@@ -1,8 +1,6 @@
 package CelestialHostess;
 
 import CelestialHostess.cardmods.AbstractInfusion;
-import CelestialHostess.cardmods.DealDamageMod;
-import CelestialHostess.cardmods.GainBlockMod;
 import CelestialHostess.cards.cardvars.*;
 import CelestialHostess.cards.interfaces.GlowAdjacentCard;
 import CelestialHostess.icons.IconContainer;
@@ -12,8 +10,6 @@ import CelestialHostess.powers.StaggerPower;
 import CelestialHostess.powers.interfaces.InfusionTriggerPower;
 import CelestialHostess.powers.interfaces.OnUpgradePower;
 import CelestialHostess.relics.AbstractEasyRelic;
-import CelestialHostess.relics.LocketOfDevotion;
-import CelestialHostess.relics.MemoriaBracelet;
 import CelestialHostess.util.*;
 import CelestialHostess.vfx.ShaderTest;
 import basemod.AutoAdd;
@@ -336,12 +332,6 @@ public class MainModfile implements
     }
 
     public static void infusionTrigger(AbstractInfusion infusion, int directAmount, int relicAmount) {
-        if (infusion instanceof DealDamageMod) {
-            MemoriaBracelet.onDamageInfusionTrigger(relicAmount);
-            LocketOfDevotion.onInfusionTrigger(relicAmount);
-        } else if (infusion instanceof GainBlockMod) {
-            MemoriaBracelet.onBlockInfusionTrigger(relicAmount);
-        }
         for (AbstractPower p : Wiz.adp().powers) {
             if (p instanceof InfusionTriggerPower) {
                 ((InfusionTriggerPower) p).infusionTrigger(infusion, directAmount);

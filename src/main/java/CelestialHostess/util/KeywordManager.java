@@ -10,6 +10,8 @@ public class KeywordManager {
     public static String STAGGER;
     public static String GATHER;
     public static String INFUSE;
+    public static String GRAB;
+    public static String GUIDE;
 
     public static String getKeyword(String ID) {
         return keywordMap.getOrDefault(ID, "");

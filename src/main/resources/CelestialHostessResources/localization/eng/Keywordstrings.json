@@ -44,5 +44,31 @@
       "infusions"
     ],
     "DESCRIPTION": "Add an extra effect onto a card this combat."
+  },
+  {
+    "ID": "grab",
+    "PROPER_NAME": "Grab",
+    "NAMES": [
+      "grab",
+      "grabbed"
+    ],
+    "DESCRIPTION": "Whenever you Grab an enemy, play any adjacent Attacks against them."
+  },
+  {
+    "ID": "guide",
+    "PROPER_NAME": "Guide",
+    "NAMES": [
+      "guide",
+      "guided"
+    ],
+    "DESCRIPTION": "Place a card on top of your draw pile."
+  },
+  {
+    "ID": "piety",
+    "PROPER_NAME": "Piety",
+    "NAMES": [
+      "piety"
+    ],
+    "DESCRIPTION": "?"
   }
 ]

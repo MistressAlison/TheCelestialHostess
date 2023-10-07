@@ -3,7 +3,7 @@ package CelestialHostess;
 import CelestialHostess.cards.Defend;
 import CelestialHostess.cards.Strike;
 import CelestialHostess.cards.interfaces.SkillAnimationAttack;
-import CelestialHostess.relics.MemoriaBracelet;
+import CelestialHostess.relics.HolyOrb;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -71,8 +71,8 @@ public class TheCelestialHostess extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                65,
-                65,
+                85,
+                85,
                 0,
                 99,
                 5, this, getStartingRelics(),
@@ -95,7 +95,7 @@ public class TheCelestialHostess extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(MemoriaBracelet.ID);
+        retVal.add(HolyOrb.ID);
         return retVal;
     }
 

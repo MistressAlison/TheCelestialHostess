@@ -19,6 +19,8 @@ import java.util.ArrayList;
 public class CardCounterPatches {
     public static int cardsSurveyedThisTurn;
     public static int cardsSurveyedThisCombat;
+    public static int cardsGuidedThisTurn;
+    public static int cardsGuidedThisCombat;
     public static AbstractCreature lastAttacker;
     public static final ArrayList<AbstractCard> cardsDrawnThisTurn = new ArrayList<>();
     public static final ArrayList<AbstractCard> cardsDrawnThisCombat = new ArrayList<>();
@@ -31,6 +33,8 @@ public class CardCounterPatches {
         public static void reset() {
             cardsSurveyedThisCombat = 0;
             cardsSurveyedThisTurn = 0;
+            cardsGuidedThisCombat = 0;
+            cardsGuidedThisTurn = 0;
             lastAttacker = null;
             cardsDrawnThisCombat.clear();
             cardsDrawnThisTurn.clear();
@@ -44,6 +48,7 @@ public class CardCounterPatches {
         @SpireInsertPatch(locator = Locator.class)
         public static void reset() {
             cardsSurveyedThisTurn = 0;
+            cardsGuidedThisTurn = 0;
             cardsDrawnThisTurn.clear();
             initialHand.clear();
             isInitialDraw = true;

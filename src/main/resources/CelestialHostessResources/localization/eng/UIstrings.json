@@ -27,5 +27,12 @@
       "Choose a power to Cleanse.",
       "Choose "," powers to Cleanse."
     ]
+  },
+  "${ModID}:GuideAction": {
+    "TEXT": [
+      "Guide",
+      "Choose a card to Guide.",
+      "Choose "," cards to Guide."
+    ]
   }
 }

@@ -53,7 +53,7 @@ public class TheCelestialHostess extends CustomPlayer {
 
 
     public TheCelestialHostess(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", new float[]{0.0F, 20.0F, -40.0F, 40.0F, 360.0F}, new CustomSpriterAnimation(
+        super(name, setClass, orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", new float[]{-20.0F, 20.0F, -40.0F, 40.0F, 0.0F}, new CustomSpriterAnimation(
                 modID + "Resources/images/char/mainChar/OJCharacter.scml"));
         Player.PlayerListener listener = new CustomAnimationListener(this);
         ((CustomSpriterAnimation)this.animation).myPlayer.addListener(listener);

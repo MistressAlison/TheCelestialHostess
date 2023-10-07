@@ -7,6 +7,8 @@
         <file id="3" name="Full Images/KO.png" width="256" height="256" pivot_x="0.5" pivot_y="0.20"/>
         <file id="4" name="Full Images/Throw.png" width="256" height="256" pivot_x="0.5" pivot_y="0.20"/>
         <file id="5" name="Full Images/Idle.png" width="256" height="256" pivot_x="0.5" pivot_y="0.20"/>
+        <file id="6" name="Full Images/Slam.png" width="256" height="256" pivot_x="0.5" pivot_y="0.20"/>
+        <file id="7" name="Full Images/Toss.png" width="256" height="256" pivot_x="0.5" pivot_y="0.20"/>
     </folder>
     <entity id="0" name="Character">
         <animation id="0" name="idle" length="4000" interval="100">
@@ -114,6 +116,42 @@
                 </key>
                 <key id="1" time="2000" spin="0">
                     <object folder="0" file="3" scale_x="-1.47" scale_y="1.53"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="6" name="slam" length="500" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+                <key id="1" time="500">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="Slam">
+                <key id="0" spin="0">
+                    <object folder="0" file="6" angle="0" scale_x="-1.5" scale_y="1.5"/>
+                </key>
+                <key id="1" time="500" spin="0">
+                    <object folder="0" file="6" angle="0" scale_x="-1.47" scale_y="1.53"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="7" name="toss" length="500" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+                <key id="1" time="500">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="Toss">
+                <key id="0" spin="0">
+                    <object folder="0" file="7" angle="0" scale_x="-1.5" scale_y="1.5"/>
+                </key>
+                <key id="1" time="500" spin="0">
+                    <object folder="0" file="7" angle="0" scale_x="-1.47" scale_y="1.53"/>
                 </key>
             </timeline>
         </animation>

@@ -1,5 +1,6 @@
 package CelestialHostess;
 
+import CelestialHostess.cards.BeatDown;
 import CelestialHostess.cards.Defend;
 import CelestialHostess.cards.Strike;
 import CelestialHostess.cards.interfaces.SkillAnimationAttack;
@@ -86,6 +87,7 @@ public class TheCelestialHostess extends CustomPlayer {
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
+        retVal.add(BeatDown.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);

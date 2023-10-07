@@ -50,6 +50,7 @@ public class OnCreateCardPatches {
         @SpirePostfixPatch
         public static void plz(Object[] __args) {
             if (__args[0] instanceof AbstractCard && !AlreadyModifiedField.modified.get(__args[0])) {
+                CardCounterPatches.cardsCreatedThisCombat.add((AbstractCard) __args[0]);
                 for (AbstractPower p : Wiz.adp().powers) {
                     if (p instanceof OnCreateCardPower) {
                         ((OnCreateCardPower) p).onCreateCard((AbstractCard) __args[0]);

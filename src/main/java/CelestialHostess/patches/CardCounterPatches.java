@@ -24,6 +24,7 @@ public class CardCounterPatches {
     public static AbstractCreature lastAttacker;
     public static final ArrayList<AbstractCard> cardsDrawnThisTurn = new ArrayList<>();
     public static final ArrayList<AbstractCard> cardsDrawnThisCombat = new ArrayList<>();
+    public static final ArrayList<AbstractCard> cardsCreatedThisCombat = new ArrayList<>();
     public static final ArrayList<AbstractCard> initialHand = new ArrayList<>();
     public static boolean isInitialDraw;
 
@@ -38,6 +39,7 @@ public class CardCounterPatches {
             lastAttacker = null;
             cardsDrawnThisCombat.clear();
             cardsDrawnThisTurn.clear();
+            cardsCreatedThisCombat.clear();
             initialHand.clear();
             isInitialDraw = true;
         }

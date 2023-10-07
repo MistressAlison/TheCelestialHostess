@@ -1,0 +1,48 @@
+[
+  {
+    "ID": "braced",
+    "PROPER_NAME": "Braced",
+    "NAMES": [
+      "braced"
+    ],
+    "DESCRIPTION": "Your next #yBlock gaining card gains additional #yBlock."
+  },
+  {
+    "ID": "exposed",
+    "PROPER_NAME": "Exposed",
+    "NAMES": [
+      "expose",
+      "exposed"
+    ],
+    "DESCRIPTION": "Exposed creatures take more damage from Attacks this turn."
+  },
+  {
+    "ID": "stagger",
+    "PROPER_NAME": "Staggered",
+    "NAMES": [
+      "stagger",
+      "staggered"
+    ],
+    "DESCRIPTION": "Staggered creatures deal less damage with Attacks this turn."
+  },
+  {
+    "ID": "gather",
+    "PROPER_NAME": "Gather",
+    "NAMES": [
+      "gather",
+      "gathered"
+    ],
+    "DESCRIPTION": "Choose #b1 of #b3 random cards to add into your hand."
+  },
+  {
+    "ID": "infuse",
+    "PROPER_NAME": "Infuse",
+    "NAMES": [
+      "infuse",
+      "infused",
+      "infusion",
+      "infusions"
+    ],
+    "DESCRIPTION": "Add an extra effect onto a card this combat."
+  }
+]

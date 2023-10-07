@@ -1,0 +1,22 @@
+{
+  "${ModID}:PoisonPowderPower": {
+    "NAME": "Poison Powder",
+    "DESCRIPTIONS": ["Your next Attack applies #b"," #yPoison on hit."]
+  },
+  "${ModID}:BracedPower": {
+    "NAME": "Braced",
+    "DESCRIPTIONS": ["Your next #yBlock gaining card gains #b", " additional #yBlock."]
+  },
+  "${ModID}:ExposedPower": {
+    "NAME": "Exposed",
+    "DESCRIPTIONS": ["Takes #b"," more damage from Attacks this turn."]
+  },
+  "${ModID}:StaggerPower": {
+    "NAME": "Staggered",
+    "DESCRIPTIONS": ["Deals #b"," less damage with Attacks this turn."]
+  },
+  "${ModID}:CardToHandPower": {
+    "NAME": " Next Turn",
+    "DESCRIPTIONS": ["Next turn, add "," into your hand."," copies of "]
+  }
+}

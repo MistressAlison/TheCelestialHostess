@@ -1,0 +1,16 @@
+{
+  "${ModID}:ExampleCard": {
+    "NAME": "Name",
+    "DESCRIPTION": "Main description",
+    "UPGRADE_DESCRIPTION": "Upgrade description",
+    "EXTENDED_DESCRIPTION": ["Extra Stuff"]
+  },
+  "${ModID}:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  }
+}

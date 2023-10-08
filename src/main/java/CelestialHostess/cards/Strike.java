@@ -2,7 +2,7 @@ package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.purple.Strike_Purple;
+import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -20,7 +20,7 @@ public class Strike extends AbstractEasyCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
     }
 
     @Override
@@ -30,6 +30,6 @@ public class Strike extends AbstractEasyCard {
 
     @Override
     public String cardArtCopy() {
-        return Strike_Purple.ID;
+        return Strike_Red.ID;
     }
 }

@@ -57,7 +57,7 @@ public class MainModfile implements
         return modID + ":" + idText;
     }
 
-    public static final Color CELESTIAL_CHARDONNAY_COLOR = CardHelper.getColor(255, 205, 140);
+    public static final Color CELESTIAL_CHARDONNAY_COLOR = CardHelper.getColor(255, 205, 140); //FFCD8C
 
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder2.png";
     public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder.png";

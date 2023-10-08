@@ -114,7 +114,7 @@ public class TheCelestialHostess extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 4;
+        return 5;
     }
 
     @Override
@@ -139,8 +139,7 @@ public class TheCelestialHostess extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        //TODO replace with starter card
-        return new Strike();
+        return new Zeal();
     }
 
     @Override

@@ -1,8 +1,6 @@
 package CelestialHostess;
 
-import CelestialHostess.cards.BeatDown;
-import CelestialHostess.cards.Defend;
-import CelestialHostess.cards.Strike;
+import CelestialHostess.cards.*;
 import CelestialHostess.cards.interfaces.SkillAnimationAttack;
 import CelestialHostess.relics.HolyOrb;
 import basemod.abstracts.CustomPlayer;
@@ -86,12 +84,13 @@ public class TheCelestialHostess extends CustomPlayer {
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
-        retVal.add(Strike.ID);
-        retVal.add(BeatDown.ID);
+        retVal.add(Jab.ID);
+        retVal.add(Jab.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
+        retVal.add(Zeal.ID);
         return retVal;
     }
 

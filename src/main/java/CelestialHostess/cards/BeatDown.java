@@ -21,7 +21,7 @@ public class BeatDown extends AbstractEasyCard implements GlowAdjacentCard {
     private static final Color glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
 
     public BeatDown() {
-        super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 6;
         tags.add(CustomTags.HOSTESS_GRAB);
     }

@@ -70,5 +70,13 @@
       "piety"
     ],
     "DESCRIPTION": "?"
+  },
+  {
+    "ID": "combo",
+    "PROPER_NAME": "Combo",
+    "NAMES": [
+      "combo"
+    ],
+    "DESCRIPTION": "Whenever you play an adjacent Attack, also play this."
   }
 ]

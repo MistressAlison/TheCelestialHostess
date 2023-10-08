@@ -12,6 +12,7 @@ public class KeywordManager {
     public static String INFUSE;
     public static String GRAB;
     public static String GUIDE;
+    public static String COMBO;
 
     public static String getKeyword(String ID) {
         return keywordMap.getOrDefault(ID, "");

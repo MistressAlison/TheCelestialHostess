@@ -2,7 +2,8 @@
   "${ModID}:TheCelestialHostess": {
     "NAMES": [
       "The Celestial Hostess",
-      "the Hostess"
+      "the Hostess",
+      "The Hostess"
     ],
     "TEXT": [
       "The Celestial Hostess believes in absolute righteousness and will eliminate all those who oppose them. NL Her holy aura keeps her safe and energized.",

@@ -9,13 +9,29 @@
     "NAME": "Beat Down",
     "DESCRIPTION": "${ModID}:Grab. NL Deal !D! damage."
   },
+  "${ModID}:Bunker": {
+    "NAME": "Bunker",
+    "DESCRIPTION": "Gain !B! Block. NL Upgrade adjacent cards."
+  },
   "${ModID}:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "${ModID}:EchoingHymn": {
+    "NAME": "Echoing Hymn",
+    "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, gain !B! Block."
+  },
   "${ModID}:Jab": {
     "NAME": "Jab",
     "DESCRIPTION": "${ModID}:Combo. NL Deal !D! damage."
+  },
+  "${ModID}:PenaltyOfDeath": {
+    "NAME": "Penalty of Death",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Die next turn."
+  },
+  "${ModID}:QuickGuard": {
+    "NAME": "Quick Guard",
+    "DESCRIPTION": "${ModID}:Combo. NL Gain !B! Block."
   },
   "${ModID}:Strike": {
     "NAME": "Strike",

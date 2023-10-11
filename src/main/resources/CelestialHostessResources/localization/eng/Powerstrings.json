@@ -1,4 +1,8 @@
 {
+  "${ModID}:NextTurnPowerPower": {
+    "NAME": "Next Turn ",
+    "DESCRIPTIONS": ["Next turn, gain #b"," ","."]
+  },
   "${ModID}:PoisonPowderPower": {
     "NAME": "Poison Powder",
     "DESCRIPTIONS": ["Your next Attack applies #b"," #yPoison on hit."]
@@ -18,5 +22,9 @@
   "${ModID}:CardToHandPower": {
     "NAME": " Next Turn",
     "DESCRIPTIONS": ["Next turn, add "," into your hand."," copies of "]
+  },
+  "${ModID}:EchoingHymnPower": {
+    "NAME": "Echoing Hymn",
+    "DESCRIPTIONS": ["Gain #b"," #yBlock at the start of your next turn."," #yBlock at the start of your next #b"," turns."]
   }
 }

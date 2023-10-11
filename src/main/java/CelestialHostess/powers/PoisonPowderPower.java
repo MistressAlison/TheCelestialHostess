@@ -16,7 +16,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class PoisonPowderPower extends AbstractPower implements DamageModApplyingPower {
-
     public static final String POWER_ID = MainModfile.makeID(PoisonPowderPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;

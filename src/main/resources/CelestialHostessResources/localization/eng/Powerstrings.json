@@ -1,4 +1,8 @@
 {
+  "${ModID}:LosePowerPower": {
+    "NAME": "Lose ",
+    "DESCRIPTIONS": ["At the end of your turn, lose #b"," ","."]
+  },
   "${ModID}:NextTurnPowerPower": {
     "NAME": "Next Turn ",
     "DESCRIPTIONS": ["Next turn, gain #b"," ","."]

@@ -33,6 +33,10 @@
     "NAME": "Quick Guard",
     "DESCRIPTION": "${ModID}:Combo. NL Gain !B! Block."
   },
+  "${ModID}:ShieldDrop": {
+    "NAME": "Shield Drop",
+    "DESCRIPTION": "${ModID}:Grab. NL Gain !B! Block."
+  },
   "${ModID}:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."

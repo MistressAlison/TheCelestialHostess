@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -22,9 +23,7 @@ import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -279,6 +278,32 @@ public class Wiz {
     public static ArrayList<AbstractCard> getAdjacentCards(AbstractCard thisCard) {
         ArrayList<AbstractCard> ret = new ArrayList<>();
         forAdjacentCards(thisCard, ret::add);
+        return ret;
+    }
+
+    public static void forAdjacentMonsters(AbstractCreature entity, Consumer<AbstractMonster> consumer) {
+        ArrayList<Hitbox> hitboxes = new ArrayList<>();
+        HashMap<Hitbox, AbstractMonster> hitMap = new HashMap<>();
+        hitboxes.add(entity.hb);
+        for (AbstractMonster m : Wiz.getEnemies()) {
+            hitMap.put(m.hb, m);
+            if (!hitboxes.contains(m.hb)) {
+                hitboxes.add(m.hb);
+            }
+        }
+        hitboxes.sort((h1, h2) -> Float.compare(h1.cX, h2.cX));
+        int index = hitboxes.indexOf(entity.hb);
+        if (index > 0) {
+            consumer.accept(hitMap.get(hitboxes.get(index - 1)));
+        }
+        if (index < hitboxes.size() - 1) {
+            consumer.accept(hitMap.get(hitboxes.get(index + 1)));
+        }
+    }
+
+    public static ArrayList<AbstractMonster> getAdjacentMonsters(AbstractCreature entity) {
+        ArrayList<AbstractMonster> ret = new ArrayList<>();
+        forAdjacentMonsters(entity, ret::add);
         return ret;
     }
 }

@@ -78,5 +78,14 @@
       "combo"
     ],
     "DESCRIPTION": "Whenever you play an adjacent Attack, also play this."
+  },
+  {
+    "ID": "ability",
+    "PROPER_NAME": "Ability",
+    "NAMES": [
+      "ability",
+      "abilities"
+    ],
+    "DESCRIPTION": "Abilities can be upgraded any number of times via accumulated damage dealt, but cannot be upgraded normally."
   }
 ]

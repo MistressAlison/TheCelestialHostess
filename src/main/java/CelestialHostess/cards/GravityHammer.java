@@ -1,6 +1,6 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.cards.abstracts.AbstractAbilityCard;
 import CelestialHostess.damageMods.PiercingDamage;
 import CelestialHostess.util.Wiz;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.red.Bludgeon;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
 import static CelestialHostess.MainModfile.makeID;
 
-public class GravityHammer extends AbstractEasyCard {
+public class GravityHammer extends AbstractAbilityCard {
     public final static String ID = makeID(GravityHammer.class.getSimpleName());
 
     public GravityHammer() {

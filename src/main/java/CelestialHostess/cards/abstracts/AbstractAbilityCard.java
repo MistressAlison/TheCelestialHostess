@@ -1,6 +1,5 @@
 package CelestialHostess.cards.abstracts;
 
-import CelestialHostess.MainModfile;
 import CelestialHostess.cardmods.XPMod;
 import CelestialHostess.damageMods.AbilityDamage;
 import CelestialHostess.util.KeywordManager;
@@ -11,7 +10,6 @@ import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

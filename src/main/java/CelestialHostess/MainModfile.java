@@ -1,7 +1,6 @@
 package CelestialHostess;
 
 import CelestialHostess.cardmods.AbstractInfusion;
-import CelestialHostess.cards.abstracts.AbstractAbilityCard;
 import CelestialHostess.cards.cardvars.*;
 import CelestialHostess.cards.interfaces.GlowAdjacentCard;
 import CelestialHostess.icons.IconContainer;
@@ -20,7 +19,6 @@ import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.helpers.ScreenPostProcessorManager;
 import basemod.interfaces.*;
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.DynamicTextBlocks;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -171,15 +169,6 @@ public class MainModfile implements
         CustomIconHelper.addCustomIcon(IconContainer.IceIcon.get());
         CustomIconHelper.addCustomIcon(IconContainer.BoltIcon.get());
         CustomIconHelper.addCustomIcon(IconContainer.WindIcon.get());
-
-        DynamicTextBlocks.registerCustomCheck(makeID("XPPad"), c -> {
-            if (c instanceof AbstractAbilityCard) {
-                int padCurrent = Integer.toString(((AbstractAbilityCard) c).currentXP).length() - 1;
-                int padNext = Integer.toString(((AbstractAbilityCard) c).xpForLevel()).length() - 1;
-                return padCurrent + padNext;
-            }
-            return -1;
-        });
 
         new AutoAdd(modID)
                 .packageFilter(modID+".cards")

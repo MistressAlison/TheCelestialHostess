@@ -5,6 +5,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class EnterCardGroupPatches {
     @SpirePatch2(clz = CardGroup.class, method = "addToTop")
@@ -15,15 +16,13 @@ public class EnterCardGroupPatches {
         @SpirePostfixPatch
         public static void checkCard(CardGroup __instance, AbstractCard c) {
             if (Wiz.adp() != null) {
-/*                if (__instance == Wiz.adp().hand) {
-                    CardCounterPatches.cardsDrawnThisCombat.add(c);
-                    CardCounterPatches.cardsDrawnThisTurn.add(c);
-                    if (CardCounterPatches.isInitialDraw) {
-                        CardCounterPatches.initialHand.add(c);
-                    }
-                }*/
                 if (c instanceof OnEnterCardGroupCard) {
                     ((OnEnterCardGroupCard) c).onEnter(__instance);
+                }
+                for (AbstractPower p : Wiz.adp().powers) {
+                    if (p instanceof OnEnterCardGroupPower) {
+                        ((OnEnterCardGroupPower) p).onEnter(__instance, c);
+                    }
                 }
             }
         }
@@ -31,5 +30,9 @@ public class EnterCardGroupPatches {
 
     public interface OnEnterCardGroupCard {
         void onEnter(CardGroup g);
+    }
+
+    public interface OnEnterCardGroupPower {
+        void onEnter(CardGroup g, AbstractCard c);
     }
 }

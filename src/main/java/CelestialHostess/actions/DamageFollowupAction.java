@@ -14,12 +14,13 @@ public class DamageFollowupAction extends AbstractGameAction {
     private final DamageInfo info;
     private final Consumer<AbstractCreature> followup;
     private final AttackEffect fx;
+    private final boolean fast;
 
     public DamageFollowupAction(AbstractCreature target, DamageInfo info, Consumer<AbstractCreature> followup) {
-        this(target, info, AttackEffect.NONE, followup);
+        this(target, info, AttackEffect.NONE, true, followup);
     }
 
-    public DamageFollowupAction(AbstractCreature target, DamageInfo info, AttackEffect fx, Consumer<AbstractCreature> followup) {
+    public DamageFollowupAction(AbstractCreature target, DamageInfo info, AttackEffect fx, boolean fast, Consumer<AbstractCreature> followup) {
         this.info = info;
         this.setValues(target, info);
         this.actionType = ActionType.DAMAGE;
@@ -27,6 +28,7 @@ public class DamageFollowupAction extends AbstractGameAction {
         this.duration = this.startDuration;
         this.followup = followup;
         this.fx = fx;
+        this.fast = fast;
     }
 
     @Override
@@ -34,7 +36,11 @@ public class DamageFollowupAction extends AbstractGameAction {
         if (this.shouldCancelAction()) {
             this.isDone = true;
         } else {
-            this.tickDuration();
+            if (fast) {
+                this.isDone = true;
+            } else {
+                tickDuration();
+            }
             if (this.isDone) {
                 if (fx != AttackEffect.NONE) {
                     AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, fx, false));
@@ -45,7 +51,7 @@ public class DamageFollowupAction extends AbstractGameAction {
 
                 if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                     AbstractDungeon.actionManager.clearPostCombatActions();
-                } else {
+                } else if (!fast) {
                     this.addToTop(new WaitAction(0.1F));
                 }
             }

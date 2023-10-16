@@ -29,6 +29,10 @@
     "NAME": "Echoing Hymn",
     "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, gain !B! Block."
   },
+  "${ModID}:Gambler": {
+    "NAME": "Gambler",
+    "DESCRIPTION": "Whenever an Attack enters your hand, increase its damage by 0 to !M! this combat."
+  },
   "${ModID}:GravityHammer": {
     "NAME": "Gravity Hammer",
     "DESCRIPTION": "Deal !D! damage. NL Deal equal damage to adjacent enemies. NL Ignores Block."
@@ -52,6 +56,10 @@
   "${ModID}:ShieldDrop": {
     "NAME": "Shield Drop",
     "DESCRIPTION": "${ModID}:Grab. NL Gain !B! Block."
+  },
+  "${ModID}:Star": {
+    "NAME": "Star",
+    "DESCRIPTION": "Deal !D! damage. NL Ignores Block."
   },
   "${ModID}:Strike": {
     "NAME": "Strike",

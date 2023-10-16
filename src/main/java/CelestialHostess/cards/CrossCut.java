@@ -1,6 +1,6 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.cards.abstracts.AbstractAbilityCard;
 import CelestialHostess.util.Wiz;
 import CelestialHostess.vfx.AngledCleaveEffect;
 import com.badlogic.gdx.math.MathUtils;
@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static CelestialHostess.MainModfile.makeID;
 
-public class CrossCut extends AbstractEasyCard {
+public class CrossCut extends AbstractAbilityCard {
     public final static String ID = makeID(CrossCut.class.getSimpleName());
 
     public CrossCut() {
@@ -38,7 +38,7 @@ public class CrossCut extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
     }
 
     @Override

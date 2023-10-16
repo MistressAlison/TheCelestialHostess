@@ -2,7 +2,6 @@ package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.util.Wiz;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.red.ShrugItOff;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,7 +21,6 @@ public class Taunt extends AbstractEasyCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SFXAction("VO_CHAMP_2A"));
         blck();
         Wiz.applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
     }

@@ -21,6 +21,10 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "${ModID}:DoubleBladed": {
+    "NAME": "Double Bladed",
+    "DESCRIPTION": "Choose an Attack. NL Add !M! {@@}{!M!|1=copy|@=copies} of that card into your hand. NL Exhaust."
+  },
   "${ModID}:EchoingHymn": {
     "NAME": "Echoing Hymn",
     "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, gain !B! Block."
@@ -61,5 +65,9 @@
   "${ModID}:Zeal": {
     "NAME": "Zeal",
     "DESCRIPTION": "Gain !B! Block. NL Discard 1 card."
+  },
+  "${ModID}:Zielregen": {
+    "NAME": "Zielregen",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times."
   }
 }

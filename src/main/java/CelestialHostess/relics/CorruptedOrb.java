@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.FreeAttackPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -44,7 +45,11 @@ public class CorruptedOrb extends AbstractEasyRelic {
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         if (c.type == AbstractCard.CardType.ATTACK && triggersLeft > 0) {
             triggersLeft--;
-            incrementStat(c.costForTurn);
+            if (c.cost == -1) {
+                incrementStat(EnergyPanel.getCurrentEnergy());
+            } else if (c.costForTurn > 0) {
+                incrementStat(c.costForTurn);
+            }
         }
     }
 

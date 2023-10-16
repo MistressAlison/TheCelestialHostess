@@ -37,6 +37,10 @@
     "NAME": "Penalty of Death",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Die next turn."
   },
+  "${ModID}:PowerShot": {
+    "NAME": "Power Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if adjacent to a Power."
+  },
   "${ModID}:QuickGuard": {
     "NAME": "Quick Guard",
     "DESCRIPTION": "${ModID}:Combo. NL Gain !B! Block."

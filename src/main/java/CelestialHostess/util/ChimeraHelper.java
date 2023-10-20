@@ -22,7 +22,7 @@ public class ChimeraHelper {
     public static void registerAugments() {
         CardAugmentsMod.registerMod(MainModfile.modID, CardCrawlGame.languagePack.getUIString(MainModfile.makeID("CrossOver")).TEXT[0]);
         new AutoAdd(MainModfile.modID)
-                .packageFilter("Professor.augments")
+                .packageFilter("CelestialHostess.augments")
                 .any(AbstractAugment.class, (info, abstractAugment) -> {
                     CardAugmentsMod.registerAugment(abstractAugment, MainModfile.modID);});
     }

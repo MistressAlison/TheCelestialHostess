@@ -14,6 +14,7 @@ public class KeywordManager {
     public static String GUIDE;
     public static String COMBO;
     public static String ABILITY;
+    public static String PIETY;
 
     public static String getKeyword(String ID) {
         return keywordMap.getOrDefault(ID, "");

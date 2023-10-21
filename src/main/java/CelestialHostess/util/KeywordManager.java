@@ -8,12 +8,8 @@ public class KeywordManager {
     public static String BRACED;
     public static String EXPOSED;
     public static String STAGGER;
-    public static String GATHER;
     public static String INFUSE;
-    public static String GRAB;
     public static String GUIDE;
-    public static String COMBO;
-    public static String ABILITY;
     public static String PIETY;
 
     public static String getKeyword(String ID) {

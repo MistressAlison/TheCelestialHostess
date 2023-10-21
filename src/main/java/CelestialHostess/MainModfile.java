@@ -163,7 +163,6 @@ public class MainModfile implements
         BaseMod.addDynamicVariable(new SecondDamage());
         BaseMod.addDynamicVariable(new SecondBlock());
         BaseMod.addDynamicVariable(new DynvarInterfaceManager());
-        BaseMod.addDynamicVariable(new XP());
 
         CustomIconHelper.addCustomIcon(IconContainer.FireIcon.get());
         CustomIconHelper.addCustomIcon(IconContainer.IceIcon.get());

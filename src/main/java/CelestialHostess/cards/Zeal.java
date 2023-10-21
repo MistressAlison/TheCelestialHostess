@@ -12,7 +12,7 @@ public class Zeal extends AbstractEasyCard {
     public final static String ID = makeID(Zeal.class.getSimpleName());
 
     public Zeal() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = block = 5;
     }
 

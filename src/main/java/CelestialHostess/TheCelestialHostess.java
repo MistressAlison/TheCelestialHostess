@@ -84,13 +84,13 @@ public class TheCelestialHostess extends CustomPlayer {
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
-        retVal.add(Jab.ID);
-        retVal.add(Jab.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Enfeeble.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
-        retVal.add(Taunt.ID);
+        retVal.add(Zeal.ID);
         return retVal;
     }
 
@@ -139,7 +139,7 @@ public class TheCelestialHostess extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new Taunt();
+        return new Enfeeble();
     }
 
     @Override

@@ -5,18 +5,6 @@
     "UPGRADE_DESCRIPTION": "Upgrade description",
     "EXTENDED_DESCRIPTION": ["Extra Stuff"]
   },
-  "${ModID}:BeatDown": {
-    "NAME": "Beat Down",
-    "DESCRIPTION": "${ModID}:Grab. NL Deal !D! damage."
-  },
-  "${ModID}:Bunker": {
-    "NAME": "Bunker",
-    "DESCRIPTION": "Gain !B! Block. NL Upgrade adjacent cards."
-  },
-  "${ModID}:CrossCut": {
-    "NAME": "Cross Cut",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies twice."
-  },
   "${ModID}:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
@@ -29,62 +17,29 @@
     "NAME": "Echoing Hymn",
     "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, gain !B! Block."
   },
+  "${ModID}:Enfeeble": {
+    "NAME": "Enfeeble",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
   "${ModID}:Gambler": {
     "NAME": "Gambler",
     "DESCRIPTION": "Whenever an Attack enters your hand, increase its damage by 0 to !M! this combat."
-  },
-  "${ModID}:GravityHammer": {
-    "NAME": "Gravity Hammer",
-    "DESCRIPTION": "Deal !D! damage. NL Deal equal damage to adjacent enemies. NL Ignores Block."
-  },
-  "${ModID}:Jab": {
-    "NAME": "Jab",
-    "DESCRIPTION": "${ModID}:Combo. NL Deal !D! damage."
   },
   "${ModID}:PenaltyOfDeath": {
     "NAME": "Penalty of Death",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Die next turn."
   },
-  "${ModID}:PowerShot": {
-    "NAME": "Power Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if adjacent to a Power."
-  },
-  "${ModID}:QuickGuard": {
-    "NAME": "Quick Guard",
-    "DESCRIPTION": "${ModID}:Combo. NL Gain !B! Block."
-  },
-  "${ModID}:ShieldDrop": {
-    "NAME": "Shield Drop",
-    "DESCRIPTION": "${ModID}:Grab. NL Gain !B! Block."
-  },
-  "${ModID}:Star": {
-    "NAME": "Star",
-    "DESCRIPTION": "Deal !D! damage. NL Ignores Block."
-  },
   "${ModID}:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
-  },
-  "${ModID}:Taunt": {
-    "NAME": "Taunt",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Vulnerable."
   },
   "${ModID}:Tribute": {
     "NAME": "Tribute",
     "DESCRIPTION": "Exhaust a card in your hand. If you do, add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Exhaust a card in your hand. If you do, add !M! *Miracle{!M!|>1=s}{@@} into your hand."
   },
-  "${ModID}:TripleStrike": {
-    "NAME": "Triple Strike",
-    "DESCRIPTION": "Deal !D! damage !M! times.",
-    "EXTENDED_DESCRIPTION": ["Null Strike", "Single Strike", "Double Strike", "Triple Strike", "Quadruple Strike", "Quintuple Strike", "Sextuple Strike", "Septuple Strike", "Octuple Strike", "Nonuple Strike", "Omni Strike"]
-  },
   "${ModID}:Zeal": {
     "NAME": "Zeal",
     "DESCRIPTION": "Gain !B! Block. NL Discard 1 card."
-  },
-  "${ModID}:Zielregen": {
-    "NAME": "Zielregen",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X times."
   }
 }

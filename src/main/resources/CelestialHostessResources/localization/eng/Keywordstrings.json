@@ -26,15 +26,6 @@
     "DESCRIPTION": "Staggered creatures deal less damage with Attacks this turn."
   },
   {
-    "ID": "gather",
-    "PROPER_NAME": "Gather",
-    "NAMES": [
-      "gather",
-      "gathered"
-    ],
-    "DESCRIPTION": "Choose #b1 of #b3 random cards to add into your hand."
-  },
-  {
     "ID": "infuse",
     "PROPER_NAME": "Infuse",
     "NAMES": [
@@ -44,15 +35,6 @@
       "infusions"
     ],
     "DESCRIPTION": "Add an extra effect onto a card this combat."
-  },
-  {
-    "ID": "grab",
-    "PROPER_NAME": "Grab",
-    "NAMES": [
-      "grab",
-      "grabbed"
-    ],
-    "DESCRIPTION": "Whenever you Grab an enemy, play any adjacent Attacks against them."
   },
   {
     "ID": "guide",
@@ -70,22 +52,5 @@
       "piety"
     ],
     "DESCRIPTION": "?"
-  },
-  {
-    "ID": "combo",
-    "PROPER_NAME": "Combo",
-    "NAMES": [
-      "combo"
-    ],
-    "DESCRIPTION": "Whenever you play an adjacent Attack, also play this."
-  },
-  {
-    "ID": "ability",
-    "PROPER_NAME": "Ability",
-    "NAMES": [
-      "ability",
-      "abilities"
-    ],
-    "DESCRIPTION": "Abilities can be upgraded any number of times via accumulated damage dealt, but cannot be upgraded normally."
   }
 ]

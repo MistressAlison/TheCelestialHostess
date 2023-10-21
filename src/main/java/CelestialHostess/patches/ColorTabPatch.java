@@ -12,7 +12,7 @@ import javassist.CtBehavior;
 import static CelestialHostess.MainModfile.makeID;
 
 public class ColorTabPatch {
-    static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(makeID("TheCelestialHostess"));
+    static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(makeID(TheCelestialHostess.class.getSimpleName()));
 
     @SpirePatch2(clz = ColorTabBarFix.Render.class, method = "Insert")
     public static class ChangeName {

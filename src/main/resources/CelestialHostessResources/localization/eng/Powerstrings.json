@@ -27,6 +27,10 @@
     "NAME": " Next Turn",
     "DESCRIPTIONS": ["Next turn, add "," into your hand."," copies of "]
   },
+  "${ModID}:PietyPower": {
+    "NAME": "Piety",
+    "DESCRIPTIONS": ["Increases attack damage by #b",". At the end of your turn, reduce #yHoly #yPower by #b1."]
+  },
   "${ModID}:EchoingHymnPower": {
     "NAME": "Echoing Hymn",
     "DESCRIPTIONS": ["Gain #b"," #yBlock at the start of your next turn."," #yBlock at the start of your next #b"," turns."]

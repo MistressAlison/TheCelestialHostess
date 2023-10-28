@@ -11,6 +11,7 @@ public class KeywordManager {
     public static String INFUSE;
     public static String GUIDE;
     public static String PIETY;
+    public static String HOLY_POWER;
 
     public static String getKeyword(String ID) {
         return keywordMap.getOrDefault(ID, "");

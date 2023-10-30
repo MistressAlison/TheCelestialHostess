@@ -102,14 +102,14 @@ public class TheCelestialHostess extends CustomPlayer {
 
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("ATTACK_POISON2", MathUtils.random(-0.2F, 0.2F));
+        CardCrawlGame.sound.playA("HEAL_1", MathUtils.random(-0.2F, 0.2F));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false);
     }
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "ATTACK_POISON2";
+        return "HEAL_1";
     }
 
     @Override

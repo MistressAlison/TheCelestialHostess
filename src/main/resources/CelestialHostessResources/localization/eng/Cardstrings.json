@@ -25,6 +25,10 @@
     "NAME": "Gambler",
     "DESCRIPTION": "Whenever an Attack enters your hand, increase its damage by 0 to !M! this combat."
   },
+  "${ModID}:Microverse": {
+    "NAME": "Microverse",
+    "DESCRIPTION": "Choose any number of cards in your hand. Add a copy of them into your hand next turn. NL Exhaust."
+  },
   "${ModID}:PenaltyOfDeath": {
     "NAME": "Penalty of Death",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Die next turn."

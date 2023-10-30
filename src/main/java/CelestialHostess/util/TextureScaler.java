@@ -12,6 +12,10 @@ public class TextureScaler {
     }
 
     public static Texture rescale(Texture t, int w, int h) {
+        return rescale(t, w, h, false, false);
+    }
+
+    public static Texture rescale(Texture t, int w, int h, boolean flipx, boolean flipy) {
         float w2 = w/2f;
         float h2 = h/2f;
         FrameBuffer fb = ImageHelper.createBuffer(w, h);
@@ -19,7 +23,7 @@ public class TextureScaler {
         sb.setProjectionMatrix(new OrthographicCamera(w, h).combined);
         ImageHelper.beginBuffer(fb);
         sb.begin();
-        sb.draw(t, -w2, -h2, -w2, -h2, w, h, 1, 1, 0, 0, 0, t.getWidth(), t.getHeight(), false, true);
+        sb.draw(t, -w2, -h2, -w2, -h2, w, h, 1, 1, 0, 0, 0, t.getWidth(), t.getHeight(), flipx, !flipy);
         sb.end();
         fb.end();
         return ImageHelper.getBufferTexture(fb).getTexture();

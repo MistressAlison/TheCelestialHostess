@@ -4,6 +4,7 @@ import CelestialHostess.MainModfile;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import basemod.patches.whatmod.WhatMod;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -276,6 +277,10 @@ public class CardArtRoller {
                     itemTex = TextureScaler.rescale(itemTex, c.itemScale());
                 }
             }
+            Texture extraTex = null;
+            if (c.artTexture() != null) {
+                extraTex = c.artTexture();
+            }
             AbstractCard artCard = CardLibrary.getCard(r.origCardID);
             TextureAtlas.AtlasRegion t = artCard.portrait;
             t.flip(r.flipX, true);
@@ -329,7 +334,12 @@ public class CardArtRoller {
             if (itemTex != null) {
                 sb.draw(itemTex, -itemTex.getWidth()/2f, -itemTex.getHeight()/2f, -itemTex.getWidth()/2f, -itemTex.getHeight()/2f, itemTex.getWidth(), itemTex.getHeight(), 1, 1, 0, 0, 0, itemTex.getWidth(), itemTex.getHeight(), false, true);
             }
-            if (needsMask(c, artCard) || !c.itemArt().isEmpty()) {
+            if (extraTex != null) {
+                sb.setBlendFunction(GL20.GL_ONE, GL20.GL_ZERO);
+                sb.setColor(Color.WHITE);
+                sb.draw(extraTex, -125, -95, -125, -95, 250, 190, 1, 1, 0, 0, 0, extraTex.getWidth(), extraTex.getHeight(), false, false);
+            }
+            if (needsMask(c, artCard) || !c.itemArt().isEmpty() || extraTex != null) {
                 sb.setBlendFunction(GL_DST_COLOR, GL_ZERO);
                 sb.setColor(Color.WHITE);
                 Texture mask = getMask(c);
@@ -356,6 +366,10 @@ public class CardArtRoller {
             if (c.itemScale() != 1.0f) {
                 itemTex = TextureScaler.rescale(itemTex, c.itemScale());
             }
+        }
+        Texture extraTex = null;
+        if (c.artTexture() != null) {
+            extraTex = c.artTexture();
         }
         AbstractCard artCard = CardLibrary.getCard(r.origCardID);
         TextureAtlas.AtlasRegion t = new TextureAtlas.AtlasRegion(TexLoader.getTexture("images/1024Portraits/" + artCard.assetUrl + ".png"), 0, 0, 500, 380);
@@ -410,7 +424,13 @@ public class CardArtRoller {
         if (itemTex != null) {
             sb.draw(itemTex, -itemTex.getWidth(), -itemTex.getHeight(), -itemTex.getWidth(), -itemTex.getHeight(), itemTex.getWidth()*2, itemTex.getHeight()*2, 1, 1, 0, 0, 0, itemTex.getWidth(), itemTex.getHeight(), false, true);
         }
-        if (needsMask(c, artCard) || !c.itemArt().isEmpty()) {
+        if (extraTex != null) {
+            sb.setBlendFunction(GL20.GL_ONE, GL20.GL_ZERO);
+            sb.setColor(Color.WHITE);
+            //sb.draw(extraTex, -extraTex.getWidth(), -extraTex.getHeight(), -extraTex.getWidth(), -extraTex.getHeight(), extraTex.getWidth()*2, extraTex.getHeight()*2, 1, 1, 0, 0, 0, extraTex.getWidth(), extraTex.getHeight(), false, true);
+            sb.draw(extraTex, -250, -190, -250, -190, 500, 380, 1, 1, 0, 0, 0, extraTex.getWidth(), extraTex.getHeight(), false, false);
+        }
+        if (needsMask(c, artCard) || !c.itemArt().isEmpty() || extraTex != null) {
             sb.setBlendFunction(GL_DST_COLOR, GL_ZERO);
             sb.setColor(Color.WHITE);
             Texture mask = getMask(c);

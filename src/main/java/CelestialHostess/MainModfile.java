@@ -10,6 +10,7 @@ import CelestialHostess.powers.StaggerPower;
 import CelestialHostess.powers.interfaces.InfusionTriggerPower;
 import CelestialHostess.powers.interfaces.OnUpgradePower;
 import CelestialHostess.relics.AbstractEasyRelic;
+import CelestialHostess.ui.MicroverseProcessor;
 import CelestialHostess.util.*;
 import CelestialHostess.vfx.ShaderTest;
 import basemod.AutoAdd;
@@ -301,10 +302,8 @@ public class MainModfile implements
             }
         });
 
-        if (shaderTest) {
-            ScreenPostProcessor postProcessor = new ShaderTest();
-            ScreenPostProcessorManager.addPostProcessor(postProcessor);
-        }
+        ScreenPostProcessor microverseProcessor = new MicroverseProcessor();
+        ScreenPostProcessorManager.addPostProcessor(microverseProcessor);
     }
 
     public static boolean shaderTest = false;

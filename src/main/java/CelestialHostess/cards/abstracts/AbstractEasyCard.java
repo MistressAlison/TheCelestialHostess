@@ -406,6 +406,14 @@ public abstract class AbstractEasyCard extends CustomCard {
         return cardID;
     }
 
+    public Texture artTexture() {
+        return null;
+    }
+
+    public boolean transientArt() {
+        return false;
+    }
+
     public float itemScale() {
         return 1.0f;
     }

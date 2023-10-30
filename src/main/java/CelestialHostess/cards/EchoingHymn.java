@@ -14,7 +14,7 @@ public class EchoingHymn extends AbstractEasyCard {
 
     public EchoingHymn() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = block = 5;
+        baseBlock = block = 4;
         baseMagicNumber = magicNumber = 2;
     }
 

@@ -41,10 +41,10 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
-  "${ModID}:Tribute": {
-    "NAME": "Tribute",
-    "DESCRIPTION": "Exhaust a card in your hand. If you do, add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card in your hand. If you do, add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+  "${ModID}:Oblation": {
+    "NAME": "Oblation",
+    "DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
   },
   "${ModID}:Zeal": {
     "NAME": "Zeal",

@@ -61,5 +61,13 @@
       "holy_power"
     ],
     "DESCRIPTION": "?"
+  },
+  {
+    "ID": "tribute",
+    "PROPER_NAME": "Tribute",
+    "NAMES": [
+      "tribute"
+    ],
+    "DESCRIPTION": "Exhaust a card in your hand to trigger an effect."
   }
 ]

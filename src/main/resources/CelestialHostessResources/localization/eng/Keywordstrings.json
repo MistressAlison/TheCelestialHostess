@@ -54,13 +54,12 @@
     "DESCRIPTION": "Piety adds additional damage to attacks. Each turn, Piety is reduced by #b1."
   },
   {
-    "ID": "holy_power",
-    "PROPER_NAME": "Holy Power",
+    "ID": "holy",
+    "PROPER_NAME": "Holy",
     "NAMES": [
-      "holy power",
-      "holy_power"
+      "holy"
     ],
-    "DESCRIPTION": "?"
+    "DESCRIPTION": "This card's effects trigger an additional time for each #yMiracle in your hand."
   },
   {
     "ID": "tribute",

@@ -5,6 +5,18 @@
     "UPGRADE_DESCRIPTION": "Upgrade description",
     "EXTENDED_DESCRIPTION": ["Extra Stuff"]
   },
+  "${ModID}:FlameBlessing": {
+    "NAME": "Flame Blessing",
+    "DESCRIPTION": "${ModID}:Holy. Retain. NL Deal !D! damage to ALL enemies. NL Exhaust."
+  },
+  "${ModID}:FrostBlessing": {
+    "NAME": "Frost Blessing",
+    "DESCRIPTION": "${ModID}:Holy. Retain. NL Gain !B! Block. NL Exhaust."
+  },
+  "${ModID}:GaleBlessing": {
+    "NAME": "Gale Blessing",
+    "DESCRIPTION": "${ModID}:Holy. Retain. NL Draw !M! card{@@}{!M!|>1-s}. NL Exhaust."
+  },
   "${ModID}:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
@@ -32,6 +44,10 @@
   "${ModID}:PenaltyOfDeath": {
     "NAME": "Penalty of Death",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Die next turn."
+  },
+  "${ModID}:PiercingArrow": {
+    "NAME": "Piercing Arrow",
+    "DESCRIPTION": "${ModID}:Holy. NL Deal !D! damage."
   },
   "${ModID}:Serenity": {
     "NAME": "Serenity",

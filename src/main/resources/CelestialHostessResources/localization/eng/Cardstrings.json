@@ -33,6 +33,10 @@
     "NAME": "Penalty of Death",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Die next turn."
   },
+  "${ModID}:Serenity": {
+    "NAME": "Serenity",
+    "DESCRIPTION": "Add !M! *Miracle{!M!|>1=s}{@@} into your hand next turn."
+  },
   "${ModID}:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."

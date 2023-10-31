@@ -40,7 +40,7 @@ public class CardToHandPower extends AbstractPower implements NonStackablePower 
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void onEnergyRecharge() {
         flash();
         addToBot(new MakeTempCardInHandAction(card.makeSameInstanceOf(), amount));
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));

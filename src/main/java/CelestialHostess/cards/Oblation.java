@@ -3,7 +3,6 @@ package CelestialHostess.cards;
 import CelestialHostess.actions.TributeAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.util.Wiz;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.purple.Prostrate;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,17 +14,9 @@ import static CelestialHostess.MainModfile.makeID;
 public class Oblation extends AbstractEasyCard {
     public final static String ID = makeID(Oblation.class.getSimpleName());
 
-    private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
-    private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.NONE;
-    private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
-
-    private static final int COST = 0;
-    private static final int EFFECT = 1;
-    private static final int UP_EFFECT = 1;
-
     public Oblation() {
-        super(ID, COST, TYPE, RARITY, TARGET);
-        baseMagicNumber = magicNumber = EFFECT;
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        baseMagicNumber = magicNumber = 1;
         exhaust = true;
         cardsToPreview = new Miracle();
     }

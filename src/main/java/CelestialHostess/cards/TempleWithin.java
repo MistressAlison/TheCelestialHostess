@@ -3,8 +3,6 @@ package CelestialHostess.cards;
 import CelestialHostess.actions.CleansePowerAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import com.megacrit.cardcrawl.cards.purple.EmptyBody;
-import com.megacrit.cardcrawl.cards.purple.Sanctity;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;

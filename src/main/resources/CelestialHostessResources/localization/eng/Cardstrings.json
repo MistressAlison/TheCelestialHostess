@@ -62,6 +62,14 @@
     "DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
   },
+  "${ModID}:TempleWithin": {
+    "NAME": "Temple Within",
+    "DESCRIPTION": "Gain !B! Block. NL Remove !M! of your debuffs."
+  },
+  "${ModID}:Venerate": {
+    "NAME": "Venerate",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand next turn."
+  },
   "${ModID}:Zeal": {
     "NAME": "Zeal",
     "DESCRIPTION": "Gain !B! Block. NL Discard 1 card."

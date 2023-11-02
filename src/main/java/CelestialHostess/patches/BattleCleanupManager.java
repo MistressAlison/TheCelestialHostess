@@ -23,7 +23,7 @@ public class BattleCleanupManager implements StartGameSubscriber, PostBattleSubs
         BattleCleanupManager manager = new BattleCleanupManager();
     }
 
-    public CleanupLogic addLogic(Runnable cleanup) {
+    public static CleanupLogic addLogic(Runnable cleanup) {
         CleanupLogic e = new CleanupLogic(cleanup);
         logicEntities.add(e);
         return e;

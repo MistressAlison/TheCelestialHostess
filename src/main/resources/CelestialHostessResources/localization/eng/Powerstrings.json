@@ -38,5 +38,9 @@
   "${ModID}:GamblerPower": {
     "NAME": "Gambler",
     "DESCRIPTIONS": ["Whenever an Attack enters your hand, increase its damage by #b0 to #b"," this combat."]
+  },
+  "${ModID}:BurdenBreakerPower": {
+    "NAME": "Burden Breaker",
+    "DESCRIPTIONS": ["Increase your maximum hand size by #b"," this combat."]
   }
 }

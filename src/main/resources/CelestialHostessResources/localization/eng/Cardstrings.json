@@ -17,6 +17,10 @@
     "NAME": "Gale Blessing",
     "DESCRIPTION": "${ModID}:Holy. Retain. NL Draw !M! card{@@}{!M!|>1-s}. NL Exhaust."
   },
+  "${ModID}:BurdenBreaker": {
+    "NAME": "Burden Breaker",
+    "DESCRIPTION": "Increase your maximum hand size by !M! this combat."
+  },
   "${ModID}:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."

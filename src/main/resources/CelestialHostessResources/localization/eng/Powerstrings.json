@@ -29,7 +29,7 @@
   },
   "${ModID}:PietyPower": {
     "NAME": "Piety",
-    "DESCRIPTIONS": ["Increases attack damage by #b",". At the end of your turn, reduce #yHoly #yPower by #b1."]
+    "DESCRIPTIONS": ["Increases attack damage by #b",". At the end of your turn, reduce #yPiety by #b1."]
   },
   "${ModID}:EchoingHymnPower": {
     "NAME": "Echoing Hymn",

@@ -61,6 +61,10 @@
     "NAME": "Piercing Arrow",
     "DESCRIPTION": "${ModID}:Holy. NL Deal !D! damage."
   },
+  "${ModID}:RighteousBlow": {
+    "NAME": "Righteous Blow",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Piety."
+  },
   "${ModID}:Serenity": {
     "NAME": "Serenity",
     "DESCRIPTION": "Add !M! *Miracle{!M!|>1=s}{@@} into your hand next turn."

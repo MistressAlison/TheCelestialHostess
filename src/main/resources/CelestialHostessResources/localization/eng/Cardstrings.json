@@ -33,6 +33,10 @@
     "NAME": "Enfeeble",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
   },
+  "${ModID}:Espoir": {
+    "NAME": "Espoir",
+    "DESCRIPTION": "Gain !B! Block. NL Remove !M! of your debuffs."
+  },
   "${ModID}:Gambler": {
     "NAME": "Gambler",
     "DESCRIPTION": "Whenever an Attack enters your hand, increase its damage by 0 to !M! this combat."
@@ -61,10 +65,6 @@
     "NAME": "Oblation",
     "DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
-  },
-  "${ModID}:TempleWithin": {
-    "NAME": "Temple Within",
-    "DESCRIPTION": "Gain !B! Block. NL Remove !M! of your debuffs."
   },
   "${ModID}:Venerate": {
     "NAME": "Venerate",

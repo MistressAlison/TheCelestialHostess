@@ -53,6 +53,10 @@
     "NAME": "Lightmare",
     "DESCRIPTION": "${ModID}:Holy. ${ModID}:Corrupt. NL Deal !D! damage to a random enemy."
   },
+  "${ModID}:MagicWall": {
+    "NAME": "Magic Wall",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Dexterity. NL At the end of this turn, lose !M! Dexterity."
+  },
   "${ModID}:Microverse": {
     "NAME": "Microverse",
     "DESCRIPTION": "Choose any number of cards in your hand. Add a copy of them into your hand next turn. NL Exhaust."

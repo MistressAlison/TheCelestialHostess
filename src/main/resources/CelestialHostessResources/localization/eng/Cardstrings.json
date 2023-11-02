@@ -33,6 +33,10 @@
     "NAME": "Echoing Hymn",
     "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, gain !B! Block."
   },
+  "${ModID}:Empower": {
+    "NAME": "Empower",
+    "DESCRIPTION": "${ModID}:Tribute: Gain !M! ${ModID}:Piety."
+  },
   "${ModID}:Enfeeble": {
     "NAME": "Enfeeble",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."

@@ -1,18 +1,16 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.actions.BetterSelectCardsInHandAction;
-import CelestialHostess.actions.DoAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.powers.CardToHandPower;
-import CelestialHostess.powers.EchoingHymnPower;
 import CelestialHostess.ui.MicroverseProcessor;
 import CelestialHostess.util.Wiz;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.unique.DualWieldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.purple.BattleHymn;
 import com.megacrit.cardcrawl.cards.purple.Blasphemy;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static CelestialHostess.MainModfile.makeID;
@@ -23,6 +21,9 @@ public class Microverse extends AbstractEasyCard {
     public Microverse() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
+        if (CardLibrary.getAllCards() != null && !CardLibrary.getAllCards().isEmpty()) {
+            portrait = MicroverseProcessor.makeArt();
+        }
     }
 
     @Override

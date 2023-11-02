@@ -19,7 +19,7 @@
   },
   "${ModID}:BurdenBreaker": {
     "NAME": "Burden Breaker",
-    "DESCRIPTION": "Increase your maximum hand size by !M! this combat."
+    "DESCRIPTION": "???"
   },
   "${ModID}:Defend": {
     "NAME": "Defend",

@@ -15,7 +15,6 @@ public class Gambler extends AbstractEasyCard {
     public Gambler() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
-        exhaust = true;
     }
 
     @Override

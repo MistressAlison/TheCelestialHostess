@@ -41,6 +41,10 @@
     "NAME": "Gambler",
     "DESCRIPTION": "Whenever an Attack enters your hand, increase its damage by 0 to !M! this combat."
   },
+  "${ModID}:Lightmare": {
+    "NAME": "Lightmare",
+    "DESCRIPTION": "${ModID}:Holy. ${ModID}:Corrupt. NL Deal !D! damage to a random enemy."
+  },
   "${ModID}:Microverse": {
     "NAME": "Microverse",
     "DESCRIPTION": "Choose any number of cards in your hand. Add a copy of them into your hand next turn. NL Exhaust."

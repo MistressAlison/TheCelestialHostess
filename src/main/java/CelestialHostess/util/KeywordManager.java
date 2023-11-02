@@ -13,6 +13,7 @@ public class KeywordManager {
     public static String PIETY;
     public static String HOLY;
     public static String TRIBUTE;
+    public static String CORRUPT;
 
     public static String getKeyword(String ID) {
         return keywordMap.getOrDefault(ID, "");

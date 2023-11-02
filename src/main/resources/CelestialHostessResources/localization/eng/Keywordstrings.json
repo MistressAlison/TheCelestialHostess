@@ -68,5 +68,13 @@
       "tribute"
     ],
     "DESCRIPTION": "Exhaust a card in your hand to trigger an effect."
+  },
+  {
+    "ID": "corrupt",
+    "PROPER_NAME": "Corrupt",
+    "NAMES": [
+      "corrupt"
+    ],
+    "DESCRIPTION": "Exhaust a #yMiracle in your hand. If you have none, add a #rVoid onto the top of your draw pile."
   }
 ]

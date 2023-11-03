@@ -61,6 +61,10 @@
     "NAME": "Microverse",
     "DESCRIPTION": "Choose any number of cards in your hand. Add a copy of them into your hand next turn. NL Exhaust."
   },
+  "${ModID}:Mindscape": {
+    "NAME": "Mindscape",
+    "DESCRIPTION": "Draw !M! card{@@}{!M!|>1=s}. NL If you have no *Miracles, add !${ModID}:M2! *Miracle{!${ModID}:M2!|>1=s} into your hand."
+  },
   "${ModID}:Oblation": {
     "NAME": "Oblation",
     "DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",

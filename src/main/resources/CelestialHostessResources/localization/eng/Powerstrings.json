@@ -42,5 +42,9 @@
   "${ModID}:BurdenBreakerPower": {
     "NAME": "Burden Breaker",
     "DESCRIPTIONS": ["Increase your maximum hand size by #b"," this combat."]
+  },
+  "${ModID}:TempleWithinPower": {
+    "NAME": "Temple Within",
+    "DESCRIPTIONS": ["Whenever a card is created, draw #b"," card."," cards."]
   }
 }

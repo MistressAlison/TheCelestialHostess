@@ -81,6 +81,10 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "${ModID}:TempleWithin": {
+    "NAME": "Temple Within",
+    "DESCRIPTION": "Whenever a card is created during combat, draw !M! card{@@}{!M!|>1=s}."
+  },
   "${ModID}:Oblation": {
     "NAME": "Oblation",
     "DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",

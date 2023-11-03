@@ -2,6 +2,7 @@ package CelestialHostess.cards.tokens;
 
 import CelestialHostess.actions.HolyAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.green.StormOfSteel;
@@ -18,6 +19,7 @@ public class GaleBlessing extends AbstractEasyCard {
         baseMagicNumber = magicNumber = 1;
         selfRetain = true;
         exhaust = true;
+        tags.add(CustomTags.HOSTESS_HOLY);
     }
 
     @Override

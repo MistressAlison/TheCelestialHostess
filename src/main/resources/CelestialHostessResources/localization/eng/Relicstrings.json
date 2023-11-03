@@ -3,16 +3,16 @@
     "NAME": "Corrupted Orb",
     "FLAVOR": "Demonic power has tainted this orb for the stronger.",
     "DESCRIPTIONS": [
-      "Replaces [#c69f6c]Holy [#c69f6c]Orb. The first Attack you play each turn costs 0.",
-      "Energy saved: "," NL Per turn: "," NL Per combat: "
+      "Replaces [#c69f6c]Holy [#c69f6c]Orb. At the start of each combat, convert #b1 [E] into #b4 #yMiracles.",
+      "Holy effects triggered: "," NL Per turn: "," NL Per combat: "
     ]
   },
   "${ModID}:HolyOrb": {
     "NAME": "Holy Orb",
     "FLAVOR": "Filled with holy energies.",
     "DESCRIPTIONS": [
-      "The first Attack you play each combat costs 0.",
-      "Energy saved: "," NL Per turn: "," NL Per combat: "
+      "At the start of each combat, convert #b1 [E] into #b2 #yMiracles.",
+      "Holy effects triggered: "," NL Per turn: "," NL Per combat: "
     ]
   }
 }

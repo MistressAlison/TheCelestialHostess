@@ -1,17 +1,18 @@
 package CelestialHostess.relics;
 
 import CelestialHostess.TheCelestialHostess;
-import CelestialHostess.util.Wiz;
+import CelestialHostess.patches.CustomTags;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.watcher.FreeAttackPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class HolyOrb extends AbstractEasyRelic {
     private final String SAVED_STAT = DESCRIPTIONS[1];
     private final String PER_TURN = DESCRIPTIONS[2];
     private final String PER_COMBAT = DESCRIPTIONS[3];
-    private boolean triggered;
+    private int triggersLeft;
 
     public HolyOrb() {
         super(ID, RelicTier.STARTER, LandingSound.MAGICAL, TheCelestialHostess.Enums.CELESTIAL_CHARDONNAY_COLOR);
@@ -33,21 +34,24 @@ public class HolyOrb extends AbstractEasyRelic {
     }
 
     @Override
-    public void atBattleStart() {
+    public void atBattleStartPreDraw() {
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        Wiz.applyToSelf(new FreeAttackPower(Wiz.adp(), 1));
-        triggered = false;
+        addToBot(new LoseEnergyAction(1));
+        addToBot(new MakeTempCardInHandAction(new Miracle(), 2));
+        triggersLeft = 2;
     }
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (c.type == AbstractCard.CardType.ATTACK && !triggered) {
-            triggered = true;
-            if (c.cost == -1) {
-                incrementStat(EnergyPanel.getCurrentEnergy());
-            } else if (c.costForTurn > 0) {
-                incrementStat(c.costForTurn);
+        if (triggersLeft > 0) {
+            if (c instanceof Miracle) {
+                triggersLeft--;
+            }
+            if (c.hasTag(CustomTags.HOSTESS_HOLY)) {
+                incrementStat(triggersLeft);
+            } else if (c.hasTag(CustomTags.HOSTESS_MIRACLE_TRIGGER)) {
+                incrementStat(1);
             }
         }
     }

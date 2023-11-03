@@ -4,6 +4,7 @@ import CelestialHostess.actions.CorruptAction;
 import CelestialHostess.actions.HolyAction;
 import CelestialHostess.actions.ProcessDamageRandomEnemyAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.vfx.BigExplosionVFX;
 import CelestialHostess.vfx.SpotlightEnemyEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -22,6 +23,7 @@ public class Lightmare extends AbstractEasyCard {
     public Lightmare() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = damage = 10;
+        tags.add(CustomTags.HOSTESS_HOLY);
     }
 
     @Override

@@ -2,6 +2,7 @@ package CelestialHostess.cards;
 
 import CelestialHostess.actions.HolyAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -18,6 +19,7 @@ public class PiercingArrow extends AbstractEasyCard {
     public PiercingArrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 6;
+        tags.add(CustomTags.HOSTESS_HOLY);
     }
 
     @Override

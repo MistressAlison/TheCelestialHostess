@@ -2,6 +2,7 @@ package CelestialHostess.cards.tokens;
 
 import CelestialHostess.actions.HolyAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.blue.Glacier;
@@ -18,6 +19,7 @@ public class FrostBlessing extends AbstractEasyCard {
         baseBlock = block = 3;
         selfRetain = true;
         exhaust = true;
+        tags.add(CustomTags.HOSTESS_HOLY);
     }
 
     @Override

@@ -20,7 +20,7 @@ public class Lightmare extends AbstractEasyCard {
     public final static String ID = makeID(Lightmare.class.getSimpleName());
 
     public Lightmare() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = damage = 10;
     }
 

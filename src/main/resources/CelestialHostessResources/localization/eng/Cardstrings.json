@@ -61,6 +61,11 @@
     "NAME": "Microverse",
     "DESCRIPTION": "Choose any number of cards in your hand. Add a copy of them into your hand next turn. NL Exhaust."
   },
+  "${ModID}:Oblation": {
+    "NAME": "Oblation",
+    "DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+  },
   "${ModID}:PenaltyOfDeath": {
     "NAME": "Penalty of Death",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Die next turn."
@@ -84,11 +89,6 @@
   "${ModID}:TempleWithin": {
     "NAME": "Temple Within",
     "DESCRIPTION": "Whenever a card is created during combat, draw !M! card{@@}{!M!|>1=s}."
-  },
-  "${ModID}:Oblation": {
-    "NAME": "Oblation",
-    "DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
   },
   "${ModID}:Venerate": {
     "NAME": "Venerate",

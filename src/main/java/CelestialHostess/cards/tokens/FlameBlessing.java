@@ -16,7 +16,7 @@ public class FlameBlessing extends AbstractEasyCard {
 
     public FlameBlessing() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
-        baseDamage = damage = 4;
+        baseDamage = damage = 3;
         isMultiDamage = true;
         selfRetain = true;
         exhaust = true;

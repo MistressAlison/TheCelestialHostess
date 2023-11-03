@@ -15,7 +15,7 @@ public class FrostBlessing extends AbstractEasyCard {
 
     public FrostBlessing() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = block = 4;
+        baseBlock = block = 3;
         selfRetain = true;
         exhaust = true;
     }

@@ -45,6 +45,18 @@
     "NAME": "Espoir",
     "DESCRIPTION": "Gain !B! Block. NL Remove !M! of your debuffs."
   },
+  "${ModID}:FlameWalker": {
+    "NAME": "Flame Walker",
+    "DESCRIPTION": "Draw !${ModID}:M2! card{!${ModID}:M2!|>1=s}. NL Add !M! *Flame *Blessing{!M!|>1=s}{@@} into your hand."
+  },
+  "${ModID}:FrostShard": {
+    "NAME": "Frost Shard",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! *Frost *Blessing{!M!|>1=s}{@@} into your hand."
+  },
+  "${ModID}:GaleForce": {
+    "NAME": "Gale Force",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Gale *Blessing{!M!|>1=s}{@@} into your hand."
+  },
   "${ModID}:Gambler": {
     "NAME": "Gambler",
     "DESCRIPTION": "Whenever an Attack enters your hand, increase its damage by 0 to !M! this combat."

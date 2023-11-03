@@ -13,7 +13,7 @@
   },
   "${ModID}:BracedPower": {
     "NAME": "Braced",
-    "DESCRIPTIONS": ["Your next #yBlock gaining card gains #b", " additional #yBlock."]
+    "DESCRIPTIONS": ["Your next #yBlock gaining card gains #b"," additional #yBlock."]
   },
   "${ModID}:ExposedPower": {
     "NAME": "Exposed",

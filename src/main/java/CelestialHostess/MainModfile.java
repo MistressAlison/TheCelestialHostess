@@ -6,13 +6,13 @@ import CelestialHostess.cards.interfaces.GlowAdjacentCard;
 import CelestialHostess.icons.IconContainer;
 import CelestialHostess.patches.GlowChangePatch;
 import CelestialHostess.powers.BracedPower;
+import CelestialHostess.powers.PurityPower;
 import CelestialHostess.powers.StaggerPower;
 import CelestialHostess.powers.interfaces.InfusionTriggerPower;
 import CelestialHostess.powers.interfaces.OnUpgradePower;
 import CelestialHostess.relics.AbstractEasyRelic;
 import CelestialHostess.ui.MicroverseProcessor;
 import CelestialHostess.util.*;
-import CelestialHostess.vfx.ShaderTest;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.ModPanel;
@@ -256,6 +256,7 @@ public class MainModfile implements
         //Add Powers
         BaseMod.addPower(BracedPower.class, BracedPower.POWER_ID);
         BaseMod.addPower(StaggerPower.class, StaggerPower.POWER_ID);
+        BaseMod.addPower(PurityPower.class, PurityPower.POWER_ID);
 
         //Wide Potions
         if (Loader.isModLoaded("widepotions")) {

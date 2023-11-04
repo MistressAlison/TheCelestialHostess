@@ -46,5 +46,13 @@
   "${ModID}:TempleWithinPower": {
     "NAME": "Temple Within",
     "DESCRIPTIONS": ["Whenever a card is created, draw #b"," card."," cards."]
+  },
+  "${ModID}:PurityPower": {
+    "NAME": "Purity",
+    "DESCRIPTIONS": ["When you obtain #b10 #yPurity, take #b50% less damage from attacks and reflect attack damage taken for #b1 turn."]
+  },
+  "${ModID}:DivineForcePower": {
+    "NAME": "Divine Force",
+    "DESCRIPTIONS": ["Take #b50% less damage from attacks and reflect attack damage taken for #b"," turn."," turns."]
   }
 }

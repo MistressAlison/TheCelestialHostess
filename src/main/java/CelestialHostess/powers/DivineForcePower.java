@@ -40,8 +40,8 @@ public class DivineForcePower extends AbstractPower {
     private static final float PARTICLE_INTERVAL = 0.1f;
     private static Pair<String, Long> loopKey;
     private static BattleCleanupManager.CleanupLogic cleanup;
-    private static String loopSFX = "STANCE_LOOP_WRATH";
-    private static String enterSFX = "STANCE_ENTER_CALM";
+    private static final String LOOP_SFX = "STANCE_LOOP_WRATH";
+    private static final String ENTER_SFX = "STANCE_ENTER_CALM";
 
     public DivineForcePower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
@@ -62,8 +62,8 @@ public class DivineForcePower extends AbstractPower {
         if (loopKey != null) {
             stopIdleSfx();
         }
-        CardCrawlGame.sound.play(enterSFX);
-        loopKey = new Pair<>(loopSFX, CardCrawlGame.sound.playAndLoop(loopSFX));
+        CardCrawlGame.sound.play(ENTER_SFX);
+        loopKey = new Pair<>(LOOP_SFX, CardCrawlGame.sound.playAndLoop(LOOP_SFX));
         cleanup = BattleCleanupManager.addLogic(() -> {
             CardCrawlGame.sound.stop(loopKey.getKey(), loopKey.getValue());
             loopKey = null;

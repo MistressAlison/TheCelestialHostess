@@ -1,6 +1,6 @@
 package CelestialHostess.cards.tokens;
 
-import CelestialHostess.actions.HolyAction;
+import CelestialHostess.actions.DoForEachMiracleAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.patches.CustomTags;
 import CelestialHostess.util.Wiz;
@@ -21,12 +21,13 @@ public class FlameBlessing extends AbstractEasyCard {
         isMultiDamage = true;
         selfRetain = true;
         exhaust = true;
-        tags.add(CustomTags.HOSTESS_HOLY);
+        tags.add(CustomTags.HOSTESS_FOR_EACH_MIRACLE);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new HolyAction(() -> Wiz.att(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE, true))));
+        //addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE, true));
+        addToBot(new DoForEachMiracleAction(() -> Wiz.att(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE, true))));
     }
 
     @Override

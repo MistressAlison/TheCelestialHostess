@@ -7,15 +7,15 @@
   },
   "${ModID}:FlameBlessing": {
     "NAME": "Flame Blessing",
-    "DESCRIPTION": "${ModID}:Holy. Retain. NL Deal !D! damage to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies for each *Miracle in your hand. NL Exhaust."
   },
   "${ModID}:FrostBlessing": {
     "NAME": "Frost Blessing",
-    "DESCRIPTION": "${ModID}:Holy. Retain. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block for each *Miracle in your hand. NL Exhaust."
   },
   "${ModID}:GaleBlessing": {
     "NAME": "Gale Blessing",
-    "DESCRIPTION": "${ModID}:Holy. Retain. NL Draw !M! card{@@}{!M!|>1-s}. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Draw !M! card{@@}{!M!|>1-s} for each *Miracle in your hand. NL Exhaust."
   },
   "${ModID}:BurdenBreaker": {
     "NAME": "Burden Breaker",
@@ -63,7 +63,7 @@
   },
   "${ModID}:Lightmare": {
     "NAME": "Lightmare",
-    "DESCRIPTION": "${ModID}:Holy. ${ModID}:Corrupt. NL Deal !D! damage to a random enemy."
+    "DESCRIPTION": "${ModID}:Holy: Deal !D! damage to a random enemy. NL ${ModID}:Corrupt."
   },
   "${ModID}:MagicWall": {
     "NAME": "Magic Wall",
@@ -88,7 +88,7 @@
   },
   "${ModID}:PiercingArrow": {
     "NAME": "Piercing Arrow",
-    "DESCRIPTION": "${ModID}:Holy. NL Deal !D! damage X times."
+    "DESCRIPTION": "Deal !D! damage X times. NL ${ModID}:Holy: Costs 0."
   },
   "${ModID}:RighteousBlow": {
     "NAME": "Righteous Blow",

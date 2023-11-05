@@ -59,7 +59,7 @@
     "NAMES": [
       "holy"
     ],
-    "DESCRIPTION": "This card's effects trigger an additional time for each #yMiracle in your hand."
+    "DESCRIPTION": "Trigger an effect if you have a #yMiracle in your hand."
   },
   {
     "ID": "tribute",

@@ -1,6 +1,6 @@
 package CelestialHostess.cards.tokens;
 
-import CelestialHostess.actions.HolyAction;
+import CelestialHostess.actions.DoForEachMiracleAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.patches.CustomTags;
 import CelestialHostess.util.Wiz;
@@ -19,12 +19,13 @@ public class FrostBlessing extends AbstractEasyCard {
         baseBlock = block = 3;
         selfRetain = true;
         exhaust = true;
-        tags.add(CustomTags.HOSTESS_HOLY);
+        tags.add(CustomTags.HOSTESS_FOR_EACH_MIRACLE);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new HolyAction(() -> Wiz.att(new GainBlockAction(p, p, block))));
+        //addToBot(new GainBlockAction(p, p, block));
+        addToBot(new DoForEachMiracleAction(() -> Wiz.att(new GainBlockAction(p, p, block))));
     }
 
     @Override

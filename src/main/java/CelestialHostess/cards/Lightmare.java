@@ -23,7 +23,7 @@ public class Lightmare extends AbstractEasyCard {
     public Lightmare() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = damage = 10;
-        tags.add(CustomTags.HOSTESS_HOLY);
+        tags.add(CustomTags.HOSTESS_IF_MIRACLE);
     }
 
     @Override

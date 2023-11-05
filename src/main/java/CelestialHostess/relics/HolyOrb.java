@@ -1,7 +1,6 @@
 package CelestialHostess.relics;
 
 import CelestialHostess.TheCelestialHostess;
-import CelestialHostess.patches.CustomTags;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -23,9 +22,10 @@ import static CelestialHostess.MainModfile.makeID;
 public class HolyOrb extends AbstractEasyRelic {
     public static final String ID = makeID(HolyOrb.class.getSimpleName());
     HashMap<String, Integer> stats = new HashMap<>();
-    private final String SAVED_STAT = DESCRIPTIONS[1];
+    private final String STAT = DESCRIPTIONS[1];
     private final String PER_TURN = DESCRIPTIONS[2];
     private final String PER_COMBAT = DESCRIPTIONS[3];
+    private final String LOST = DESCRIPTIONS[4];
     private int triggersLeft;
 
     public HolyOrb() {
@@ -39,6 +39,7 @@ public class HolyOrb extends AbstractEasyRelic {
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new LoseEnergyAction(1));
         addToBot(new MakeTempCardInHandAction(new Miracle(), 2));
+        incrementStat(-1);
         triggersLeft = 2;
     }
 
@@ -47,25 +48,27 @@ public class HolyOrb extends AbstractEasyRelic {
         if (triggersLeft > 0) {
             if (c instanceof Miracle) {
                 triggersLeft--;
-            }
-            if (c.hasTag(CustomTags.HOSTESS_HOLY)) {
-                incrementStat(triggersLeft);
-            } else if (c.hasTag(CustomTags.HOSTESS_MIRACLE_TRIGGER)) {
                 incrementStat(1);
             }
+            /*if (c.hasTag(CustomTags.HOSTESS_FOR_EACH_MIRACLE)) {
+                incrementStat(triggersLeft);
+            } else if (c.hasTag(CustomTags.HOSTESS_IF_MIRACLE)) {
+                incrementStat(1);
+            }*/
         }
     }
 
     public int getStat() {
-        return stats.get(SAVED_STAT);
+        return stats.get(STAT);
     }
 
     public void incrementStat(int amount) {
-        stats.put(SAVED_STAT, stats.get(SAVED_STAT) + amount);
+        stats.put(STAT, stats.get(STAT) + amount);
     }
 
     public String getStatsDescription() {
-        return SAVED_STAT + stats.get(SAVED_STAT);
+        int stat = stats.get(STAT);
+        return stat >= 0 ? STAT + stat : LOST + (stat * -1);
     }
 
     public String getExtendedStatsDescription(int totalCombats, int totalTurns) {
@@ -76,7 +79,10 @@ public class HolyOrb extends AbstractEasyRelic {
         // Relic Stats truncates these extended stats to 3 decimal places, so we do the same
         DecimalFormat perTurnFormat = new DecimalFormat("#.###");
 
-        float stat = (float)stats.get(SAVED_STAT);
+        float stat = (float)stats.get(STAT);
+        if (stat < 0) {
+            stat *= -1;
+        }
         builder.append(PER_TURN);
         builder.append(perTurnFormat.format(stat / Math.max(totalTurns, 1)));
         builder.append(PER_COMBAT);
@@ -86,21 +92,21 @@ public class HolyOrb extends AbstractEasyRelic {
     }
 
     public void resetStats() {
-        stats.put(SAVED_STAT, 0);
+        stats.put(STAT, 0);
     }
 
     public JsonElement onSaveStats() {
         // An array makes more sense if you want to store more than one stat
         Gson gson = new Gson();
         ArrayList<Integer> statsToSave = new ArrayList<>();
-        statsToSave.add(stats.get(SAVED_STAT));
+        statsToSave.add(stats.get(STAT));
         return gson.toJsonTree(statsToSave);
     }
 
     public void onLoadStats(JsonElement jsonElement) {
         if (jsonElement != null) {
             JsonArray jsonArray = jsonElement.getAsJsonArray();
-            stats.put(SAVED_STAT, jsonArray.get(0).getAsInt());
+            stats.put(STAT, jsonArray.get(0).getAsInt());
         } else {
             resetStats();
         }

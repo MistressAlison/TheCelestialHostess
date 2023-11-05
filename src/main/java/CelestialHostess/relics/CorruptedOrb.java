@@ -1,7 +1,6 @@
 package CelestialHostess.relics;
 
 import CelestialHostess.TheCelestialHostess;
-import CelestialHostess.patches.CustomTags;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -27,6 +26,7 @@ public class CorruptedOrb extends AbstractEasyRelic {
     private final String STAT = DESCRIPTIONS[1];
     private final String PER_TURN = DESCRIPTIONS[2];
     private final String PER_COMBAT = DESCRIPTIONS[3];
+    private final String LOST = DESCRIPTIONS[4];
     private int triggersLeft;
 
     public CorruptedOrb() {
@@ -40,6 +40,7 @@ public class CorruptedOrb extends AbstractEasyRelic {
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new LoseEnergyAction(1));
         addToBot(new MakeTempCardInHandAction(new Miracle(), 4));
+        incrementStat(-1);
         triggersLeft = 4;
     }
 
@@ -48,12 +49,13 @@ public class CorruptedOrb extends AbstractEasyRelic {
         if (triggersLeft > 0) {
             if (c instanceof Miracle) {
                 triggersLeft--;
-            }
-            if (c.hasTag(CustomTags.HOSTESS_HOLY)) {
-                incrementStat(triggersLeft);
-            } else if (c.hasTag(CustomTags.HOSTESS_MIRACLE_TRIGGER)) {
                 incrementStat(1);
             }
+            /*if (c.hasTag(CustomTags.HOSTESS_FOR_EACH_MIRACLE)) {
+                incrementStat(triggersLeft);
+            } else if (c.hasTag(CustomTags.HOSTESS_IF_MIRACLE)) {
+                incrementStat(1);
+            }*/
         }
     }
 
@@ -89,7 +91,8 @@ public class CorruptedOrb extends AbstractEasyRelic {
     }
 
     public String getStatsDescription() {
-        return STAT + stats.get(STAT);
+        int stat = stats.get(STAT);
+        return stat >= 0 ? STAT + stat : LOST + (stat * -1);
     }
 
     public String getExtendedStatsDescription(int totalCombats, int totalTurns) {
@@ -97,6 +100,9 @@ public class CorruptedOrb extends AbstractEasyRelic {
         StringBuilder builder = new StringBuilder();
         builder.append(getStatsDescription());
         float stat = (float)stats.get(STAT);
+        if (stat < 0) {
+            stat *= -1;
+        }
         // Relic Stats truncates these extended stats to 3 decimal places, so we do the same
         DecimalFormat perTurnFormat = new DecimalFormat("#.###");
         builder.append(PER_TURN);

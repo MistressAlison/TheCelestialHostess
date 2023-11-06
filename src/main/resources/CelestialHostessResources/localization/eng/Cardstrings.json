@@ -15,7 +15,7 @@
   },
   "${ModID}:GaleBlessing": {
     "NAME": "Gale Blessing",
-    "DESCRIPTION": "Retain. NL Draw !M! card{@@}{!M!|>1-s} for each *Miracle in your hand. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Draw !M! card{@@}{!M!|>1=s} for each *Miracle in your hand. NL Exhaust."
   },
   "${ModID}:BanefulBlast": {
     "NAME": "Baneful Blast",

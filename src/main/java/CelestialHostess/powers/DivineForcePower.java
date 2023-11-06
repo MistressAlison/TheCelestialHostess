@@ -9,6 +9,7 @@ import basemod.Pair;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,6 +17,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -37,11 +39,13 @@ public class DivineForcePower extends AbstractPower {
     private final ArrayList<AbstractGameEffect> array;
     private static final Random rng = new Random();
     private float particleTimer;
+    private float angle;
     private static final float PARTICLE_INTERVAL = 0.1f;
     private static Pair<String, Long> loopKey;
     private static BattleCleanupManager.CleanupLogic cleanup;
     private static final String LOOP_SFX = "STANCE_LOOP_WRATH";
     private static final String ENTER_SFX = "STANCE_ENTER_CALM";
+    private static final boolean SPINNY = false;
 
     public DivineForcePower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
@@ -49,7 +53,7 @@ public class DivineForcePower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.loadRegion("flight");
+        this.loadRegion("controlled_change");
         updateDescription();
         this.isTurnBased = true;
         this.priority = 101;
@@ -120,7 +124,9 @@ public class DivineForcePower extends AbstractPower {
         super.update(slot);
         flashTimer += Gdx.graphics.getDeltaTime();
         if (flashTimer > 1f) {
-            array.add(new SilentGainPowerEffect(this));
+            if (!SPINNY) {
+                array.add(new SilentGainPowerEffect(this));
+            }
             flashTimer = 0f;
         }
     }
@@ -129,6 +135,10 @@ public class DivineForcePower extends AbstractPower {
     public void updateParticles() {
         this.particleTimer -= Gdx.graphics.getRawDeltaTime();
         this.auraTimer -= Gdx.graphics.getRawDeltaTime();
+        if (SPINNY) {
+            this.angle += Gdx.graphics.getRawDeltaTime() * 300f;
+            angle %= 360;
+        }
         if (this.auraTimer < 0.0F) {
             this.auraTimer = MathUtils.random(0.45F, 0.55F);
             AbstractDungeon.effectsQueue.add(new AscensionAuraEffect());
@@ -145,6 +155,15 @@ public class DivineForcePower extends AbstractPower {
             //AbstractDungeon.effectList.add(new StraightFireParticle(owner.drawX + xOff, owner.drawY + MathUtils.random(owner.hb_h/2f), 75f));
             AbstractDungeon.effectList.add(new UncommonPotionParticleEffect(owner.hb.cX+xOff, owner.hb.cY+yOff));
             this.particleTimer = PARTICLE_INTERVAL;
+        }
+    }
+
+    @Override
+    public void renderIcons(SpriteBatch sb, float x, float y, Color c) {
+        sb.setColor(c);
+        sb.draw(this.region48, x - (float)this.region48.packedWidth / 2.0F, y - (float)this.region48.packedHeight / 2.0F, (float)this.region48.packedWidth / 2.0F, (float)this.region48.packedHeight / 2.0F, (float)this.region48.packedWidth, (float)this.region48.packedHeight, Settings.scale, Settings.scale, angle);
+        for (AbstractGameEffect e : array) {
+            e.render(sb, x, y);
         }
     }
 }

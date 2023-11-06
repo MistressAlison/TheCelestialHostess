@@ -22,7 +22,7 @@ public class PurityPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.loadRegion("deva");
+        this.loadRegion("flight");
         updateDescription();
     }
 

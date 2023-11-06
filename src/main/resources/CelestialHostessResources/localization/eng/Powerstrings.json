@@ -54,5 +54,29 @@
   "${ModID}:DivineForcePower": {
     "NAME": "Divine Force",
     "DESCRIPTIONS": ["Take #b50% less damage from attacks and reflect attack damage taken for #b"," turn."," turns."]
+  },
+  "${ModID}:ManaMasterPower": {
+    "NAME": "Mana Master",
+    "DESCRIPTIONS": ["Whenever you gain #yEnergy, gain #b"," additional #yEnergy."]
+  },
+  "${ModID}:AbsolutionPower": {
+    "NAME": "Absolution",
+    "DESCRIPTIONS": ["Whenever you gain #yEnergy, deal #b"," damage to ALL enemies."]
+  },
+  "${ModID}:HeartGuardPower": {
+    "NAME": "Heart Guard",
+    "DESCRIPTIONS": ["Whenever a card is created, gain #b"," #yBlock."]
+  },
+  "${ModID}:CrossFormationPower": {
+    "NAME": "Cross Formation",
+    "DESCRIPTIONS": ["At the end of your turn, gain #b"," #yBlock for each #yMiracle in your hand."]
+  },
+  "${ModID}:DangerClosePower": {
+    "NAME": "Danger Close",
+    "DESCRIPTIONS": ["Whenever a card is #yExhausted, deal #b"," damage to a random enemy."]
+  },
+  "${ModID}:UnsaintedPower": {
+    "NAME": "Unsainted",
+    "DESCRIPTIONS": ["At the end of your turn, deal #b"," damage to ALL enemies for ALL of your status cards."]
   }
 }

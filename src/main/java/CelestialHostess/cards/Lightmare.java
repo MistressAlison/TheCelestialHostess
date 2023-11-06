@@ -28,13 +28,13 @@ public class Lightmare extends AbstractEasyCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new HolyAction(() -> addToTop(new ProcessDamageRandomEnemyAction(this, (mon, total) -> {
+        addToBot(new ProcessDamageRandomEnemyAction(this, (mon, total) -> {
             addToTop(new BigExplosionVFX(mon));
             addToTop(new DamageAction(mon, new DamageInfo(p, total, damageTypeForTurn)));
             addToTop(new VFXAction(new InversionBeamEffect(mon.hb.cX)));
             addToTop(new VFXAction(new SpotlightEnemyEffect(mon)));
-        }))));
-        addToBot(new CorruptAction());
+        }));
+        addToBot(new HolyAction(() -> addToTop(new CorruptAction())));
     }
 
     @Override

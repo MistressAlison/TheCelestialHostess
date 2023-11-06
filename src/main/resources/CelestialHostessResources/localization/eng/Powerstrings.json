@@ -41,7 +41,7 @@
   },
   "${ModID}:BurdenBreakerPower": {
     "NAME": "Burden Breaker",
-    "DESCRIPTIONS": ["Increase your maximum hand size by #b"," this combat."]
+    "DESCRIPTIONS": ["Whenever a card is #yExhausted, #yUpgrade #b"," random card in your hand."," random cards in your hand."]
   },
   "${ModID}:TempleWithinPower": {
     "NAME": "Temple Within",

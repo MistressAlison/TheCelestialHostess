@@ -19,7 +19,8 @@
   },
   "${ModID}:BurdenBreaker": {
     "NAME": "Burden Breaker",
-    "DESCRIPTION": "???"
+    "DESCRIPTION": "Whenever a card is Exhausted, Upgrade !M! random card{@@}{!M!|>1=s} in your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a card is Exhausted, Upgrade !M! random card{@@}{!M!|>1=s} in your hand."
   },
   "${ModID}:Defend": {
     "NAME": "Defend",
@@ -32,6 +33,10 @@
   "${ModID}:EchoingHymn": {
     "NAME": "Echoing Hymn",
     "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, gain !B! Block."
+  },
+  "${ModID}:EclipsePower": {
+    "NAME": "Eclipse Power",
+    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage equal to the target's intent."
   },
   "${ModID}:Empower": {
     "NAME": "Empower",
@@ -82,6 +87,11 @@
     "DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
   },
+  "${ModID}:Parry": {
+    "NAME": "Parry",
+    "DESCRIPTION": "Unplayable. Retain. NL While held, the next time you are attacked, gain !B! Block and deal !D! damage back.",
+    "EXTENDED_DESCRIPTION": ["I can't play this card."]
+  },
   "${ModID}:PenaltyOfDeath": {
     "NAME": "Penalty of Death",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Die next turn."
@@ -109,6 +119,19 @@
   "${ModID}:Venerate": {
     "NAME": "Venerate",
     "DESCRIPTION": "Gain !B! Block. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand next turn."
+  },
+  "${ModID}:VoidSpirit": {
+    "NAME": "Void Spirit",
+    "DESCRIPTION": "Gain !M! ${ModID}:Purity. NL ${ModID}:Corrupt.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! ${ModID}:Purity. NL ${ModID}:Corrupt."
+  },
+  "${ModID}:WeaponFusion": {
+    "NAME": "Weapon Fusion",
+    "DESCRIPTION": "Exhaust up to !M! Attacks in your hand. NL Add a *Flame *Blessing with their combined damage into your hand. NL Exhaust."
+  },
+  "${ModID}:Withstand": {
+    "NAME": "Withstand",
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Gain !M! ${ModID}:Purity."
   },
   "${ModID}:Zeal": {
     "NAME": "Zeal",

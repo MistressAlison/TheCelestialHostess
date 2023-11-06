@@ -76,5 +76,13 @@
       "corrupt"
     ],
     "DESCRIPTION": "Exhaust a #yMiracle in your hand. If you have none, add a #rVoid onto the top of your draw pile."
+  },
+  {
+    "ID": "purity",
+    "PROPER_NAME": "Purity",
+    "NAMES": [
+      "purity"
+    ],
+    "DESCRIPTION": "When you obtain #b10 Purity, take #b50% less damage from attacks and reflect attack damage taken for #b1 turn."
   }
 ]

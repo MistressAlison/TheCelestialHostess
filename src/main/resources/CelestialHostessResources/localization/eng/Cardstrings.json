@@ -17,6 +17,10 @@
     "NAME": "Gale Blessing",
     "DESCRIPTION": "Retain. NL Draw !M! card{@@}{!M!|>1-s} for each *Miracle in your hand. NL Exhaust."
   },
+  "${ModID}:BanefulBlast": {
+    "NAME": "Baneful Blast",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL ${ModID}:Corrupt."
+  },
   "${ModID}:BurdenBreaker": {
     "NAME": "Burden Breaker",
     "DESCRIPTION": "Whenever a card is Exhausted, Upgrade !M! random card{@@}{!M!|>1=s} in your hand.",
@@ -66,6 +70,10 @@
     "NAME": "Gambler",
     "DESCRIPTION": "Whenever an Attack enters your hand, increase its damage by 0 to !M! this combat."
   },
+  "${ModID}:HallowedGround": {
+    "NAME": "Hallowed Ground",
+    "DESCRIPTION": "Gain !M! ${ModID}:Purity. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+  },
   "${ModID}:Lightmare": {
     "NAME": "Lightmare",
     "DESCRIPTION": "${ModID}:Holy: Deal !D! damage to a random enemy. NL ${ModID}:Corrupt."
@@ -81,6 +89,10 @@
   "${ModID}:Mindscape": {
     "NAME": "Mindscape",
     "DESCRIPTION": "Draw !M! card{@@}{!M!|>1=s}. NL If you have no *Miracles, add !${ModID}:M2! *Miracle{!${ModID}:M2!|>1=s} into your hand."
+  },
+  "${ModID}:NullStar": {
+    "NAME": "Null Star",
+    "DESCRIPTION": "Put !M! Attack{@@}{!M!|>1=s} from your discard pile into your hand. NL {!M!|1=It costs|@=They cost} 0 this turn. NL ${ModID}:Corrupt. Exhaust."
   },
   "${ModID}:Oblation": {
     "NAME": "Oblation",
@@ -99,6 +111,10 @@
   "${ModID}:PiercingArrow": {
     "NAME": "Piercing Arrow",
     "DESCRIPTION": "Deal !D! damage X times. NL ${ModID}:Holy: Costs 0."
+  },
+  "${ModID}:Renitence": {
+    "NAME": "Renitence",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Purity."
   },
   "${ModID}:RighteousBlow": {
     "NAME": "Righteous Blow",

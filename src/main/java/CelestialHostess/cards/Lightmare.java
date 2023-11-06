@@ -21,8 +21,8 @@ public class Lightmare extends AbstractEasyCard {
     public final static String ID = makeID(Lightmare.class.getSimpleName());
 
     public Lightmare() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = damage = 10;
+        super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        baseDamage = damage = 15;
         tags.add(CustomTags.HOSTESS_IF_MIRACLE);
     }
 
@@ -39,7 +39,7 @@ public class Lightmare extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(5);
     }
 
     @Override

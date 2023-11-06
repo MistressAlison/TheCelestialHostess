@@ -15,10 +15,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static CelestialHostess.MainModfile.makeID;
 
-public class Microverse extends AbstractEasyCard {
-    public final static String ID = makeID(Microverse.class.getSimpleName());
+public class Microcosm extends AbstractEasyCard {
+    public final static String ID = makeID(Microcosm.class.getSimpleName());
 
-    public Microverse() {
+    public Microcosm() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         if (CardLibrary.getAllCards() != null && !CardLibrary.getAllCards().isEmpty()) {

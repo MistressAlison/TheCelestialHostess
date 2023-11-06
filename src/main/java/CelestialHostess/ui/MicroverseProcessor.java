@@ -1,6 +1,6 @@
 package CelestialHostess.ui;
 
-import CelestialHostess.cards.Microverse;
+import CelestialHostess.cards.Microcosm;
 import CelestialHostess.util.CardArtRoller;
 import CelestialHostess.util.ImageHelper;
 import basemod.interfaces.ScreenPostProcessor;
@@ -23,7 +23,7 @@ public class MicroverseProcessor implements ScreenPostProcessor {
     private static final FrameBuffer SCVBuffer = ImageHelper.createBuffer(500, 380);
     private static final OrthographicCamera og = new OrthographicCamera(250, 190);
     private static final OrthographicCamera SCVog = new OrthographicCamera(500, 380);
-    private static final Texture mask = CardArtRoller.getMask(CardLibrary.getCard(Microverse.ID));
+    private static final Texture mask = CardArtRoller.getMask(CardLibrary.getCard(Microcosm.ID));
     private static final int[] saveEquations = new int[]{0, 0};
     public static TextureAtlas.AtlasRegion portrait;
     public static Texture scv;

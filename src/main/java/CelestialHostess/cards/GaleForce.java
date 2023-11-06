@@ -2,7 +2,6 @@ package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.cards.tokens.GaleBlessing;
-import CelestialHostess.util.KeywordManager;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.cards.green.Blur;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,7 +17,6 @@ public class GaleForce extends AbstractEasyCard {
         baseBlock = block = 5;
         baseMagicNumber = magicNumber = 1;
         cardsToPreview = new GaleBlessing();
-        addCustomKeyword(KeywordManager.HOLY);
     }
 
     @Override

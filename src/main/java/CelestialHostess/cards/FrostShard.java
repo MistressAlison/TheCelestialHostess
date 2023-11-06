@@ -2,7 +2,6 @@ package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.cards.tokens.FrostBlessing;
-import CelestialHostess.util.KeywordManager;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.blue.ColdSnap;
@@ -19,7 +18,6 @@ public class FrostShard extends AbstractEasyCard {
         baseDamage = damage = 6;
         baseMagicNumber = magicNumber = 1;
         cardsToPreview = new FrostBlessing();
-        addCustomKeyword(KeywordManager.HOLY);
     }
 
     @Override

@@ -2,7 +2,6 @@ package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.cards.tokens.FlameBlessing;
-import CelestialHostess.util.KeywordManager;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.red.BurningPact;
@@ -19,7 +18,6 @@ public class FlameWalker extends AbstractEasyCard {
         baseSecondMagic = secondMagic = 1;
         baseMagicNumber = magicNumber = 1;
         cardsToPreview = new FlameBlessing();
-        addCustomKeyword(KeywordManager.HOLY);
     }
 
     @Override

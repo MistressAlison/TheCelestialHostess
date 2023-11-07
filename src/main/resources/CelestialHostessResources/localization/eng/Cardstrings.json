@@ -183,6 +183,6 @@
   },
   "${ModID}:Zeal": {
     "NAME": "Zeal",
-    "DESCRIPTION": "Gain !B! Block. NL Discard 1 card."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Piety."
   }
 }

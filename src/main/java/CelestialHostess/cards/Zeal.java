@@ -1,7 +1,8 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import CelestialHostess.powers.PietyPower;
+import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.cards.green.Survivor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,18 +14,20 @@ public class Zeal extends AbstractEasyCard {
 
     public Zeal() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseBlock = block = 5;
+        baseBlock = block = 3;
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        addToBot(new DiscardAction(p, p, 1, false));
+        Wiz.applyToSelf(new PietyPower(p, magicNumber));
     }
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(1);
+        upgradeMagicNumber(1);
     }
 
     @Override

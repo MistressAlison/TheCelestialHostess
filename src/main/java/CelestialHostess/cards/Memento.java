@@ -13,7 +13,7 @@ public class Memento extends AbstractEasyCard {
     public final static String ID = makeID(Memento.class.getSimpleName());
 
     public Memento() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = block = 5;
         baseMagicNumber = magicNumber = 2;
         cardsToPreview = new Miracle();

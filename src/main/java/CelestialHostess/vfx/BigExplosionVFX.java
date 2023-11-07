@@ -23,9 +23,11 @@ public class BigExplosionVFX extends AbstractGameAction {
 
     @Override
     public void update() {
-        AbstractDungeon.effectsQueue.add(new ExplosionSmallEffect(target.hb.cX, target.hb.cY));
-        AbstractDungeon.effectsQueue.add(new BurnToAshEffect(target.hb.cX, target.hb.cY));
-        CardCrawlGame.screenShake.shake(intensity, dur, false);
+        if (target != null) {
+            AbstractDungeon.effectsQueue.add(new ExplosionSmallEffect(target.hb.cX, target.hb.cY));
+            AbstractDungeon.effectsQueue.add(new BurnToAshEffect(target.hb.cX, target.hb.cY));
+            CardCrawlGame.screenShake.shake(intensity, dur, false);
+        }
         this.isDone = true;
     }
 }

@@ -2,7 +2,7 @@ package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.util.Wiz;
-import com.megacrit.cardcrawl.cards.red.ShrugItOff;
+import com.megacrit.cardcrawl.cards.red.Disarm;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -30,6 +30,6 @@ public class Disengage extends AbstractEasyCard {
 
     @Override
     public String cardArtCopy() {
-        return ShrugItOff.ID;
+        return Disarm.ID;
     }
 }

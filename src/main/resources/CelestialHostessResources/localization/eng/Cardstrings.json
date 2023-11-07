@@ -25,6 +25,10 @@
     "NAME": "Baneful Blast",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL ${ModID}:Corrupt."
   },
+  "${ModID}:BreakThrough": {
+    "NAME": "Break Through",
+    "DESCRIPTION": "Deal !D! damage. NL If this deals unblocked damage, add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+  },
   "${ModID}:BurdenBreaker": {
     "NAME": "Burden Breaker",
     "DESCRIPTION": "Whenever a card is Exhausted, Upgrade !M! random card{@@}{!M!|>1=s} in your hand.",
@@ -37,6 +41,10 @@
   "${ModID}:CrossFormation": {
     "NAME": "Cross Formation",
     "DESCRIPTION": "At the end of your turn, gain !M! Block for each *Miracle in your hand."
+  },
+  "${ModID}:CuttingEdge": {
+    "NAME": "Cutting Edge",
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Exhausted, ${ModID}:Sharpen your hand by !M! this combat."
   },
   "${ModID}:DangerClose": {
     "NAME": "Danger Close",
@@ -126,6 +134,14 @@
     "NAME": "Mana Master",
     "DESCRIPTION": "Whenever you gain Energy, gain !M! additional Energy."
   },
+  "${ModID}:MastersGaze": {
+    "NAME": "Master's Gaze",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust."
+  },
+  "${ModID}:Memento": {
+    "NAME": "Memento",
+    "DESCRIPTION": "Gain !B! Block. NL If this card is Exhausted, add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+  },
   "${ModID}:Microcosm": {
     "NAME": "Microcosm",
     "DESCRIPTION": "Choose any number of cards in your hand. Add a copy of them into your hand next turn. NL Exhaust."
@@ -156,6 +172,14 @@
     "NAME": "Piercing Arrow",
     "DESCRIPTION": "Deal !D! damage X times. NL ${ModID}:Holy: Costs 0."
   },
+  "${ModID}:Punishment": {
+    "NAME": "Punishment",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Holy: Draw !M! card{@@}{!M!|>1=s}."
+  },
+  "${ModID}:RelentlessAssault": {
+    "NAME": "Relentless Assault",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Increase this card's hits by 1 this combat. NL ${ModID}:Corrupt."
+  },
   "${ModID}:Renitence": {
     "NAME": "Renitence",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Purity."
@@ -183,6 +207,10 @@
   "${ModID}:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:Taunt": {
+    "NAME": "Taunt",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Apply !M! Vulnerable."
   },
   "${ModID}:TempleWithin": {
     "NAME": "Temple Within",
@@ -212,5 +240,9 @@
   "${ModID}:Zeal": {
     "NAME": "Zeal",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Piety."
+  },
+  "${ModID}:Zephyr": {
+    "NAME": "Zephyr",
+    "DESCRIPTION": "Gain !M! ${ModID}:Piety. NL Add 1 *Gale *Blessing into your hand."
   }
 }

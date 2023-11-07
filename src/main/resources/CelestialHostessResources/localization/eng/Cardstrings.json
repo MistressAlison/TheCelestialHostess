@@ -30,6 +30,10 @@
     "DESCRIPTION": "Whenever a card is Exhausted, Upgrade !M! random card{@@}{!M!|>1=s} in your hand.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever a card is Exhausted, Upgrade !M! random card{@@}{!M!|>1=s} in your hand."
   },
+  "${ModID}:CrossCut": {
+    "NAME": "Cross Cut",
+    "DESCRIPTION": "Deal !D! damage twice. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+  },
   "${ModID}:CrossFormation": {
     "NAME": "Cross Formation",
     "DESCRIPTION": "At the end of your turn, gain !M! Block for each *Miracle in your hand."
@@ -41,6 +45,10 @@
   "${ModID}:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:Disengage": {
+    "NAME": "Disengage",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies."
   },
   "${ModID}:DoubleBladed": {
     "NAME": "Double Bladed",
@@ -66,6 +74,14 @@
     "NAME": "Espoir",
     "DESCRIPTION": "Gain !B! Block. NL Remove !M! of your debuffs."
   },
+  "${ModID}:EternalVoice": {
+    "NAME": "Eternal Voice",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Holy: Deal !D! damage to ALL enemies again."
+  },
+  "${ModID}:FallenForm": {
+    "NAME": "Fallen Form",
+    "DESCRIPTION": "Whenever a *Void enters your hand, gain {@@}{!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|>3=!M! [E]} and Transform it. NL ${ModID}:Corrupt 3 times."
+  },
   "${ModID}:FlameWalker": {
     "NAME": "Flame Walker",
     "DESCRIPTION": "Draw !${ModID}:M2! card{!${ModID}:M2!|>1=s}. NL Add !M! *Flame *Blessing{!M!|>1=s}{@@} into your hand."
@@ -85,6 +101,10 @@
   "${ModID}:Gambler": {
     "NAME": "Gambler",
     "DESCRIPTION": "Whenever an Attack enters your hand, increase its damage by 0 to !M! this combat."
+  },
+  "${ModID}:GearRepair": {
+    "NAME": "Gear Repair",
+    "DESCRIPTION": "${ModID}:Tribute: Increase the Block of all Block gaining cards in your hand by !M! this combat."
   },
   "${ModID}:HallowedGround": {
     "NAME": "Hallowed Ground",
@@ -140,9 +160,17 @@
     "NAME": "Renitence",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Purity."
   },
+  "${ModID}:ResoundingImpact": {
+    "NAME": "Resounding Impact",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Holy: Increase this card's damage by !M! this combat."
+  },
   "${ModID}:RighteousBlow": {
     "NAME": "Righteous Blow",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Piety."
+  },
+  "${ModID}:SeraphForm": {
+    "NAME": "Seraph Form",
+    "DESCRIPTION": "Whenever you play a *Miracle, gain !M! ${ModID}:Purity."
   },
   "${ModID}:Serenity": {
     "NAME": "Serenity",

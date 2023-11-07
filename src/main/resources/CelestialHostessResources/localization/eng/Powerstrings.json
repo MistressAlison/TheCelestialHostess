@@ -78,5 +78,13 @@
   "${ModID}:UnsaintedPower": {
     "NAME": "Unsainted",
     "DESCRIPTIONS": ["At the end of your turn, deal #b"," damage to ALL enemies for ALL of your status cards."]
+  },
+  "${ModID}:SeraphFormPower": {
+    "NAME": "Seraph Form",
+    "DESCRIPTIONS": ["Whenever you play a #yMiracle, gain #b"," #yPurity."]
+  },
+  "${ModID}:FallenFormPower": {
+    "NAME": "Fallen Form",
+    "DESCRIPTIONS": ["Whenever a #yVoid enters your hand, gain #b"," #yEnergy and #yTransform it."]
   }
 }

@@ -25,6 +25,10 @@
     "NAME": "Baneful Blast",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL ${ModID}:Corrupt."
   },
+  "${ModID}:BlessedWeapon": {
+    "NAME": "Blessed Weapon",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Holy: ${ModID}:Sharpen your hand by !M! this combat."
+  },
   "${ModID}:BreakThrough": {
     "NAME": "Break Through",
     "DESCRIPTION": "Deal !D! damage. NL If this deals unblocked damage, add !M! *Miracle{!M!|>1=s}{@@} into your hand."
@@ -192,6 +196,10 @@
     "NAME": "Righteous Blow",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Piety."
   },
+  "${ModID}:Sentence": {
+    "NAME": "Sentence",
+    "DESCRIPTION": "Deal !D! damage. NL When this enemy dies, add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+  },
   "${ModID}:SeraphForm": {
     "NAME": "Seraph Form",
     "DESCRIPTION": "Whenever you play a *Miracle, gain !M! ${ModID}:Purity."
@@ -207,6 +215,10 @@
   "${ModID}:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:SwordGuru": {
+    "NAME": "Sword Guru",
+    "DESCRIPTION": "Whenever you play an Attack, gain !M! ${ModID}:Piety."
   },
   "${ModID}:Taunt": {
     "NAME": "Taunt",
@@ -228,6 +240,10 @@
     "NAME": "Void Spirit",
     "DESCRIPTION": "Gain !M! ${ModID}:Purity. NL ${ModID}:Corrupt.",
     "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! ${ModID}:Purity. NL ${ModID}:Corrupt."
+  },
+  "${ModID}:WeaknessExploit": {
+    "NAME": "Weakness Exploit",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Weak, add !M! *Miracle{!M!|>1=s}{@@} into your hand."
   },
   "${ModID}:WeaponFusion": {
     "NAME": "Weapon Fusion",

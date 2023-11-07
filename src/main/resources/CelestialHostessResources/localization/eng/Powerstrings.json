@@ -86,5 +86,13 @@
   "${ModID}:FallenFormPower": {
     "NAME": "Fallen Form",
     "DESCRIPTIONS": ["Whenever a #yVoid enters your hand, gain #b"," #yEnergy and #yTransform it."]
+  },
+  "${ModID}:SentencePower": {
+    "NAME": "Sentenced",
+    "DESCRIPTIONS": ["When this enemy dies, add #b"," #yMiracle into your hand."," #yMiracles into your hand."]
+  },
+  "${ModID}:SwordGuruPower": {
+    "NAME": "Sword Guru",
+    "DESCRIPTIONS": ["Whenever you play an Attack, gain #b"," #yPiety."]
   }
 }

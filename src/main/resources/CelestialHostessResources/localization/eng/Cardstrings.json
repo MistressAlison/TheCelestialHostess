@@ -100,11 +100,11 @@
   },
   "${ModID}:Gambler": {
     "NAME": "Gambler",
-    "DESCRIPTION": "Whenever an Attack enters your hand, increase its damage by 0 to !M! this combat."
+    "DESCRIPTION": "Whenever an Attack enters your hand, ${ModID}:Sharpen it by 0 to !M! this combat."
   },
   "${ModID}:GearRepair": {
     "NAME": "Gear Repair",
-    "DESCRIPTION": "${ModID}:Tribute: Increase the Block of all Block gaining cards in your hand by !M! this combat."
+    "DESCRIPTION": "${ModID}:Tribute: ${ModID}:Polish your hand by !M! this combat."
   },
   "${ModID}:HallowedGround": {
     "NAME": "Hallowed Ground",

@@ -84,5 +84,23 @@
       "purity"
     ],
     "DESCRIPTION": "When you obtain #b10 Purity, take #b50% less damage from attacks and reflect attack damage taken for #b1 turn."
+  },
+  {
+    "ID": "sharpen",
+    "PROPER_NAME": "Sharpen",
+    "NAMES": [
+      "sharpen",
+      "sharpened"
+    ],
+    "DESCRIPTION": "Increase the damage of Attack cards."
+  },
+  {
+    "ID": "polish",
+    "PROPER_NAME": "Polish",
+    "NAMES": [
+      "polish",
+      "polished"
+    ],
+    "DESCRIPTION": "Increase the #yBlock of #yBlock gaining cards."
   }
 ]

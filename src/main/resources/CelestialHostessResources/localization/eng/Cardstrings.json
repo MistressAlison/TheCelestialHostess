@@ -92,7 +92,7 @@
   },
   "${ModID}:FallenForm": {
     "NAME": "Fallen Form",
-    "DESCRIPTION": "Whenever a *Void enters your hand, gain {@@}{!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|>3=!M! [E]} and Transform it. NL ${ModID}:Corrupt 3 times."
+    "DESCRIPTION": "Whenever a *Void enters your hand, gain !M! Strength. NL ${ModID}:Corrupt 3 times."
   },
   "${ModID}:FlameWalker": {
     "NAME": "Flame Walker",

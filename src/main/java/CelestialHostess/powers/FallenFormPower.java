@@ -1,10 +1,9 @@
 package CelestialHostess.powers;
 
 import CelestialHostess.MainModfile;
-import CelestialHostess.actions.BetterTransformCardInHandAction;
 import CelestialHostess.patches.EnterCardGroupPatches;
 import CelestialHostess.util.Wiz;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
@@ -12,6 +11,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class FallenFormPower extends AbstractPower implements EnterCardGroupPatches.OnEnterCardGroupPower {
     public static final String POWER_ID = MainModfile.makeID(FallenFormPower.class.getSimpleName());
@@ -38,8 +38,9 @@ public class FallenFormPower extends AbstractPower implements EnterCardGroupPatc
     public void onEnter(CardGroup g, AbstractCard c) {
         if (g == Wiz.adp().hand && c instanceof VoidCard) {
             flash();
-            addToBot(new BetterTransformCardInHandAction(c, Wiz.returnTrulyRandomPrediCardInCombat(card -> true)));
-            addToBot(new GainEnergyAction(amount));
+            //addToBot(new BetterTransformCardInHandAction(c, Wiz.returnTrulyRandomPrediCardInCombat(card -> true)));
+            //addToBot(new GainEnergyAction(amount));
+            addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount)));
         }
     }
 }

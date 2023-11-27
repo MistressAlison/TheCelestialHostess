@@ -33,7 +33,8 @@ public class UnsaintedPower extends AbstractPower {
     }
 
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-        int cards = (int) Wiz.getAllCardsInCardGroups(true, false).stream().filter(c -> c.type == AbstractCard.CardType.STATUS).count();
+        //int cards = (int) Wiz.getAllCardsInCardGroups(true, false).stream().filter(c -> c.type == AbstractCard.CardType.STATUS).count();
+        int cards = Wiz.adp().exhaustPile.size();
         if (cards > 0) {
             flash();
             addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(cards * this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));

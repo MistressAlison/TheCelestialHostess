@@ -14,7 +14,7 @@ public class Unsainted extends AbstractEasyCard {
 
     public Unsainted() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
@@ -24,7 +24,8 @@ public class Unsainted extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        //upgradeMagicNumber(1);
+        upgradeBaseCost(1);
     }
 
     @Override

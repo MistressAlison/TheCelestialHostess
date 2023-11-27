@@ -77,7 +77,7 @@
   },
   "${ModID}:UnsaintedPower": {
     "NAME": "Unsainted",
-    "DESCRIPTIONS": ["At the end of your turn, deal #b"," damage to ALL enemies for ALL of your status cards."]
+    "DESCRIPTIONS": ["At the end of your turn, deal #b"," damage to ALL enemies for each card in your Exhaust pile."]
   },
   "${ModID}:SeraphFormPower": {
     "NAME": "Seraph Form",

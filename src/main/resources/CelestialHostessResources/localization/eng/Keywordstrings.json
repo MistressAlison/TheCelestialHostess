@@ -102,5 +102,14 @@
       "polished"
     ],
     "DESCRIPTION": "Increase the #yBlock of #yBlock gaining cards."
+  },
+  {
+    "ID": "clutch",
+    "PROPER_NAME": "Clutch",
+    "NAMES": [
+      "clutch",
+      "clutched"
+    ],
+    "DESCRIPTION": "Right Click to #yExhaust this card and trigger an effect."
   }
 ]

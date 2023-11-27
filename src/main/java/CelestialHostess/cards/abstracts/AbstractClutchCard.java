@@ -1,6 +1,5 @@
 package CelestialHostess.cards.abstracts;
 
-import com.evacipated.cardcrawl.mod.stslib.patches.HitboxRightClick;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -14,18 +13,9 @@ public abstract class AbstractClutchCard extends AbstractEasyCard {
     }
 
     @Override
-    public void update() {
-        super.update();
-        if (AbstractDungeon.player != null) {
-            clickUpdate();
-        }
-    }
-
-    public void clickUpdate() {
-        if (!AbstractDungeon.isScreenUp && HitboxRightClick.rightClicked.get(this.hb) && !AbstractDungeon.actionManager.turnHasEnded && AbstractDungeon.player.hand.contains(this)) {
-            addToBot(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand, true));
-            onClutch();
-        }
+    public void onRightClick() {
+        addToBot(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand, true));
+        onClutch();
     }
 
     public abstract void onClutch();

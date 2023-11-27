@@ -88,7 +88,7 @@
   },
   "${ModID}:EternalVoice": {
     "NAME": "Eternal Voice",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Holy: Deal !D! damage to ALL enemies again."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies{!M!|>1= !M! times}{@@}. NL ${ModID}:Empower: Deal damage an additional time."
   },
   "${ModID}:FallenForm": {
     "NAME": "Fallen Form",
@@ -116,7 +116,7 @@
   },
   "${ModID}:GearRepair": {
     "NAME": "Gear Repair",
-    "DESCRIPTION": "${ModID}:Tribute: ${ModID}:Polish your hand by !M! this combat."
+    "DESCRIPTION": "${ModID}:Tribute: Upgrade all cards in your hand for the rest of combat. NL Exhaust."
   },
   "${ModID}:HallowedGround": {
     "NAME": "Hallowed Ground",

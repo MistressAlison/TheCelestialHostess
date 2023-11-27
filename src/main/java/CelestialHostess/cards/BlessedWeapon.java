@@ -35,14 +35,14 @@ public class BlessedWeapon extends AbstractEasyCard {
         addToBot(new SFXAction("ATTACK_HEAVY"));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
-        addToBot(new HolyAction(() -> new DoAction(() -> {
+        addToBot(new HolyAction(() -> {
             for (AbstractCard c : Wiz.adp().hand.group) {
                 if (c.baseDamage > 0 && c.type == CardType.ATTACK) {
                     c.superFlash(Color.GOLD.cpy());
                     CardModifierManager.addModifier(c, new FlatDamageMod(magicNumber));
                 }
             }
-        })));
+        }));
     }
 
     public void triggerOnGlowCheck() {

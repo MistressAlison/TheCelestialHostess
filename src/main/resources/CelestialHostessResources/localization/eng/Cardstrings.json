@@ -76,7 +76,7 @@
   },
   "${ModID}:Empower": {
     "NAME": "Empower",
-    "DESCRIPTION": "${ModID}:Tribute: Gain !M! ${ModID}:Piety."
+    "DESCRIPTION": "Gain !M! ${ModID}:Piety."
   },
   "${ModID}:Enfeeble": {
     "NAME": "Enfeeble",
@@ -116,7 +116,7 @@
   },
   "${ModID}:GearRepair": {
     "NAME": "Gear Repair",
-    "DESCRIPTION": "${ModID}:Tribute: Upgrade all cards in your hand for the rest of combat. NL Exhaust."
+    "DESCRIPTION": "Upgrade all cards in your hand for the rest of combat. NL Exhaust."
   },
   "${ModID}:HallowedGround": {
     "NAME": "Hallowed Ground",
@@ -160,8 +160,8 @@
   },
   "${ModID}:Oblation": {
     "NAME": "Oblation",
-    "DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Tribute: Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
   },
   "${ModID}:Parry": {
     "NAME": "Parry",

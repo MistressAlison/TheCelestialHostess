@@ -63,11 +63,11 @@
   },
   {
     "ID": "tribute",
-    "PROPER_NAME": "Tribute",
+    "PROPER_NAME": "Tribute [${ModID}:TributeIcon]",
     "NAMES": [
       "tribute"
     ],
-    "DESCRIPTION": "Exhaust a card in your hand to trigger an effect."
+    "DESCRIPTION": "Exhaust cards in your hand as an additional cost to play this card."
   },
   {
     "ID": "corrupt",

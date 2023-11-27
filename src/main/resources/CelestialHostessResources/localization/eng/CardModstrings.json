@@ -34,5 +34,8 @@
   },
   "${ModID}:XPMod": {
     "EXTENDED_DESCRIPTION": [" NL XP: "]
+  },
+  "${ModID}:TributeMod": {
+    "EXTENDED_DESCRIPTION": ["${ModID}:Tribute. NL "]
   }
 }

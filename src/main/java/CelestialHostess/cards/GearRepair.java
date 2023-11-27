@@ -1,7 +1,8 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.actions.TributeAction;
+import CelestialHostess.cardmods.TributeMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
 import com.megacrit.cardcrawl.cards.red.Armaments;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,11 +16,13 @@ public class GearRepair extends AbstractEasyCard {
     public GearRepair() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         exhaust = true;
+        CardModifierManager.addModifier(this, new TributeMod(1));
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new TributeAction(() -> addToTop(new ArmamentsAction(true))));
+        //addToBot(new TributeAction(() -> addToTop(new ArmamentsAction(true))));
+        addToBot(new ArmamentsAction(true));
     }
 
     @Override

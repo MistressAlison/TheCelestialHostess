@@ -1,8 +1,7 @@
-package CelestialHostess.cards;
+package CelestialHostess.cutStuff.cards;
 
 import CelestialHostess.actions.BetterSelectCardsInHandAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
-import CelestialHostess.cards.tokens.FlameBlessing;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

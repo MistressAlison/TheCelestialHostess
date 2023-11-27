@@ -120,5 +120,35 @@
       "empowered"
     ],
     "DESCRIPTION": "Right Click to Exhaust a #yMiracle and add an extra effect to this card for the rest of combat."
+  },
+  {
+    "ID": "fire_charge",
+    "PROPER_NAME": "Fire Charge",
+    "NAMES": [
+      "fire charge",
+      "fire_charge",
+      "fire_charges"
+    ],
+    "DESCRIPTION": "Whenever you play an Attack this turn, deal #b3 damage to ALL enemies."
+  },
+  {
+    "ID": "ice_charge",
+    "PROPER_NAME": "Ice Charge",
+    "NAMES": [
+      "ice charge",
+      "ice_charge",
+      "ice_charges"
+    ],
+    "DESCRIPTION": "Whenever you play a Skill this turn, gain #b2 #yBlock."
+  },
+  {
+    "ID": "wind_charge",
+    "PROPER_NAME": "Wind Charge",
+    "NAMES": [
+      "wind charge",
+      "wind_charge",
+      "wind_charges"
+    ],
+    "DESCRIPTION": "Whenever you #yExhaust a card this turn, draw #b1 card."
   }
 ]

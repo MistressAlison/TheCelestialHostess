@@ -94,5 +94,20 @@
   "${ModID}:SwordGuruPower": {
     "NAME": "Sword Guru",
     "DESCRIPTIONS": ["Whenever you play an Attack, gain #b"," #yPiety."]
+  },
+  "${ModID}:FireChargePower": {
+    "NAME": "Fire Charge",
+    "DESCRIPTIONS": ["This turn, whenever you play an Attack, deal #b"," damage to ALL enemies.",
+      "For #b"," turns, whenever you play an Attack, deal #b"]
+  },
+  "${ModID}:IceChargePower": {
+    "NAME": "Ice Charge",
+    "DESCRIPTIONS": ["This turn, whenever you play a Skill, gain #b"," #yBlock.",
+      "For #b"," turns, whenever you play a Skill, gain #b"]
+  },
+  "${ModID}:WindChargePower": {
+    "NAME": "Wind Charge",
+    "DESCRIPTIONS": ["This turn, whenever you #yExhaust a card, draw #b"," card."," cards.",
+      "For #b"," turns, whenever you #yExhaust a card, draw #b"]
   }
 }

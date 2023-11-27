@@ -2,8 +2,9 @@ package CelestialHostess.cards;
 
 import CelestialHostess.actions.EasyXCostAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
-import CelestialHostess.cards.tokens.FlameBlessing;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import CelestialHostess.powers.FireChargePower;
+import CelestialHostess.powers.WindChargePower;
+import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.cards.purple.Eruption;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,7 +17,7 @@ public class FlashPoint extends AbstractEasyCard {
     public FlashPoint() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 0;
-        cardsToPreview = new FlameBlessing();
+        //cardsToPreview = new FlameBlessing();
         exhaust = true;
     }
 
@@ -28,7 +29,8 @@ public class FlashPoint extends AbstractEasyCard {
                 effect += i;
             }
             if (effect > 0) {
-                addToTop(new MakeTempCardInHandAction(new FlameBlessing(), effect));
+                Wiz.applyToSelfTop(new FireChargePower(p, effect));
+                //addToTop(new MakeTempCardInHandAction(new FlameBlessing(), effect));
             }
             return true;
         }, magicNumber));

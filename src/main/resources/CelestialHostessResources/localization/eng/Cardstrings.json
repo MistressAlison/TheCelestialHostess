@@ -96,19 +96,19 @@
   },
   "${ModID}:FlameWalker": {
     "NAME": "Flame Walker",
-    "DESCRIPTION": "Draw !${ModID}:M2! card{!${ModID}:M2!|>1=s}. NL Add !M! *Flame *Blessing{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "Draw !${ModID}:M2! card{!${ModID}:M2!|>1=s}. NL Gain !M! ${ModID}:Fire_Charge{!M!|>1=s}{@@}."
   },
   "${ModID}:FlashPoint": {
     "NAME": "Flash Point",
-    "DESCRIPTION": "Add X{@@}{!M!|>0= + !M!} *Flame *Blessings into your hand. NL Exhaust."
+    "DESCRIPTION": "Gain X{@@}{!M!|>0= + !M!} ${ModID}:Fire_Charges. NL Exhaust."
   },
   "${ModID}:FrostShard": {
     "NAME": "Frost Shard",
-    "DESCRIPTION": "Deal !D! damage. NL Add !M! *Frost *Blessing{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Ice_Charge{!M!|>1=s}{@@}."
   },
   "${ModID}:GaleForce": {
     "NAME": "Gale Force",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Gale *Blessing{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Wind_Charge{!M!|>1=s}{@@}."
   },
   "${ModID}:Gambler": {
     "NAME": "Gambler",
@@ -210,7 +210,7 @@
   },
   "${ModID}:SnowStorm": {
     "NAME": "Snow Storm",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Frost *Blessing{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Ice_Charge{!M!|>1=s}{@@}."
   },
   "${ModID}:Strike": {
     "NAME": "Strike",
@@ -259,6 +259,6 @@
   },
   "${ModID}:Zephyr": {
     "NAME": "Zephyr",
-    "DESCRIPTION": "Gain !M! ${ModID}:Piety. NL Add 1 *Gale *Blessing into your hand."
+    "DESCRIPTION": "Gain !M! ${ModID}:Piety. NL Gain 1 ${ModID}:Wind_Charge."
   }
 }

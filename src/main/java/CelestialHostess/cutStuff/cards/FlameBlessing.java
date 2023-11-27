@@ -1,4 +1,4 @@
-package CelestialHostess.cards.tokens;
+package CelestialHostess.cutStuff.cards;
 
 import CelestialHostess.actions.DoForEachMiracleAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;

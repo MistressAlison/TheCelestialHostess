@@ -1,7 +1,7 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
-import CelestialHostess.cards.tokens.FrostBlessing;
+import CelestialHostess.powers.IceChargePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.blue.ColdSnap;
@@ -15,15 +15,16 @@ public class FrostShard extends AbstractEasyCard {
 
     public FrostShard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = damage = 6;
+        baseDamage = damage = 7;
         baseMagicNumber = magicNumber = 1;
-        cardsToPreview = new FrostBlessing();
+        //cardsToPreview = new FrostBlessing();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        Wiz.makeInHand(new FrostBlessing(), magicNumber);
+        //Wiz.makeInHand(new FrostBlessing(), magicNumber);
+        Wiz.applyToSelf(new IceChargePower(p, magicNumber));
     }
 
     @Override

@@ -1,7 +1,7 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
-import CelestialHostess.cards.tokens.GaleBlessing;
+import CelestialHostess.powers.WindChargePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.cards.green.Blur;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,15 +14,16 @@ public class GaleForce extends AbstractEasyCard {
 
     public GaleForce() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = block = 5;
+        baseBlock = block = 8;
         baseMagicNumber = magicNumber = 1;
-        cardsToPreview = new GaleBlessing();
+        //cardsToPreview = new GaleBlessing();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        Wiz.makeInHand(new GaleBlessing(), magicNumber);
+        //Wiz.makeInHand(new GaleBlessing(), magicNumber);
+        Wiz.applyToSelf(new WindChargePower(p, magicNumber));
     }
 
     @Override

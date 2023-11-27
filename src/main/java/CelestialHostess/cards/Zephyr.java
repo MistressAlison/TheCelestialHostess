@@ -1,8 +1,8 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
-import CelestialHostess.cards.tokens.GaleBlessing;
 import CelestialHostess.powers.PietyPower;
+import CelestialHostess.powers.WindChargePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.cards.green.Burst;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,13 +16,13 @@ public class Zephyr extends AbstractEasyCard {
     public Zephyr() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        cardsToPreview = new GaleBlessing();
+        //cardsToPreview = new GaleBlessing();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.applyToSelf(new PietyPower(p, magicNumber));
-        Wiz.makeInHand(new GaleBlessing(), 1);
+        Wiz.applyToSelf(new WindChargePower(p, 1));
     }
 
     @Override

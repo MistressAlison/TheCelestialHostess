@@ -1,6 +1,8 @@
 package CelestialHostess.relics;
 
 import CelestialHostess.TheCelestialHostess;
+import CelestialHostess.cardmods.MiracleTracker;
+import basemod.helpers.CardModifierManager;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -26,7 +28,6 @@ public class HolyOrb extends AbstractEasyRelic {
     private final String PER_TURN = DESCRIPTIONS[2];
     private final String PER_COMBAT = DESCRIPTIONS[3];
     private final String LOST = DESCRIPTIONS[4];
-    private int triggersLeft;
 
     public HolyOrb() {
         super(ID, RelicTier.STARTER, LandingSound.MAGICAL, TheCelestialHostess.Enums.CELESTIAL_CHARDONNAY_COLOR);
@@ -38,23 +39,16 @@ public class HolyOrb extends AbstractEasyRelic {
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new LoseEnergyAction(1));
-        addToBot(new MakeTempCardInHandAction(new Miracle(), 2));
+        AbstractCard miracle = new Miracle();
+        CardModifierManager.addModifier(miracle, new MiracleTracker());
+        addToBot(new MakeTempCardInHandAction(miracle, 2));
         incrementStat(-1);
-        triggersLeft = 2;
     }
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (triggersLeft > 0) {
-            if (c instanceof Miracle) {
-                triggersLeft--;
-                incrementStat(1);
-            }
-            /*if (c.hasTag(CustomTags.HOSTESS_FOR_EACH_MIRACLE)) {
-                incrementStat(triggersLeft);
-            } else if (c.hasTag(CustomTags.HOSTESS_IF_MIRACLE)) {
-                incrementStat(1);
-            }*/
+        if (CardModifierManager.hasModifier(c, MiracleTracker.ID)) {
+            incrementStat(1);
         }
     }
 

@@ -51,7 +51,7 @@
     "NAMES": [
       "piety"
     ],
-    "DESCRIPTION": "Piety adds additional damage to attacks. Each turn, Piety is reduced by #b1."
+    "DESCRIPTION": "Piety adds additional damage to attacks this turn."
   },
   {
     "ID": "holy",

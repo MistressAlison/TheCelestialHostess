@@ -1,7 +1,7 @@
 package CelestialHostess.powers;
 
 import CelestialHostess.MainModfile;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,7 +20,7 @@ public class PietyPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.isTurnBased = true;
+        this.isTurnBased = false;
         this.loadRegion("nirvana");
         updateDescription();
     }
@@ -37,6 +37,7 @@ public class PietyPower extends AbstractPower {
 
     @Override
     public void atEndOfRound() {
-        this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
+        //this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 }

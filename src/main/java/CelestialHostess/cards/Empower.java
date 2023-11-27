@@ -15,7 +15,7 @@ public class Empower extends AbstractEasyCard {
 
     public Empower() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class Empower extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 
     @Override

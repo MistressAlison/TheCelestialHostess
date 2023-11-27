@@ -23,7 +23,7 @@ public class UnsaintedPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.loadRegion("corruption");
+        this.loadRegion("darkembrace");
         updateDescription();
     }
 

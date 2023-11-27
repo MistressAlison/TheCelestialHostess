@@ -110,6 +110,15 @@
       "clutch",
       "clutched"
     ],
-    "DESCRIPTION": "Right Click to #yExhaust this card and trigger an effect."
+    "DESCRIPTION": "Right Click to #rExhaust this card and trigger an effect."
+  },
+  {
+    "ID": "empower",
+    "PROPER_NAME": "Empower",
+    "NAMES": [
+      "empower",
+      "empowered"
+    ],
+    "DESCRIPTION": "Right Click to Exhaust a #yMiracle and add an extra effect to this card for the rest of combat."
   }
 ]

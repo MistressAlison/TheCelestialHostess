@@ -17,6 +17,7 @@ public class KeywordManager {
     public static String SHARPEN;
     public static String POLISH;
     public static String CLUTCH;
+    public static String EMPOWER;
 
     public static String getKeyword(String ID) {
         return keywordMap.getOrDefault(ID, "");

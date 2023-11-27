@@ -131,6 +131,8 @@ public abstract class AbstractEasyCard extends CustomCard {
     protected boolean needsArtRefresh = false;
     protected boolean manualD2 = false;
 
+    protected AbstractGameAction clickAction;
+
     public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, TheCelestialHostess.Enums.CELESTIAL_CHARDONNAY_COLOR);
     }
@@ -363,8 +365,19 @@ public abstract class AbstractEasyCard extends CustomCard {
     }
 
     public void clickUpdate() {
-        if (!AbstractDungeon.isScreenUp && HitboxRightClick.rightClicked.get(this.hb) && !AbstractDungeon.actionManager.turnHasEnded && AbstractDungeon.player.hand.contains(this)) {
-            onRightClick();
+        if (!AbstractDungeon.isScreenUp && HitboxRightClick.rightClicked.get(this.hb) && !AbstractDungeon.actionManager.turnHasEnded && AbstractDungeon.player.hand.contains(this) && clickAction == null) {
+            clickAction = new AbstractGameAction() {
+                {
+                    this.source = AbstractDungeon.player;
+                }
+                @Override
+                public void update() {
+                    onRightClick();
+                    clickAction = null;
+                    this.isDone = true;
+                }
+            };
+            addToBot(clickAction);
         }
     }
 

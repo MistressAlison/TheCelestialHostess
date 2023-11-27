@@ -136,7 +136,7 @@
   },
   "${ModID}:ManaMaster": {
     "NAME": "Mana Master",
-    "DESCRIPTION": "Whenever you gain Energy, gain !M! additional Energy."
+    "DESCRIPTION": "Whenever you gain Energy, increase the amount you gain by !M!."
   },
   "${ModID}:MastersGaze": {
     "NAME": "Master's Gaze",

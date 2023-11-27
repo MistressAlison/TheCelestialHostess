@@ -32,14 +32,9 @@ public class AbsolutionPower extends AbstractPower implements EnergyGainPatch.On
     }
 
     @Override
-    public void onEnergyRecharge() {
+    public int onGainEnergy(int amount) {
         flash();
         addToTop(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
-    }
-
-    @Override
-    public void onGainEnergy(int amount) {
-        flash();
-        addToTop(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
+        return amount;
     }
 }

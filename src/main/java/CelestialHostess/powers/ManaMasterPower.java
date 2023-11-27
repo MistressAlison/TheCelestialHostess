@@ -1,9 +1,7 @@
 package CelestialHostess.powers;
 
 import CelestialHostess.MainModfile;
-import CelestialHostess.actions.DoAction;
 import CelestialHostess.patches.EnergyGainPatch;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -31,18 +29,8 @@ public class ManaMasterPower extends AbstractPower implements EnergyGainPatch.On
     }
 
     @Override
-    public void onEnergyRecharge() {
+    public int onGainEnergy(int amount) {
         flash();
-        addToTop(new DoAction(() -> EnergyGainPatch.hookActive = true));
-        addToTop(new GainEnergyAction(this.amount));
-        addToTop(new DoAction(() -> EnergyGainPatch.hookActive = false));
-    }
-
-    @Override
-    public void onGainEnergy(int amount) {
-        flash();
-        addToTop(new DoAction(() -> EnergyGainPatch.hookActive = true));
-        addToTop(new GainEnergyAction(this.amount));
-        addToTop(new DoAction(() -> EnergyGainPatch.hookActive = false));
+        return amount + this.amount;
     }
 }

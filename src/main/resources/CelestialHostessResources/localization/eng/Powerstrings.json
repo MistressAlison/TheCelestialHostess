@@ -57,7 +57,7 @@
   },
   "${ModID}:ManaMasterPower": {
     "NAME": "Mana Master",
-    "DESCRIPTIONS": ["Whenever you gain #yEnergy, gain #b"," additional #yEnergy."]
+    "DESCRIPTIONS": ["Whenever you gain #yEnergy, increase the amount you gain by #b","."]
   },
   "${ModID}:AbsolutionPower": {
     "NAME": "Absolution",

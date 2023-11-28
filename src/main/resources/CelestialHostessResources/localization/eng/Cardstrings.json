@@ -247,7 +247,7 @@
   },
   "${ModID}:WeaponFusion": {
     "NAME": "Weapon Fusion",
-    "DESCRIPTION": "Exhaust up to !M! Attacks in your hand. NL Add a *Flame *Blessing with their combined damage into your hand. NL Exhaust."
+    "DESCRIPTION": "Exhaust up to !M! Attacks in your hand. NL Add a *Strike with their combined damage into your hand. NL Exhaust."
   },
   "${ModID}:Withstand": {
     "NAME": "Withstand",

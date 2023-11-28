@@ -59,9 +59,17 @@
     "NAME": "Danger Close",
     "DESCRIPTION": "Whenever a card is Exhausted, deal !M! damage to a random enemy."
   },
+  "${ModID}:DarkDesires": {
+    "NAME": "Dark Desires",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each buff the enemy has. NL ${ModID}:Corrupt."
+  },
   "${ModID}:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:DetonateDead": {
+    "NAME": "Detonate Dead",
+    "DESCRIPTION": "Deal !D! damage. NL When this enemy dies, deal !M! damage to ALL enemies."
   },
   "${ModID}:DireStrike": {
     "NAME": "Dire Strike",
@@ -209,6 +217,14 @@
   "${ModID}:Punishment": {
     "NAME": "Punishment",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! card{@@}{!M!|>1=s} if you have a *Miracle in your hand."
+  },
+  "${ModID}:Pyre": {
+    "NAME": "Pyre",
+    "DESCRIPTION": "Draw !M! cards."
+  },
+  "${ModID}:RayOfLight": {
+    "NAME": "Ray of Light",
+    "DESCRIPTION": "Costs 1 less [E] for each Miracle played this turn. NL Deal !D! damage."
   },
   "${ModID}:RelentlessAssault": {
     "NAME": "Relentless Assault",

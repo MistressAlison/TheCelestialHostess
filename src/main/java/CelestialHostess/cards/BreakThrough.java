@@ -17,7 +17,7 @@ public class BreakThrough extends AbstractEasyCard {
 
     public BreakThrough() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = damage = 8;
+        baseDamage = damage = 9;
         baseMagicNumber = magicNumber = 1;
         cardsToPreview = new Miracle();
     }

@@ -164,6 +164,7 @@ public class MainModfile implements
         BaseMod.addDynamicVariable(new DynvarInterfaceManager());
 
         CustomIconHelper.addCustomIcon(IconContainer.TributeIcon.get());
+        CustomIconHelper.addCustomIcon(IconContainer.SharpenIcon.get());
 
         new AutoAdd(modID)
                 .packageFilter(modID+".cards")

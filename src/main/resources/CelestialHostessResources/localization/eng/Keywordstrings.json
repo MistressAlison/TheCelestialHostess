@@ -87,7 +87,7 @@
   },
   {
     "ID": "sharpen",
-    "PROPER_NAME": "Sharpen",
+    "PROPER_NAME": "Sharpen [${ModID}:SharpenIcon]",
     "NAMES": [
       "sharpen",
       "sharpened"

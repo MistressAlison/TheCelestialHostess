@@ -224,7 +224,7 @@
   },
   "${ModID}:RayOfLight": {
     "NAME": "Ray of Light",
-    "DESCRIPTION": "Costs 1 less [E] for each Miracle played this turn. NL Deal !D! damage."
+    "DESCRIPTION": "Costs 1 less [E] for each *Miracle played this turn. NL Deal !D! damage."
   },
   "${ModID}:RelentlessAssault": {
     "NAME": "Relentless Assault",

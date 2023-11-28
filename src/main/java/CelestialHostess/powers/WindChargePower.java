@@ -16,7 +16,7 @@ public class WindChargePower extends AbstractPower implements PowerOrbitPatches.
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static int EFFECT = 2;
+    public static int EFFECT = 1;
 
     public WindChargePower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;

@@ -15,7 +15,7 @@ public class SnowStorm extends AbstractEasyCard {
     public SnowStorm() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = block = 7;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         //cardsToPreview = new FrostBlessing();
     }
 

@@ -129,7 +129,7 @@
       "fire_charge",
       "fire_charges"
     ],
-    "DESCRIPTION": "The next time you play an Attack, deal #b6 damage to ALL enemies."
+    "DESCRIPTION": "The next time you play an Attack, deal #b4 damage to ALL enemies."
   },
   {
     "ID": "ice_charge",
@@ -139,7 +139,7 @@
       "ice_charge",
       "ice_charges"
     ],
-    "DESCRIPTION": "The next time you play a Skill, gain #b5 #yBlock."
+    "DESCRIPTION": "The next time you play a Skill, gain #b3 #yBlock."
   },
   {
     "ID": "wind_charge",
@@ -149,7 +149,7 @@
       "wind_charge",
       "wind_charges"
     ],
-    "DESCRIPTION": "The next time you #yExhaust a card, draw #b2 cards."
+    "DESCRIPTION": "The next time you #yExhaust a card, draw #b1 card."
   },
   {
     "ID": "light_charge",

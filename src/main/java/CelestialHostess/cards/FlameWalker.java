@@ -16,7 +16,7 @@ public class FlameWalker extends AbstractEasyCard {
     public FlameWalker() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseSecondMagic = secondMagic = 1;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         //cardsToPreview = new FlameBlessing();
     }
 

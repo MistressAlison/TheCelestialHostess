@@ -15,7 +15,7 @@ public class GaleForce extends AbstractEasyCard {
     public GaleForce() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = 6;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         //cardsToPreview = new GaleBlessing();
     }
 

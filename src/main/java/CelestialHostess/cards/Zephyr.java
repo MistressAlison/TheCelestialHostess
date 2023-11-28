@@ -24,14 +24,14 @@ public class Zephyr extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //Wiz.applyToSelf(new PietyPower(p, magicNumber));
-        Wiz.applyToSelf(new WindChargePower(p, 1));
+        Wiz.applyToSelf(new WindChargePower(p, magicNumber));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
         addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, magicNumber)));
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 
     @Override

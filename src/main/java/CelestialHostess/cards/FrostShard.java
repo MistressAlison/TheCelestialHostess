@@ -16,7 +16,7 @@ public class FrostShard extends AbstractEasyCard {
     public FrostShard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 7;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         //cardsToPreview = new FrostBlessing();
     }
 

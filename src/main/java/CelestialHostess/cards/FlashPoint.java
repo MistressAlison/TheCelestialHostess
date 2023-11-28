@@ -15,9 +15,9 @@ public class FlashPoint extends AbstractEasyCard {
 
     public FlashPoint() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 0;
+        baseMagicNumber = magicNumber = 2;
         //cardsToPreview = new FlameBlessing();
-        //exhaust = true;
+        exhaust = true;
     }
 
     @Override
@@ -28,11 +28,11 @@ public class FlashPoint extends AbstractEasyCard {
                 effect += i;
             }
             if (effect > 0) {
-                Wiz.applyToSelfTop(new FireChargePower(p, effect));
+                Wiz.applyToSelfTop(new FireChargePower(p, magicNumber*effect));
                 //addToTop(new MakeTempCardInHandAction(new FlameBlessing(), effect));
             }
             return true;
-        }, magicNumber));
+        }));
     }
 
     @Override

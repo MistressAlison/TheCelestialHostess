@@ -114,5 +114,9 @@
     "NAME": "Light Charge",
     "DESCRIPTIONS": ["The next card you play costs #b0 and is played twice.",
       "The next #b"," cards you play cost #b0 and are played twice."]
+  },
+  "${ModID}:StrikeBuffPower": {
+    "NAME": "Strike Up",
+    "DESCRIPTIONS": ["Cards containing #yStrike deal #b"," additional damage this turn."]
   }
 }

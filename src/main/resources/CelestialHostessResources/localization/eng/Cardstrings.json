@@ -180,6 +180,10 @@
     "NAME": "Piercing Arrow",
     "DESCRIPTION": "Deal !D! damage X times. NL Costs 0 if you have a *Miracle in your hand."
   },
+  "${ModID}:Piety": {
+    "NAME": "Piety",
+    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL At the end of this turn, lose !M! Strength and Dexterity."
+  },
   "${ModID}:Punishment": {
     "NAME": "Punishment",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! card{@@}{!M!|>1=s} if you have a *Miracle in your hand."

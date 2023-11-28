@@ -29,9 +29,10 @@ public class Sentence extends AbstractEasyCard {
         if (m != null) {
             addToBot(new SFXAction("THUNDERCLAP", 0.05F));
             addToBot(new VFXAction(new LightningEffect(m.drawX, m.drawY), 0.05F));
+            Wiz.applyToEnemy(m, new SentencePower(m, magicNumber));
         }
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        Wiz.applyToEnemy(m, new SentencePower(m, magicNumber));
+
     }
 
     @Override

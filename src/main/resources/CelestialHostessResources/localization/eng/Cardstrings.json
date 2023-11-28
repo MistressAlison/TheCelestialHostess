@@ -128,7 +128,7 @@
   },
   "${ModID}:Lightmare": {
     "NAME": "Lightmare",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL ${ModID}:Holy: ${ModID}:Corrupt."
+    "DESCRIPTION": "Gain !M! ${ModID}:Light_Charge{!M!|>1=s}{@@}. NL ${ModID}:Corrupt. Exhaust."
   },
   "${ModID}:MagicWall": {
     "NAME": "Magic Wall",

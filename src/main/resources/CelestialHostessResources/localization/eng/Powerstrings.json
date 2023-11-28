@@ -130,5 +130,13 @@
   "${ModID}:ReckoningPower": {
     "NAME": "Reckoning",
     "DESCRIPTIONS": ["This creature loses #b"," HP whenever you play a card."]
+  },
+  "${ModID}:FervorPower": {
+    "NAME": "Fervor",
+    "DESCRIPTIONS": ["Cards containing \"Strike\" are played twice this turn.","Cards containing \"Strike\" are played twice for #b"," turns."]
+  },
+  "${ModID}:StrikeningPower": {
+    "NAME": "Strikening",
+    "DESCRIPTIONS": ["Whenever you play a cards containing \"Strike\" this turn, deal #b"," damage to a random enemy."]
   }
 }

@@ -111,6 +111,10 @@
     "NAME": "Fallen Form",
     "DESCRIPTION": "Whenever a *Void enters your hand, gain !M! Strength. NL ${ModID}:Corrupt 3 times."
   },
+  "${ModID}:Fervor": {
+    "NAME": "Fervor",
+    "DESCRIPTION": "Cards containing \"Strike\" are played twice {!M!|1=this turn|>1=for !M! turns}{@@}."
+  },
   "${ModID}:FlameWalker": {
     "NAME": "Flame Walker",
     "DESCRIPTION": "Draw !${ModID}:M2! card{!${ModID}:M2!|>1=s}. NL Gain !M! ${ModID}:Fire_Charge{!M!|>1=s}{@@}."
@@ -269,6 +273,10 @@
   "${ModID}:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:Strikening": {
+    "NAME": "Strikening",
+    "DESCRIPTION": "Add !M! modified *Strikes into your hand. NL Whenever you play a card containing \"Strike\" this turn, deal !${ModID}:M2! damage to a random enemy."
   },
   "${ModID}:SwordGuru": {
     "NAME": "Sword Guru",

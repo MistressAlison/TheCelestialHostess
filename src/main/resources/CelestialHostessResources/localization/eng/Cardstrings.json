@@ -244,7 +244,7 @@
   },
   "${ModID}:ResoundingImpact": {
     "NAME": "Resounding Impact",
-    "DESCRIPTION": "Deal !D! damage. NL Increase this card's damage by !M! this combat."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Sharpen this card by !M! this combat."
   },
   "${ModID}:RighteousBlow": {
     "NAME": "Righteous Blow",

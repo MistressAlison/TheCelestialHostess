@@ -26,7 +26,7 @@ public class WeaponFusion extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BetterSelectCardsInHandAction(2, ExhaustAction.TEXT[0], true, true, c -> c.type == CardType.ATTACK, l -> {
+        addToBot(new BetterSelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0], true, true, c -> c.type == CardType.ATTACK, l -> {
             AbstractCard card = new Strike();
             card.baseDamage = 0;
             for (AbstractCard c : l) {

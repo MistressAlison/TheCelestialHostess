@@ -216,6 +216,10 @@
     "NAME": "Serenity",
     "DESCRIPTION": "Add !M! *Miracle{!M!|>1=s}{@@} into your hand next turn."
   },
+  "${ModID}:Sheathe": {
+    "NAME": "Sheathe",
+    "DESCRIPTION": "Gain !B! Block. NL Cards containing \"Strike\" deal !M! additional damage this turn."
+  },
   "${ModID}:SnowStorm": {
     "NAME": "Snow Storm",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Ice_Charge{!M!|>1=s}{@@}."

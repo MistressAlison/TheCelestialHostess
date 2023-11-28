@@ -3,7 +3,7 @@ package CelestialHostess.cards;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.powers.SwordGuruPower;
 import CelestialHostess.util.Wiz;
-import com.megacrit.cardcrawl.cards.red.SecondWind;
+import com.megacrit.cardcrawl.cards.red.InfernalBlade;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -29,6 +29,6 @@ public class SwordGuru extends AbstractEasyCard {
 
     @Override
     public String cardArtCopy() {
-        return SecondWind.ID;
+        return InfernalBlade.ID;
     }
 }

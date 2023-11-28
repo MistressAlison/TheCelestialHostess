@@ -1,3 +1,4 @@
+/*
 package CelestialHostess.patches;
 
 import CelestialHostess.vfx.CustomEmpowerEffect;
@@ -73,7 +74,8 @@ public class EmpowerRedirectPatches {
         }
     }
 
-    /*@SpirePatch2(clz = Soul.class, method = "update")
+    */
+/*@SpirePatch2(clz = Soul.class, method = "update")
     public static class DoCirclesInTheCorrectSpotPls {
         @SpireInstrumentPatch
         public static ExprEditor patch() {
@@ -90,7 +92,8 @@ public class EmpowerRedirectPatches {
                 }
             };
         }
-    }*/
+    }*//*
+
 
     @SpirePatch2(clz = Soul.class, method = "update")
     public static class DoCirclesInTheCorrectSpotPls {
@@ -111,3 +114,4 @@ public class EmpowerRedirectPatches {
     }
 
 }
+*/

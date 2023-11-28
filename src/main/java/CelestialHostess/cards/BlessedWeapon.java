@@ -1,7 +1,6 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.actions.DoAction;
-import CelestialHostess.actions.HolyAction;
+import CelestialHostess.actions.DoForEachMiracleAction;
 import CelestialHostess.cardmods.FlatDamageMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.patches.CustomTags;
@@ -26,8 +25,8 @@ public class BlessedWeapon extends AbstractEasyCard {
     public BlessedWeapon() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = damage = 10;
-        baseMagicNumber = magicNumber = 5;
-        tags.add(CustomTags.HOSTESS_IF_MIRACLE);
+        baseMagicNumber = magicNumber = 1;
+        tags.add(CustomTags.HOSTESS_FOR_EACH_MIRACLE);
     }
 
     @Override
@@ -35,7 +34,7 @@ public class BlessedWeapon extends AbstractEasyCard {
         addToBot(new SFXAction("ATTACK_HEAVY"));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
-        addToBot(new HolyAction(() -> {
+        addToBot(new DoForEachMiracleAction(() -> {
             for (AbstractCard c : Wiz.adp().hand.group) {
                 if (c.baseDamage > 0 && c.type == CardType.ATTACK) {
                     c.superFlash(Color.GOLD.cpy());
@@ -55,7 +54,7 @@ public class BlessedWeapon extends AbstractEasyCard {
     @Override
     public void upp() {
         upgradeDamage(4);
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 
     @Override

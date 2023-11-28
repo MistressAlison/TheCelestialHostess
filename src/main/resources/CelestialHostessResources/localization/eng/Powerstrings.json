@@ -126,5 +126,9 @@
   "${ModID}:DetonateDeadPower": {
     "NAME": "Detonate Dead",
     "DESCRIPTIONS": ["When this enemy dies, deal #b"," damage to ALL enemies."]
+  },
+  "${ModID}:ReckoningPower": {
+    "NAME": "Reckoning",
+    "DESCRIPTIONS": ["This creature loses #b"," HP whenever you play a card."]
   }
 }

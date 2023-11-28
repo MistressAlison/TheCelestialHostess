@@ -226,6 +226,10 @@
     "NAME": "Ray of Light",
     "DESCRIPTION": "Costs 1 less [E] for each *Miracle played this turn. NL Deal !D! damage."
   },
+  "${ModID}:Reckoning": {
+    "NAME": "Reckoning",
+    "DESCRIPTION": "Enemy loses !M! HP whenever you play a card."
+  },
   "${ModID}:RelentlessAssault": {
     "NAME": "Relentless Assault",
     "DESCRIPTION": "Deal !D! damage !M! times. NL Increase this card's hits by 1 this combat. NL ${ModID}:Corrupt."

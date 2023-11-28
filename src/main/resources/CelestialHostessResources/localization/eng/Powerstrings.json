@@ -93,7 +93,7 @@
   },
   "${ModID}:SwordGuruPower": {
     "NAME": "Sword Guru",
-    "DESCRIPTIONS": ["Whenever you play an Attack, gain #b"," #yPiety."]
+    "DESCRIPTIONS": ["Whenever you play an Attack, gain #b"," temporary #yStrength."]
   },
   "${ModID}:FireChargePower": {
     "NAME": "Fire Charge",

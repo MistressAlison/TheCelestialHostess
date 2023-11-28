@@ -13,8 +13,8 @@ public class SwordGuru extends AbstractEasyCard {
     public final static String ID = makeID(SwordGuru.class.getSimpleName());
 
     public SwordGuru() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override

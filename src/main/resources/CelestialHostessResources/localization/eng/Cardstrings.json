@@ -76,7 +76,7 @@
   },
   "${ModID}:Empower": {
     "NAME": "Empower",
-    "DESCRIPTION": "Gain !M! ${ModID}:Piety."
+    "DESCRIPTION": "Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
   },
   "${ModID}:Enfeeble": {
     "NAME": "Enfeeble",
@@ -198,7 +198,7 @@
   },
   "${ModID}:RighteousBlow": {
     "NAME": "Righteous Blow",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Piety."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
   },
   "${ModID}:Sentence": {
     "NAME": "Sentence",
@@ -222,7 +222,7 @@
   },
   "${ModID}:SwordGuru": {
     "NAME": "Sword Guru",
-    "DESCRIPTION": "Whenever you play an Attack, gain !M! ${ModID}:Piety."
+    "DESCRIPTION": "Whenever you play an Attack, gain !M! temporary Strength."
   },
   "${ModID}:Taunt": {
     "NAME": "Taunt",
@@ -259,10 +259,10 @@
   },
   "${ModID}:Zeal": {
     "NAME": "Zeal",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Piety."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
   },
   "${ModID}:Zephyr": {
     "NAME": "Zephyr",
-    "DESCRIPTION": "Gain !M! ${ModID}:Piety. NL Gain 1 ${ModID}:Wind_Charge."
+    "DESCRIPTION": "Gain 1 ${ModID}:Wind_Charge. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
   }
 }

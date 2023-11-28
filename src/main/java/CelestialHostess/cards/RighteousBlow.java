@@ -1,12 +1,13 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
-import CelestialHostess.powers.PietyPower;
-import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.purple.EmptyFist;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static CelestialHostess.MainModfile.makeID;
 
@@ -22,7 +23,9 @@ public class RighteousBlow extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        Wiz.applyToSelf(new PietyPower(p, magicNumber));
+        //Wiz.applyToSelf(new PietyPower(p, magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, magicNumber)));
     }
 
     @Override

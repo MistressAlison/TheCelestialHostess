@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class SwordGuruPower extends AbstractPower {
     public static final String POWER_ID = MainModfile.makeID(SwordGuruPower.class.getSimpleName());
@@ -33,7 +35,9 @@ public class SwordGuruPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
             flash();
-            addToTop(new ApplyPowerAction(owner, owner, new PietyPower(owner, amount)));
+            //addToTop(new ApplyPowerAction(owner, owner, new PietyPower(owner, amount)));
+            addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount)));
+            addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount)));
         }
     }
 }

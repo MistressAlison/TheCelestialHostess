@@ -58,6 +58,10 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "${ModID}:DireStrike": {
+    "NAME": "Dire Strike",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, deal !D! damage again."
+  },
   "${ModID}:Disengage": {
     "NAME": "Disengage",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies."
@@ -117,6 +121,10 @@
   "${ModID}:GearRepair": {
     "NAME": "Gear Repair",
     "DESCRIPTION": "Upgrade all cards in your hand for the rest of combat. NL Exhaust."
+  },
+  "${ModID}:GlowingStrike": {
+    "NAME": "Glowing Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card for each unique ${ModID}:Charge you have."
   },
   "${ModID}:HallowedGround": {
     "NAME": "Hallowed Ground",

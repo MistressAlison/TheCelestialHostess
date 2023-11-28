@@ -39,9 +39,19 @@ public class WindChargePower extends AbstractPower implements PowerOrbitPatches.
 
     @Override
     public void onExhaust(AbstractCard card) {
+        onSpecificTrigger();
+    }
+
+    @Override
+    public void onSpecificTrigger() {
         flash();
         addToBot(new DrawCardAction(EFFECT));
-        addToBot(new ReducePowerAction(owner, owner, this, 1));
+        AbstractPower preserve = owner.getPower(ChargePreservationPower.POWER_ID);
+        if (preserve != null && preserve.amount > 0) {
+            preserve.onSpecificTrigger();
+        } else {
+            addToBot(new ReducePowerAction(owner, owner, this, 1));
+        }
     }
 
     @Override

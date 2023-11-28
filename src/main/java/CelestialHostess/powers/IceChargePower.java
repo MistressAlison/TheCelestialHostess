@@ -41,8 +41,18 @@ public class IceChargePower extends AbstractPower implements PowerOrbitPatches.O
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.SKILL) {
-            flash();
-            addToBot(new GainBlockAction(owner, owner, EFFECT));
+            onSpecificTrigger();
+        }
+    }
+
+    @Override
+    public void onSpecificTrigger() {
+        flash();
+        addToBot(new GainBlockAction(owner, owner, EFFECT));
+        AbstractPower preserve = owner.getPower(ChargePreservationPower.POWER_ID);
+        if (preserve != null && preserve.amount > 0) {
+            preserve.onSpecificTrigger();
+        } else {
             addToBot(new ReducePowerAction(owner, owner, this, 1));
         }
     }

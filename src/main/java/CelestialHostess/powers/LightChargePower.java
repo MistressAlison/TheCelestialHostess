@@ -63,7 +63,12 @@ public class LightChargePower extends AbstractPower implements PowerOrbitPatches
             tmp.purgeOnUse = true;
             AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
 
-            addToBot(new ReducePowerAction(owner, owner, this, 1));
+            AbstractPower preserve = owner.getPower(ChargePreservationPower.POWER_ID);
+            if (preserve != null && preserve.amount > 0) {
+                preserve.onSpecificTrigger();
+            } else {
+                addToBot(new ReducePowerAction(owner, owner, this, 1));
+            }
         }
     }
 

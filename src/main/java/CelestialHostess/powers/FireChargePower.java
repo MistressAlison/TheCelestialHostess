@@ -43,8 +43,18 @@ public class FireChargePower extends AbstractPower implements PowerOrbitPatches.
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
-            flash();
-            addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(EFFECT, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
+            onSpecificTrigger();
+        }
+    }
+
+    @Override
+    public void onSpecificTrigger() {
+        flash();
+        addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(EFFECT, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
+        AbstractPower preserve = owner.getPower(ChargePreservationPower.POWER_ID);
+        if (preserve != null && preserve.amount > 0) {
+            preserve.onSpecificTrigger();
+        } else {
             addToBot(new ReducePowerAction(owner, owner, this, 1));
         }
     }

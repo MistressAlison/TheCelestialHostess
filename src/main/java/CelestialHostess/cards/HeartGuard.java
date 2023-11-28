@@ -14,7 +14,7 @@ public class HeartGuard extends AbstractEasyCard {
 
     public HeartGuard() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
     }
 
     @Override

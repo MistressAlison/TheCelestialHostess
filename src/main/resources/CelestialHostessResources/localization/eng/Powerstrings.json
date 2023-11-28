@@ -97,17 +97,22 @@
   },
   "${ModID}:FireChargePower": {
     "NAME": "Fire Charge",
-    "DESCRIPTIONS": ["This turn, whenever you play an Attack, deal #b"," damage to ALL enemies.",
-      "For #b"," turns, whenever you play an Attack, deal #b"]
+    "DESCRIPTIONS": ["TThe next time you play an Attack, deal #b"," damage to ALL enemies.",
+      "The next #b"," times you play an Attack, deal #b"]
   },
   "${ModID}:IceChargePower": {
     "NAME": "Ice Charge",
-    "DESCRIPTIONS": ["This turn, whenever you play a Skill, gain #b"," #yBlock.",
-      "For #b"," turns, whenever you play a Skill, gain #b"]
+    "DESCRIPTIONS": ["The next time you play a Skill, gain #b"," #yBlock.",
+      "The next #b"," times you play a Skill, gain #b"]
   },
   "${ModID}:WindChargePower": {
     "NAME": "Wind Charge",
-    "DESCRIPTIONS": ["This turn, whenever you #yExhaust a card, draw #b"," card."," cards.",
-      "For #b"," turns, whenever you #yExhaust a card, draw #b"]
+    "DESCRIPTIONS": ["The next time you #yExhaust a card, draw #b"," card."," cards.",
+      "The next #b"," times you #yExhaust a card, draw #b"]
+  },
+  "${ModID}:LightChargePower": {
+    "NAME": "Light Charge",
+    "DESCRIPTIONS": ["The next card you play costs #b0 and is played twice.",
+      "The next #b"," cards you play cost #b0 and are played twice."]
   }
 }

@@ -21,6 +21,7 @@ public class KeywordManager {
     public static String FIRE_CHARGE;
     public static String ICE_CHARGE;
     public static String WIND_CHARGE;
+    public static String LIGHT_CHARGE;
 
     public static String getKeyword(String ID) {
         return keywordMap.getOrDefault(ID, "");

@@ -1,6 +1,8 @@
 package CelestialHostess.powers;
 
 import CelestialHostess.MainModfile;
+import CelestialHostess.patches.PowerOrbitPatches;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -12,12 +14,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class FireChargePower extends AbstractPower {
+public class FireChargePower extends AbstractPower implements PowerOrbitPatches.OrbitPower {
     public static final String POWER_ID = MainModfile.makeID(FireChargePower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static int EFFECT = 3;
+    public static int EFFECT = 6;
 
     public FireChargePower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
@@ -25,7 +27,6 @@ public class FireChargePower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.isTurnBased = true;
         this.loadRegion("explosive");
         updateDescription();
     }
@@ -44,11 +45,17 @@ public class FireChargePower extends AbstractPower {
         if (card.type == AbstractCard.CardType.ATTACK) {
             flash();
             addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(EFFECT, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
+            addToBot(new ReducePowerAction(owner, owner, this, 1));
         }
     }
 
     @Override
-    public void atEndOfRound() {
-        addToTop(new ReducePowerAction(owner, owner, this, 1));
+    public int orbAmount() {
+        return amount;
+    }
+
+    @Override
+    public Color orbColor() {
+        return Color.RED;
     }
 }

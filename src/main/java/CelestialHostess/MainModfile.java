@@ -5,9 +5,7 @@ import CelestialHostess.cards.cardvars.*;
 import CelestialHostess.cards.interfaces.GlowAdjacentCard;
 import CelestialHostess.icons.IconContainer;
 import CelestialHostess.patches.GlowChangePatch;
-import CelestialHostess.powers.BracedPower;
-import CelestialHostess.powers.PurityPower;
-import CelestialHostess.powers.StaggerPower;
+import CelestialHostess.powers.*;
 import CelestialHostess.powers.interfaces.InfusionTriggerPower;
 import CelestialHostess.powers.interfaces.OnUpgradePower;
 import CelestialHostess.relics.AbstractEasyRelic;
@@ -254,6 +252,11 @@ public class MainModfile implements
         BaseMod.addPower(BracedPower.class, BracedPower.POWER_ID);
         BaseMod.addPower(StaggerPower.class, StaggerPower.POWER_ID);
         BaseMod.addPower(PurityPower.class, PurityPower.POWER_ID);
+
+        BaseMod.addPower(FireChargePower.class, FireChargePower.POWER_ID);
+        BaseMod.addPower(IceChargePower.class, IceChargePower.POWER_ID);
+        BaseMod.addPower(WindChargePower.class, WindChargePower.POWER_ID);
+        BaseMod.addPower(LightChargePower.class, LightChargePower.POWER_ID);
 
         //Wide Potions
         if (Loader.isModLoaded("widepotions")) {

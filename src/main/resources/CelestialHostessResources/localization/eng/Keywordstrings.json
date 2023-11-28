@@ -129,7 +129,7 @@
       "fire_charge",
       "fire_charges"
     ],
-    "DESCRIPTION": "Whenever you play an Attack this turn, deal #b3 damage to ALL enemies."
+    "DESCRIPTION": "The next time you play an Attack, deal #b6 damage to ALL enemies."
   },
   {
     "ID": "ice_charge",
@@ -139,7 +139,7 @@
       "ice_charge",
       "ice_charges"
     ],
-    "DESCRIPTION": "Whenever you play a Skill this turn, gain #b2 #yBlock."
+    "DESCRIPTION": "The next time you play a Skill, gain #b5 #yBlock."
   },
   {
     "ID": "wind_charge",
@@ -149,6 +149,16 @@
       "wind_charge",
       "wind_charges"
     ],
-    "DESCRIPTION": "Whenever you #yExhaust a card this turn, draw #b1 card."
+    "DESCRIPTION": "The next time you #yExhaust a card, draw #b2 cards."
+  },
+  {
+    "ID": "light_charge",
+    "PROPER_NAME": "Light Charge",
+    "NAMES": [
+      "light charge",
+      "light_charge",
+      "light_charges"
+    ],
+    "DESCRIPTION": "The next card you play costs #b0 and is played twice."
   }
 ]

@@ -97,7 +97,7 @@
   },
   "${ModID}:FireChargePower": {
     "NAME": "Fire Charge",
-    "DESCRIPTIONS": ["TThe next time you play an Attack, deal #b"," damage to ALL enemies.",
+    "DESCRIPTIONS": ["The next time you play an Attack, deal #b"," damage to ALL enemies.",
       "The next #b"," times you play an Attack, deal #b"]
   },
   "${ModID}:IceChargePower": {

@@ -163,6 +163,10 @@
     "DESCRIPTION": "Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
   },
+  "${ModID}:Overload": {
+    "NAME": "Overload",
+    "DESCRIPTION": "Gain !M! ${ModID}:Fire_Charge{!M!|>1=s}{@@}. NL Gain !M! ${ModID}:Ice_Charge{!M!|>1=s}{@@}. NL Gain !M! ${ModID}:Wind_Charge{!M!|>1=s}{@@}."
+  },
   "${ModID}:Parry": {
     "NAME": "Parry",
     "DESCRIPTION": "Unplayable. Retain. NL While held, the next time you are attacked, gain !B! Block and deal !D! damage back.",

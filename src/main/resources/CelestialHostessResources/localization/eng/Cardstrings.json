@@ -100,7 +100,7 @@
   },
   "${ModID}:FlashPoint": {
     "NAME": "Flash Point",
-    "DESCRIPTION": "Gain X{@@}{!M!|>0= + !M!} ${ModID}:Fire_Charges. NL Exhaust."
+    "DESCRIPTION": "Gain X{@@}{!M!|>0= + !M!} ${ModID}:Fire_Charges."
   },
   "${ModID}:FrostShard": {
     "NAME": "Frost Shard",

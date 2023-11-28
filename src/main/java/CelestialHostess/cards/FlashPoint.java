@@ -3,7 +3,6 @@ package CelestialHostess.cards;
 import CelestialHostess.actions.EasyXCostAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.powers.FireChargePower;
-import CelestialHostess.powers.WindChargePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.cards.purple.Eruption;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,7 +17,7 @@ public class FlashPoint extends AbstractEasyCard {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 0;
         //cardsToPreview = new FlameBlessing();
-        exhaust = true;
+        //exhaust = true;
     }
 
     @Override

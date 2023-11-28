@@ -160,5 +160,15 @@
       "light_charges"
     ],
     "DESCRIPTION": "The next card you play costs #b0 and is played twice."
+  },
+  {
+    "ID": "charge",
+    "PROPER_NAME": "Charge",
+    "NAMES": [
+      "charge",
+      "charges",
+      "charged"
+    ],
+    "DESCRIPTION": "Charges are temporary buffs that have delayed effects."
   }
 ]

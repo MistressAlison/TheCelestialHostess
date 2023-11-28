@@ -25,6 +25,11 @@
     "NAME": "Baneful Blast",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL ${ModID}:Corrupt."
   },
+  "${ModID}:BlazingStrike": {
+    "NAME": "Blazing Strike",
+    "DESCRIPTION": "Can only be played if you have a ${ModID}:Fire_Charge. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": ["I do not have a Fire Charge."]
+  },
   "${ModID}:BlessedWeapon": {
     "NAME": "Blessed Weapon",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Sharpen your hand by !M! this combat for each *Miracle in your hand."
@@ -133,6 +138,10 @@
   "${ModID}:HeartGuard": {
     "NAME": "Heart Guard",
     "DESCRIPTION": "Whenever a card is created during combat, gain !M! Block."
+  },
+  "${ModID}:ImbuedStrike": {
+    "NAME": "Imbued Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Trigger ALL your ${ModID}:Charges."
   },
   "${ModID}:Lightmare": {
     "NAME": "Lightmare",

@@ -22,7 +22,7 @@ public class FrostShard extends AbstractEasyCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         //Wiz.makeInHand(new FrostBlessing(), magicNumber);
         Wiz.applyToSelf(new IceChargePower(p, magicNumber));
     }

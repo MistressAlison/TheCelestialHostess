@@ -15,7 +15,7 @@ public class Overload extends AbstractEasyCard {
     public final static String ID = makeID(Overload.class.getSimpleName());
 
     public Overload() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         baseMagicNumber = magicNumber = 3;
         //exhaust = true;
     }

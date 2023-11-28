@@ -49,7 +49,7 @@
   },
   "${ModID}:CrossFormation": {
     "NAME": "Cross Formation",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block for each *Miracle in your hand."
+    "DESCRIPTION": "At the end of your turn, gain !M! Block for each unique ${ModID}:Charge you have."
   },
   "${ModID}:CuttingEdge": {
     "NAME": "Cutting Edge",

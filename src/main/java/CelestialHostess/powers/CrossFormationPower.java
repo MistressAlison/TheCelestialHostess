@@ -3,7 +3,6 @@ package CelestialHostess.powers;
 import CelestialHostess.MainModfile;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -31,10 +30,11 @@ public class CrossFormationPower extends AbstractPower {
     }
 
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-        int cards = (int) Wiz.adp().hand.group.stream().filter(c -> c instanceof Miracle).count();
-        if (cards > 0) {
+        //int effect = (int) Wiz.adp().hand.group.stream().filter(c -> c instanceof Miracle).count();
+        int effect = (int) Wiz.adp().powers.stream().filter(p -> p instanceof FireChargePower || p instanceof IceChargePower || p instanceof WindChargePower || p instanceof LightChargePower).count();
+        if (effect > 0) {
             this.flash();
-            this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount * cards));
+            this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount * effect));
         }
     }
 }

@@ -69,7 +69,7 @@
   },
   "${ModID}:CrossFormationPower": {
     "NAME": "Cross Formation",
-    "DESCRIPTIONS": ["At the end of your turn, gain #b"," #yBlock for each #yMiracle in your hand."]
+    "DESCRIPTIONS": ["At the end of your turn, gain #b"," #yBlock for each unique #yCharge you have."]
   },
   "${ModID}:DangerClosePower": {
     "NAME": "Danger Close",

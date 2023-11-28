@@ -14,7 +14,7 @@ public class CrossFormation extends AbstractEasyCard {
 
     public CrossFormation() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override

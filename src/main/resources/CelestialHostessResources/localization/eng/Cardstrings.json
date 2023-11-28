@@ -40,7 +40,7 @@
   },
   "${ModID}:CrossCut": {
     "NAME": "Cross Cut",
-    "DESCRIPTION": "Deal !D! damage twice. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
   },
   "${ModID}:CrossFormation": {
     "NAME": "Cross Formation",

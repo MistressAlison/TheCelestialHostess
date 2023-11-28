@@ -1,3 +1,4 @@
+/*
 package CelestialHostess.patches;
 
 import CelestialHostess.TheCelestialHostess;
@@ -36,3 +37,4 @@ public class MaintainHandOrderPatches {
         }
     }
 }
+*/

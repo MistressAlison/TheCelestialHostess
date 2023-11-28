@@ -83,7 +83,7 @@
     "NAMES": [
       "purity"
     ],
-    "DESCRIPTION": "When you obtain #b10 Purity, take #b50% less damage from attacks and reflect attack damage taken for #b1 turn."
+    "DESCRIPTION": "When you obtain #b10 Purity, remove all your debuffs and gain a #yLight #yCharge. NL Light Charges make your next card cost #b0 and play twice."
   },
   {
     "ID": "sharpen",

@@ -174,11 +174,11 @@
   },
   "${ModID}:PiercingArrow": {
     "NAME": "Piercing Arrow",
-    "DESCRIPTION": "Deal !D! damage X times. NL ${ModID}:Holy: Costs 0."
+    "DESCRIPTION": "Deal !D! damage X times. NL Costs 0 if you have a *Miracle in your hand."
   },
   "${ModID}:Punishment": {
     "NAME": "Punishment",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Holy: Draw !M! card{@@}{!M!|>1=s}."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card{@@}{!M!|>1=s} if you have a *Miracle in your hand."
   },
   "${ModID}:RelentlessAssault": {
     "NAME": "Relentless Assault",

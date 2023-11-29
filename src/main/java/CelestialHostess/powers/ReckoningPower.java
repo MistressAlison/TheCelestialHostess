@@ -38,7 +38,7 @@ public class ReckoningPower extends AbstractPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         flash();
-        addToBot(new DamageAction(owner, new DamageInfo(source, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE, true));
+        addToBot(new DamageAction(owner, new DamageInfo(source, amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.FIRE, true));
     }
 
     /*@Override

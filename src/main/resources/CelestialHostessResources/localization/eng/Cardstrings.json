@@ -207,7 +207,7 @@
   },
   "${ModID}:Penance": {
     "NAME": "Penance",
-    "DESCRIPTION": "Give a card ${ModID}:Tribute. NL It costs 1 this combat. NL Exhaust.",
+    "DESCRIPTION": "Give a card ${ModID}:Tribute. NL It costs 0 this combat. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Modify"]
   },
   "${ModID}:PiercingArrow": {

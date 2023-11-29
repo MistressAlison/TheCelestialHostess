@@ -17,16 +17,16 @@ public class Penance extends AbstractEasyCard {
     public final static String ID = makeID(Penance.class.getSimpleName());
 
     public Penance() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BetterSelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0], true, true, c -> c.cost >= 0, l -> {
+        addToBot(new BetterSelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0], false, false, c -> c.cost >= 0, l -> {
             for (AbstractCard c : l) {
                 CardModifierManager.addModifier(c, new TributeMod(1));
-                c.cost = 1;
-                c.costForTurn = 1;
+                c.cost = 0;
+                c.costForTurn = 0;
                 c.isCostModified = true;
                 c.superFlash(Color.GOLD.cpy());
             }
@@ -34,7 +34,7 @@ public class Penance extends AbstractEasyCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBaseCost(1);
     }
 
     @Override

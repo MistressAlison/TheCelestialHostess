@@ -117,7 +117,7 @@
   },
   "${ModID}:StrikeBuffPower": {
     "NAME": "Strike Up",
-    "DESCRIPTIONS": ["Cards containing #yStrike deal #b"," additional damage this turn."]
+    "DESCRIPTIONS": ["Cards containing #yStrike deal #b"," additional damage."]
   },
   "${ModID}:ChargePreservationPower": {
     "NAME": "Preservation",

@@ -15,7 +15,7 @@ public class Sheathe extends AbstractEasyCard {
     public Sheathe() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = 5;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override

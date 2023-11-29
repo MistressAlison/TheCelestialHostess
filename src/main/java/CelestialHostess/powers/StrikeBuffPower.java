@@ -1,7 +1,6 @@
 package CelestialHostess.powers;
 
 import CelestialHostess.MainModfile;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -39,8 +38,8 @@ public class StrikeBuffPower extends AbstractPower {
         return damage;
     }
 
-    @Override
+    /*@Override
     public void atEndOfRound() {
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
-    }
+    }*/
 }

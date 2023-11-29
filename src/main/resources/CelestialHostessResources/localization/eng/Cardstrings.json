@@ -264,7 +264,7 @@
   },
   "${ModID}:Sheathe": {
     "NAME": "Sheathe",
-    "DESCRIPTION": "Gain !B! Block. NL Cards containing \"Strike\" deal !M! additional damage this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Cards containing \"Strike\" deal !M! additional damage this combat."
   },
   "${ModID}:SnowStorm": {
     "NAME": "Snow Storm",

@@ -212,7 +212,7 @@
   },
   "${ModID}:PiercingArrow": {
     "NAME": "Piercing Arrow",
-    "DESCRIPTION": "Deal !D! damage X times. NL Costs 0 if you have a *Miracle in your hand."
+    "DESCRIPTION": "Deal !D! damage X times. NL Costs 0 and ignores Block if you have a *Miracle in your hand."
   },
   "${ModID}:Piety": {
     "NAME": "Piety",

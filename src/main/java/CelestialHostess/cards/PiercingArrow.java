@@ -2,8 +2,10 @@ package CelestialHostess.cards;
 
 import CelestialHostess.actions.EasyXCostAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.damageMods.PiercingDamage;
 import CelestialHostess.patches.CustomTags;
 import CelestialHostess.util.Wiz;
+import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,14 +15,15 @@ import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.Collections;
+
 import static CelestialHostess.MainModfile.makeID;
 
 public class PiercingArrow extends AbstractEasyCard {
     public final static String ID = makeID(PiercingArrow.class.getSimpleName());
-
     public PiercingArrow() {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = damage = 3;
+        baseDamage = damage = 5;
         tags.add(CustomTags.HOSTESS_IF_MIRACLE);
     }
 
@@ -32,7 +35,11 @@ public class PiercingArrow extends AbstractEasyCard {
                 effect += i;
             }
             for (int i = 0 ; i < effect ; i++) {
-                addToTop(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE, true));
+                DamageInfo info = new DamageInfo(p, damage, damageTypeForTurn);
+                if (Wiz.adp().hand.group.stream().anyMatch(c -> c instanceof Miracle)) {
+                    DamageModifierManager.bindDamageMods(info, Collections.singletonList(new PiercingDamage()));
+                }
+                addToTop(new DamageAction(m, info, AbstractGameAction.AttackEffect.FIRE, true));
             }
             return true;
         }));
@@ -53,7 +60,7 @@ public class PiercingArrow extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
     }
 
     @Override

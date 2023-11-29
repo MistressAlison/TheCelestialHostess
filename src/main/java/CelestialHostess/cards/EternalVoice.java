@@ -4,6 +4,7 @@ import CelestialHostess.cards.abstracts.AbstractEmpowerCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.green.PiercingWail;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -28,6 +29,13 @@ public class EternalVoice extends AbstractEmpowerCard {
         for (int i = 0 ; i < magicNumber ; i++) {
             allDmg(AbstractGameAction.AttackEffect.FIRE, true);
         }
+    }
+
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        AbstractCard copy = super.makeStatEquivalentCopy();
+        copy.magicNumber = this.magicNumber;
+        return copy;
     }
 
     @Override

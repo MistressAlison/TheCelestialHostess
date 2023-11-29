@@ -3,6 +3,7 @@ package CelestialHostess.cards;
 import CelestialHostess.actions.BetterSelectCardsInHandAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.util.Wiz;
+import com.megacrit.cardcrawl.actions.unique.DualWieldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.red.DualWield;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,7 +22,7 @@ public class DoubleBladed extends AbstractEasyCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BetterSelectCardsInHandAction(1, DualWield.TEXT[0], false, true, c -> c.type == CardType.ATTACK, l -> {
+        addToBot(new BetterSelectCardsInHandAction(1, DualWieldAction.TEXT[0], false, false, c -> c.type == CardType.ATTACK, l -> {
             for (AbstractCard c : l) {
                 Wiz.makeInHand(c.makeSameInstanceOf(), magicNumber);
             }

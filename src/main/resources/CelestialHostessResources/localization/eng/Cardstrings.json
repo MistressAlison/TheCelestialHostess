@@ -292,7 +292,7 @@
   },
   "${ModID}:Unsainted": {
     "NAME": "Unsainted",
-    "DESCRIPTION": "At the end of your turn, deal damage equal to {@@}{!M!|>1=!M! times }the numbers of cards in your Exhaust pile to ALL enemies."
+    "DESCRIPTION": "At the end of your turn, deal damage equal to {@@}{!M!|>1=!M! times }the number of cards in your Exhaust pile to ALL enemies."
   },
   "${ModID}:Venerate": {
     "NAME": "Venerate",

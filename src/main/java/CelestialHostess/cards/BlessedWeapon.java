@@ -27,6 +27,7 @@ public class BlessedWeapon extends AbstractEasyCard {
         baseDamage = damage = 10;
         baseMagicNumber = magicNumber = 1;
         tags.add(CustomTags.HOSTESS_FOR_EACH_MIRACLE);
+        isMultiDamage = true;
     }
 
     @Override

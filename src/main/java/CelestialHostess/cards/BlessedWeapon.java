@@ -1,8 +1,10 @@
 package CelestialHostess.cards;
 
+import CelestialHostess.actions.DoAction;
 import CelestialHostess.actions.DoForEachMiracleAction;
 import CelestialHostess.cardmods.FlatDamageMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.cards.abstracts.AbstractEmpowerCard;
 import CelestialHostess.patches.CustomTags;
 import CelestialHostess.util.Wiz;
 import basemod.helpers.CardModifierManager;
@@ -19,14 +21,13 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import static CelestialHostess.MainModfile.makeID;
 
-public class BlessedWeapon extends AbstractEasyCard {
+public class BlessedWeapon extends AbstractEmpowerCard {
     public final static String ID = makeID(BlessedWeapon.class.getSimpleName());
 
     public BlessedWeapon() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = damage = 10;
-        baseMagicNumber = magicNumber = 1;
-        tags.add(CustomTags.HOSTESS_FOR_EACH_MIRACLE);
+        baseDamage = damage = 11;
+        baseMagicNumber = magicNumber = 2;
         isMultiDamage = true;
     }
 
@@ -35,7 +36,7 @@ public class BlessedWeapon extends AbstractEasyCard {
         addToBot(new SFXAction("ATTACK_HEAVY"));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
-        addToBot(new DoForEachMiracleAction(() -> {
+        addToBot(new DoAction(() -> {
             for (AbstractCard c : Wiz.adp().hand.group) {
                 if (c.baseDamage > 0 && c.type == CardType.ATTACK) {
                     c.superFlash(Color.GOLD.cpy());
@@ -45,16 +46,14 @@ public class BlessedWeapon extends AbstractEasyCard {
         }));
     }
 
-    public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if (Wiz.adp().hand.group.stream().anyMatch(c -> c instanceof Miracle)) {
-            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        }
+    @Override
+    public void onEmpower() {
+        upgradeMagicNumber(1);
     }
 
     @Override
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(3);
         upgradeMagicNumber(1);
     }
 

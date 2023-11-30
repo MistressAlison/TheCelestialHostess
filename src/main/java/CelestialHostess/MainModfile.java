@@ -268,6 +268,37 @@ public class MainModfile implements
         if (Loader.isModLoaded("CardAugments")) {
             ChimeraHelper.registerAugments();
             ChimeraHelper.applyBans();
+
+            //Test adding a mod without needing a dependency
+            /*ClassPool pool = Loader.getClassPool();
+            try {
+                CtClass augCt = pool.getCtClass("CardAugments.cardmods.AbstractAugment");
+                CtClass reflectionAug = pool.makeClass("CelestialHostess.augments.ReflectionAug", augCt);
+                CtConstructor constructor = CtNewConstructor.defaultConstructor(reflectionAug);
+                reflectionAug.addConstructor(constructor);
+                CtMethod validCard = CtNewMethod.make("protected boolean validCard(com.megacrit.cardcrawl.cards.AbstractCard card){return true;}", reflectionAug);
+                CtMethod getRarity = CtNewMethod.make("public CardAugments.cardmods.AbstractAugment$AugmentRarity getModRarity(){return CardAugments.cardmods.AbstractAugment$AugmentRarity.UNCOMMON;}", reflectionAug);
+                CtMethod identifier = CtNewMethod.make("public String identifier(com.megacrit.cardcrawl.cards.AbstractCard card) {return \"CelestialHostess:ReflectionTest\";}", reflectionAug);
+                CtMethod getPrefix = CtNewMethod.make("public String getPrefix() {return \"Test \";}", reflectionAug);
+                CtMethod makeCopy = CtNewMethod.make("public basemod.abstracts.AbstractCardModifier makeCopy(){return new CelestialHostess.augments.ReflectionAug();}", reflectionAug);
+                reflectionAug.addMethod(validCard);
+                reflectionAug.addMethod(getRarity);
+                reflectionAug.addMethod(identifier);
+                reflectionAug.addMethod(getPrefix);
+                reflectionAug.addMethod(makeCopy);
+
+                Class<?> reflectionAugClass = pool.toClass(reflectionAug);
+                Class<?> cardAugmentsMod = Class.forName("CardAugments.CardAugmentsMod");
+                Class<?> augmentClass = Class.forName("CardAugments.cardmods.AbstractAugment");
+                Object reflectionAugObj = reflectionAugClass.getConstructor().newInstance();
+                Method registerMod = cardAugmentsMod.getMethod("registerMod", String.class, String.class);
+                registerMod.invoke(null, modID, "Test");
+                Method registerAugment = cardAugmentsMod.getMethod("registerAugment", augmentClass, String.class);
+                registerAugment.invoke(null, reflectionAugObj, modID);
+            } catch (NotFoundException | ClassNotFoundException | InvocationTargetException | NoSuchMethodException |
+                     IllegalAccessException | CannotCompileException | InstantiationException e) {
+                throw new RuntimeException(e);
+            }*/
         }
 
         //Add Config stuff

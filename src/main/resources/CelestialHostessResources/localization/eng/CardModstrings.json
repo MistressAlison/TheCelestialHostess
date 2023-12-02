@@ -37,5 +37,8 @@
   },
   "${ModID}:TributeMod": {
     "EXTENDED_DESCRIPTION": ["${ModID}:Tribute. NL "]
+  },
+  "${ModID}:CorruptMod": {
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Corrupt."," NL ${ModID}:Corrupt %s times."]
   }
 }

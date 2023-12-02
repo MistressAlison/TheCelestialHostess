@@ -1,8 +1,9 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.actions.CorruptAction;
 import CelestialHostess.actions.ModifyMagicAction;
+import CelestialHostess.cardmods.CorruptMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -22,6 +23,7 @@ public class RelentlessAssault extends AbstractEasyCard {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = damage = 6;
         baseMagicNumber = magicNumber = 2;
+        CardModifierManager.addModifier(this, new CorruptMod(1));
     }
 
     @Override
@@ -46,7 +48,6 @@ public class RelentlessAssault extends AbstractEasyCard {
             }
         }
         addToBot(new ModifyMagicAction(uuid, 1));
-        addToBot(new CorruptAction());
     }
 
     @Override

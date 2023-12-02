@@ -1,7 +1,8 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.actions.CorruptAction;
+import CelestialHostess.cardmods.CorruptMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -20,6 +21,7 @@ public class DarkDesires extends AbstractEasyCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = 13;
         baseMagicNumber = magicNumber = 6;
+        CardModifierManager.addModifier(this, new CorruptMod(1));
     }
 
     @Override
@@ -29,7 +31,6 @@ public class DarkDesires extends AbstractEasyCard {
             addToBot(new VFXAction(new DarkOrbActivateEffect(m.hb.cX, m.hb.cY)));
         }
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        addToBot(new CorruptAction());
     }
 
     @Override

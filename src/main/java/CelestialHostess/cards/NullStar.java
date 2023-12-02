@@ -1,8 +1,9 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.actions.CorruptAction;
+import CelestialHostess.cardmods.CorruptMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.util.Wiz;
+import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -20,6 +21,7 @@ public class NullStar extends AbstractEasyCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
+        CardModifierManager.addModifier(this, new CorruptMod(1));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,7 +32,6 @@ public class NullStar extends AbstractEasyCard {
                 c.setCostForTurn(0);
             }
         }));
-        addToBot(new CorruptAction());
     }
 
     public void upp() {

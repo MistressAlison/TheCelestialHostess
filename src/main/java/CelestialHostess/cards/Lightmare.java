@@ -1,9 +1,10 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.actions.CorruptAction;
+import CelestialHostess.cardmods.CorruptMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.powers.LightChargePower;
 import CelestialHostess.util.Wiz;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.blue.Storm;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,12 +18,12 @@ public class Lightmare extends AbstractEasyCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
+        CardModifierManager.addModifier(this, new CorruptMod(1));
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.applyToSelf(new LightChargePower(p, magicNumber));
-        addToBot(new CorruptAction());
     }
 
     @Override

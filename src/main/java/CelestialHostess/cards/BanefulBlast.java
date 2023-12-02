@@ -1,8 +1,9 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.actions.CorruptAction;
+import CelestialHostess.cardmods.CorruptMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.util.Wiz;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.blue.BeamCell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,13 +19,13 @@ public class BanefulBlast extends AbstractEasyCard {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 7;
         baseMagicNumber = magicNumber = 1;
+        CardModifierManager.addModifier(this, new CorruptMod(1));
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         Wiz.applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
-        addToBot(new CorruptAction());
     }
 
     @Override

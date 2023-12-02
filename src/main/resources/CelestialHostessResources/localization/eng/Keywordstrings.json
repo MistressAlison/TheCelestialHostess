@@ -71,7 +71,7 @@
   },
   {
     "ID": "corrupt",
-    "PROPER_NAME": "Corrupt",
+    "PROPER_NAME": "Corrupt [${ModID}:CorruptIcon]",
     "NAMES": [
       "corrupt"
     ],

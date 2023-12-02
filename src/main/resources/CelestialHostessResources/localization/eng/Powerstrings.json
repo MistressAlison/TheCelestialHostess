@@ -137,6 +137,6 @@
   },
   "${ModID}:StrikeningPower": {
     "NAME": "Strikening",
-    "DESCRIPTIONS": ["Whenever you play a cards containing \"Strike\" this turn, deal #b"," damage to a random enemy."]
+    "DESCRIPTIONS": ["Whenever you play a card containing \"Strike\" this turn, deal #b"," damage to a random enemy."]
   }
 }

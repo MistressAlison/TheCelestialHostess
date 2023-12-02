@@ -16,7 +16,7 @@ public class Withstand extends AbstractEasyCard {
     public Withstand() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = 10;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         selfRetain = true;
     }
 

@@ -1,5 +1,6 @@
 //Shader License: CC BY 3.0
 //Author: Jan Mróz (jaszunio15)
+//https://www.shadertoy.com/view/wl2Gzc
 
 #define PI 3.1415927
 #define TWO_PI 6.283185

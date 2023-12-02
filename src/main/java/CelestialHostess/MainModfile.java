@@ -11,6 +11,7 @@ import CelestialHostess.powers.interfaces.OnUpgradePower;
 import CelestialHostess.relics.AbstractEasyRelic;
 import CelestialHostess.ui.MicroverseProcessor;
 import CelestialHostess.util.*;
+import CelestialHostess.vfx.ShaderTest;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.ModPanel;
@@ -338,9 +339,13 @@ public class MainModfile implements
 
         ScreenPostProcessor microverseProcessor = new MicroverseProcessor();
         ScreenPostProcessorManager.addPostProcessor(microverseProcessor);
+
+        if (shaderTest) {
+            ScreenPostProcessorManager.addPostProcessor(new ShaderTest());
+        }
     }
 
-    public static boolean shaderTest = false;
+    public static boolean shaderTest = true;
 
     public static Color getRainbowColor() {
         return new Color(

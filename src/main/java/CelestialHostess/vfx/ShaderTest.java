@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import java.nio.charset.StandardCharsets;
 
 public class ShaderTest implements ScreenPostProcessor {
-    public static ShaderProgram sp = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal(MainModfile.makePath("shaders/glitch.frag")).readString(String.valueOf(StandardCharsets.UTF_8)));
+    public static ShaderProgram sp = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal(MainModfile.makePath("shaders/sparks.frag")).readString(String.valueOf(StandardCharsets.UTF_8)));
     public static float time;
 
     @Override

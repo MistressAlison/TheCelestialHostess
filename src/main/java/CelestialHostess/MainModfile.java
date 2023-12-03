@@ -345,7 +345,7 @@ public class MainModfile implements
         }
     }
 
-    public static boolean shaderTest = true;
+    public static boolean shaderTest = false;
 
     public static Color getRainbowColor() {
         return new Color(

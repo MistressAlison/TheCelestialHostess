@@ -13,7 +13,7 @@ public class ManaMaster extends AbstractEasyCard {
     public final static String ID = makeID(ManaMaster.class.getSimpleName());
 
     public ManaMaster() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -24,7 +24,7 @@ public class ManaMaster extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(2);
     }
 
     @Override

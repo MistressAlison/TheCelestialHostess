@@ -15,9 +15,9 @@ public class RighteousBlow extends AbstractEasyCard {
     public final static String ID = makeID(RighteousBlow.class.getSimpleName());
 
     public RighteousBlow() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = damage = 12;
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = damage = 8;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override
@@ -30,8 +30,8 @@ public class RighteousBlow extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(4);
-        //upgradeMagicNumber(1);
+        //upgradeDamage(3);
+        upgradeMagicNumber(2);
     }
 
     @Override

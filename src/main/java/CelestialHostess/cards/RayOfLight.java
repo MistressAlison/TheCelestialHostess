@@ -52,7 +52,7 @@ public class RayOfLight extends AbstractEasyCard implements EnterCardGroupPatche
     @Override
     public void onEnter(CardGroup g) {
         if (g == Wiz.adp().hand) {
-            for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
+            for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
                 if (c instanceof Miracle) {
                     setCostForTurn(this.costForTurn - 1);
                 }

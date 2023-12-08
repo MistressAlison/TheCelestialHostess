@@ -260,6 +260,7 @@ public class MainModfile implements
         BaseMod.addPower(IceChargePower.class, IceChargePower.POWER_ID);
         BaseMod.addPower(WindChargePower.class, WindChargePower.POWER_ID);
         BaseMod.addPower(LightChargePower.class, LightChargePower.POWER_ID);
+        BaseMod.addPower(DarkChargePower.class, DarkChargePower.POWER_ID);
 
         //Wide Potions
         if (Loader.isModLoaded("widepotions")) {

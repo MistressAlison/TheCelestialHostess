@@ -14,9 +14,10 @@ public class HallowedGround extends AbstractEasyCard {
     public final static String ID = makeID(HallowedGround.class.getSimpleName());
 
     public HallowedGround() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         cardsToPreview = new Miracle();
+        exhaust = true;
     }
 
     @Override

@@ -145,7 +145,7 @@
   },
   "${ModID}:HallowedGround": {
     "NAME": "Hallowed Ground",
-    "DESCRIPTION": "Gain !M! ${ModID}:Purity. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "Gain !M! ${ModID}:Purity. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand. NL Exhaust."
   },
   "${ModID}:HeartGuard": {
     "NAME": "Heart Guard",

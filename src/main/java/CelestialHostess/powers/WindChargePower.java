@@ -24,7 +24,7 @@ public class WindChargePower extends AbstractPower implements PowerOrbitPatches.
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.loadRegion("blur");
+        this.loadRegion("fasting");
         updateDescription();
     }
 

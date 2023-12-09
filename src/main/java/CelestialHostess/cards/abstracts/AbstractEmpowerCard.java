@@ -1,12 +1,13 @@
 package CelestialHostess.cards.abstracts;
 
+import CelestialHostess.actions.InstantExhaustSpecificCardAction;
 import CelestialHostess.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.SanctityEffect;
 
@@ -30,10 +31,16 @@ public abstract class AbstractEmpowerCard extends AbstractEasyCard {
     public void onRightClick() {
         for (AbstractCard c : Wiz.adp().hand.group) {
             if (c instanceof Miracle) {
-                addToTop(new ExhaustSpecificCardAction(c, Wiz.adp().hand));
-                addToTop(new VFXAction(new SanctityEffect(Wiz.adp().hb.cX, Wiz.adp().hb.cY)));
-                addToTop(new SFXAction("HEAL_1"));
-                addToTop(new VFXAction(new BorderFlashEffect(Color.GOLD, true), 0.1F));
+                addToTop(new InstantExhaustSpecificCardAction(c, Wiz.adp().hand));
+                addToTop(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        AbstractDungeon.effectList.add(new SanctityEffect(Wiz.adp().hb.cX, Wiz.adp().hb.cY));
+                        AbstractDungeon.effectList.add(new BorderFlashEffect(Color.GOLD, true));
+                        CardCrawlGame.sound.play("HEAL_1");
+                        this.isDone = true;
+                    }
+                });
                 superFlash();
                 onEmpower();
                 return;

@@ -26,7 +26,7 @@ public class GuidingLightPower extends AbstractPower implements FreeToPlayPower 
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.loadRegion("nirvana");
+        this.loadRegion("panache");
         updateDescription();
     }
 

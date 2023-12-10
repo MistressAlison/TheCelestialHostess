@@ -50,7 +50,7 @@ public class DivineForcePower extends AbstractPower {
         this.owner = owner;
         this.amount = -1;
         this.type = PowerType.BUFF;
-        this.loadRegion("panache");
+        this.loadRegion("nirvana");
         updateDescription();
         this.priority = -5;
         array = ReflectionHacks.getPrivateInherited(this, DivineForcePower.class, "effect");

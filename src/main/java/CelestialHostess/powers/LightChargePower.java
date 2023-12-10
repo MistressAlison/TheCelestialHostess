@@ -2,21 +2,15 @@ package CelestialHostess.powers;
 
 import CelestialHostess.MainModfile;
 import CelestialHostess.patches.PowerOrbitPatches;
-import CelestialHostess.powers.interfaces.FreeToPlayPower;
+import CelestialHostess.powers.interfaces.AuraTriggerPower;
+import CelestialHostess.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class LightChargePower extends AbstractPower implements PowerOrbitPatches.OrbitPower, FreeToPlayPower {
+public class LightChargePower extends AbstractPower implements PowerOrbitPatches.OrbitPower, AuraTriggerPower {
     public static final String POWER_ID = MainModfile.makeID(LightChargePower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
@@ -42,37 +36,6 @@ public class LightChargePower extends AbstractPower implements PowerOrbitPatches
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse) {
-            flash();
-            AbstractMonster m = null;
-            if (action.target != null) {
-                m = (AbstractMonster)action.target;
-            }
-
-            AbstractCard tmp = card.makeSameInstanceOf();
-            AbstractDungeon.player.limbo.addToBottom(tmp);
-            tmp.current_x = card.current_x;
-            tmp.current_y = card.current_y;
-            tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-            tmp.target_y = (float)Settings.HEIGHT / 2.0F;
-            if (m != null) {
-                tmp.calculateCardDamage(m);
-            }
-
-            tmp.purgeOnUse = true;
-            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
-
-            AbstractPower preserve = owner.getPower(ChargePreservationPower.POWER_ID);
-            if (preserve != null && preserve.amount > 0) {
-                preserve.onSpecificTrigger();
-            } else {
-                addToBot(new ReducePowerAction(owner, owner, this, 1));
-            }
-        }
-    }
-
-    @Override
     public int orbAmount() {
         return amount;
     }
@@ -83,7 +46,8 @@ public class LightChargePower extends AbstractPower implements PowerOrbitPatches
     }
 
     @Override
-    public boolean isFreeToPlay(AbstractCard card) {
-        return true;
+    public void onActivateAura() {
+        flash();
+        Wiz.applyToSelf(new GuidingLightPower(Wiz.adp(), amount));
     }
 }

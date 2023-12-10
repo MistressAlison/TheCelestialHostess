@@ -59,7 +59,7 @@
     "NAMES": [
       "holy"
     ],
-    "DESCRIPTION": "Trigger an effect if you have a #yMiracle in your hand."
+    "DESCRIPTION": "Trigger an effect if your #yAura is active."
   },
   {
     "ID": "tribute",
@@ -129,7 +129,7 @@
       "fire_charge",
       "fire_charges"
     ],
-    "DESCRIPTION": "The next time you play an Attack, deal #b4 damage to ALL enemies."
+    "DESCRIPTION": "The next time activate your #yAura, deal #b4 damage to ALL enemies."
   },
   {
     "ID": "ice_charge",
@@ -139,7 +139,7 @@
       "ice_charge",
       "ice_charges"
     ],
-    "DESCRIPTION": "The next time you play a Skill, gain #b3 #yBlock."
+    "DESCRIPTION": "The next time you activate your #yAura, gain #b3 #yBlock."
   },
   {
     "ID": "wind_charge",
@@ -149,7 +149,7 @@
       "wind_charge",
       "wind_charges"
     ],
-    "DESCRIPTION": "The next time you #yExhaust a card, draw #b1 card."
+    "DESCRIPTION": "The next time you activate your #yAura, draw #b1 card."
   },
   {
     "ID": "light_charge",
@@ -159,7 +159,7 @@
       "light_charge",
       "light_charges"
     ],
-    "DESCRIPTION": "The next card you play costs #b0 and is played twice."
+    "DESCRIPTION": "The next time you active your #yAura, the next card you play costs #b0 and is played twice."
   },
   {
     "ID": "charge",
@@ -169,6 +169,6 @@
       "charges",
       "charged"
     ],
-    "DESCRIPTION": "Charges are temporary buffs that have delayed effects."
+    "DESCRIPTION": "Charges are effects that trigger when you activate your #yAura."
   }
 ]

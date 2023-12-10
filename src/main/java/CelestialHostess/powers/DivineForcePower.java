@@ -11,10 +11,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -47,16 +44,15 @@ public class DivineForcePower extends AbstractPower {
     private static final String ENTER_SFX = "STANCE_ENTER_CALM";
     private static final boolean SPINNY = false;
 
-    public DivineForcePower(AbstractCreature owner, int amount) {
+    public DivineForcePower(AbstractCreature owner) {
         this.ID = POWER_ID;
         this.name = NAME;
         this.owner = owner;
-        this.amount = amount;
+        this.amount = -1;
         this.type = PowerType.BUFF;
-        this.loadRegion("controlled_change");
+        this.loadRegion("panache");
         updateDescription();
-        this.isTurnBased = true;
-        this.priority = 101;
+        this.priority = -5;
         array = ReflectionHacks.getPrivateInherited(this, DivineForcePower.class, "effect");
     }
 
@@ -88,7 +84,7 @@ public class DivineForcePower extends AbstractPower {
         }
     }
 
-    @Override
+/*    @Override
     public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {
         if (type == DamageInfo.DamageType.NORMAL) {
             damage /= 2f;
@@ -103,20 +99,16 @@ public class DivineForcePower extends AbstractPower {
             addToTop(new DamageAction(info.owner, new DamageInfo(owner, info.output, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE, true));
         }
         return damageAmount;
-    }
+    }*/
 
     @Override
     public void atEndOfRound() {
-        Wiz.atb(new ReducePowerAction(owner, owner, this , 1));
+        Wiz.atb(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
     public void updateDescription() {
-        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
-        }
+        this.description = DESCRIPTIONS[0];
     }
 
     @Override

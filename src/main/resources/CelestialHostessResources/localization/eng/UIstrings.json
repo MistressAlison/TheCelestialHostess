@@ -16,6 +16,16 @@
       "Enable Celestial Hostess Crossover Content"
     ]
   },
+  "${ModID}:AuraButton": {
+    "TEXT": [
+      "Holy Aura",
+      "Aura Active"
+    ],
+    "EXTRA_TEXT": [
+      "Holy Aura",
+      "Pressing this button will spend [E] to activate your #yAura this turn, consuming all #yCharges. NL NL While your #yAura is active, #yHoly cards are enhanced."
+    ]
+  },
   "${ModID}:ModifyAction": {
     "TEXT": [
       "Modify"

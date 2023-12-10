@@ -52,8 +52,8 @@
     "DESCRIPTIONS": ["When you obtain #b10 #yPurity, remove all your debuffs and gain a #yLight #yCharge."]
   },
   "${ModID}:DivineForcePower": {
-    "NAME": "Divine Force",
-    "DESCRIPTIONS": ["Take #b50% less damage from attacks and reflect attack damage taken for #b"," turn."," turns."]
+    "NAME": "Holy Aura",
+    "DESCRIPTIONS": ["Your #yHoly cards are enhanced this turn."]
   },
   "${ModID}:ManaMasterPower": {
     "NAME": "Mana Master",
@@ -97,28 +97,30 @@
   },
   "${ModID}:FireChargePower": {
     "NAME": "Fire Charge",
-    "DESCRIPTIONS": ["The next time you play an Attack, deal #b"," damage to ALL enemies.",
-      "The next #b"," times you play an Attack, deal #b"]
+    "DESCRIPTIONS": ["The next time activate your #yAura, deal #b"," damage to ALL enemies."," damage to ALL enemies #b"," times."]
   },
   "${ModID}:IceChargePower": {
     "NAME": "Ice Charge",
-    "DESCRIPTIONS": ["The next time you play a Skill, gain #b"," #yBlock.",
-      "The next #b"," times you play a Skill, gain #b"]
+    "DESCRIPTIONS": ["The next time activate your #yAura, gain #b"," #yBlock."," #yBlock #b"," times."]
   },
   "${ModID}:WindChargePower": {
     "NAME": "Wind Charge",
-    "DESCRIPTIONS": ["The next time you #yExhaust a card, draw #b"," card."," cards.",
-      "The next #b"," times you #yExhaust a card, draw #b"]
+    "DESCRIPTIONS": ["The next time activate your #yAura, draw #b"," card."," cards."]
   },
   "${ModID}:LightChargePower": {
     "NAME": "Light Charge",
-    "DESCRIPTIONS": ["The next card you play costs #b0 and is played twice.",
-      "The next #b"," cards you play cost #b0 and are played twice."]
+    "DESCRIPTIONS": ["The next time activate your #yAura, the next card you play costs #b0 and is played twice.",
+      "The next time activate your #yAura, the next #b"," cards you play cost #b0 and are played twice."]
   },
   "${ModID}:DarkChargePower": {
     "NAME": "Dark Charge",
     "DESCRIPTIONS": ["The next card you play is #yExhausted.",
       "The next #b"," cards you play are #yExhausted."]
+  },
+  "${ModID}:GuidingLightPower": {
+    "NAME": "Guiding Light",
+    "DESCRIPTIONS": ["The next card you play costs #b0 and is played twice.",
+      "The next #b"," cards you play cost #b0 and are played twice."]
   },
   "${ModID}:StrikeBuffPower": {
     "NAME": "Strike Up",
@@ -126,7 +128,7 @@
   },
   "${ModID}:ChargePreservationPower": {
     "NAME": "Preservation",
-    "DESCRIPTIONS": ["The next #yCharge you trigger is not removed.","The next #b"," #yCharges you trigger are not removed."]
+    "DESCRIPTIONS": ["The next time you activate your #yAura, your #yCharges are not removed.","The next #b"," times your activate your #yAura, your #yCharges are not removed."]
   },
   "${ModID}:DetonateDeadPower": {
     "NAME": "Detonate Dead",

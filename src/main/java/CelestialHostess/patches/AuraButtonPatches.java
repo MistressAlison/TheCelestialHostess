@@ -6,9 +6,9 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
-import com.megacrit.cardcrawl.actions.common.EnableEndTurnButtonAction;
 import com.megacrit.cardcrawl.core.OverlayMenu;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.ui.buttons.EndTurnButton;
 
 public class AuraButtonPatches {
     @SpirePatch2(clz = OverlayMenu.class, method = SpirePatch.CLASS)
@@ -48,11 +48,20 @@ public class AuraButtonPatches {
         }
     }
 
-    @SpirePatch2(clz = EnableEndTurnButtonAction.class, method = "update")
+    @SpirePatch2(clz = EndTurnButton.class, method = "enable")
     public static class EnableAuraButton {
         @SpirePrefixPatch
         public static void plz() {
             AuraButtonField.button.get(AbstractDungeon.overlayMenu).enable();
+        }
+    }
+
+    @SpirePatch2(clz = EndTurnButton.class, method = "disable", paramtypez = {})
+    @SpirePatch2(clz = EndTurnButton.class, method = "disable", paramtypez = {boolean.class})
+    public static class DisableAuraButton {
+        @SpirePrefixPatch
+        public static void plz() {
+            AuraButtonField.button.get(AbstractDungeon.overlayMenu).disable();
         }
     }
 }

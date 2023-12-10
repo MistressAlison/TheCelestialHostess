@@ -46,7 +46,7 @@ public class AuraButton {
     private boolean isHidden;
     public boolean enabled;
     private boolean isDisabled;
-    private boolean triggered;
+    private boolean canTrigger;
     private Color textColor;
     private final ArrayList<EndTurnGlowEffect> glowList;
     private static final float GLOW_INTERVAL = 1.2F;
@@ -65,6 +65,7 @@ public class AuraButton {
         this.isHidden = true;// 48
         this.enabled = false;// 49
         this.isDisabled = false;// 50
+        this.canTrigger = false;
         this.glowList = new ArrayList<>();// 54
         this.glowTimer = 0.0F;// 56
         this.isGlowing = false;// 57
@@ -74,7 +75,7 @@ public class AuraButton {
     }
 
     public void update() {
-        this.enabled = !triggered && EnergyPanel.totalCount >= 1;
+        this.enabled = canTrigger && EnergyPanel.totalCount >= 1;
         this.glow();// 68
         this.updateHoldProgress();// 69
         if (this.current_x != this.target_x) {// 71
@@ -149,18 +150,25 @@ public class AuraButton {
     }// 135 150
 
     public void enable() {
-        this.enabled = true;
-        this.updateText(ACTIVATE_TEXT);
-        triggered = false;
-    }// 164
+        enabled = true;
+        updateText(ACTIVATE_TEXT);
+        canTrigger = true;
+    }
+
+    public void disable() {
+        enabled = false;
+        hb.hovered = false;
+        isGlowing = false;
+        canTrigger = false;
+    }
 
     public void trigger() {
-        this.enabled = false;
-        this.hb.hovered = false;
-        this.isGlowing = false;
-        triggered = true;
+        enabled = false;
+        hb.hovered = false;
+        isGlowing = false;
+        canTrigger = false;
 
-        this.updateText(ALREADY_ACTIVE_TEXT);
+        updateText(ALREADY_ACTIVE_TEXT);
 
         AbstractDungeon.player.loseEnergy(1);
         Wiz.applyToSelf(new DivineForcePower(Wiz.adp()));
@@ -179,7 +187,7 @@ public class AuraButton {
     }
 
     public void updateText(String msg) {
-        this.label = msg;
+        label = msg;
     }
 
     private void glow() {

@@ -40,5 +40,9 @@
   },
   "${ModID}:CorruptMod": {
     "EXTENDED_DESCRIPTION": [" NL ${ModID}:Corrupt."," NL ${ModID}:Corrupt %s times."]
+  },
+  "${ModID}:HolyMod": {
+    "NAME": "Holy",
+    "EXTENDED_DESCRIPTION": [""]
   }
 }

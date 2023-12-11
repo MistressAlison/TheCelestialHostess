@@ -4,6 +4,7 @@ import CelestialHostess.cardmods.AbstractInfusion;
 import CelestialHostess.cards.cardvars.*;
 import CelestialHostess.cards.interfaces.GlowAdjacentCard;
 import CelestialHostess.icons.IconContainer;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.patches.GlowChangePatch;
 import CelestialHostess.powers.*;
 import CelestialHostess.powers.interfaces.InfusionTriggerPower;
@@ -19,6 +20,7 @@ import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.helpers.ScreenPostProcessorManager;
 import basemod.interfaces.*;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.DynamicTextBlocks;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -307,6 +309,31 @@ public class MainModfile implements
         //Add Config stuff
 
         //Other Setup stuff
+        DynamicTextBlocks.registerCustomCheck(makeID("Holy"), card -> {
+            if (card.hasTag(CustomTags.HOSTESS_HOLY) && Wiz.auraActive()) {
+                return 1;
+            }
+            return 0;
+        });
+
+        CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
+            private final Color c = Color.GOLD.cpy();
+            @Override
+            public boolean test(AbstractCard abstractCard) {
+                return abstractCard.hasTag(CustomTags.HOSTESS_HOLY) && Wiz.auraActive();
+            }
+
+            @Override
+            public Color getColor(AbstractCard abstractCard) {
+                return c;
+            }
+
+            @Override
+            public String glowID() {
+                return makeID("Holy");
+            }
+        });
+
         CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
             private final Color c = Color.RED.cpy();
             @Override

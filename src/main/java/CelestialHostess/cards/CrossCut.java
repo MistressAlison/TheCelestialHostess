@@ -27,7 +27,7 @@ public class CrossCut extends AbstractEasyCard {
         //baseMagicNumber = magicNumber = 1;
         isMultiDamage = true;
         CardModifierManager.addModifier(this, new HolyMod());
-        MultiCardPreview.add(this, new AbstractHolyInfoCard(this, cardStrings.EXTENDED_DESCRIPTION[0]) {});
+        MultiCardPreview.add(this, new AbstractHolyInfoCard(this, cardStrings.EXTENDED_DESCRIPTION[0]) {}, new Miracle());
     }
 
     @Override

@@ -5,6 +5,10 @@
     "UPGRADE_DESCRIPTION": "Upgrade description",
     "EXTENDED_DESCRIPTION": ["Extra Stuff"]
   },
+  "${ModID}:AbstractHolyInfoCard": {
+    "NAME": "Enhanced %s",
+    "DESCRIPTION": ""
+  },
   "${ModID}:FlameBlessing": {
     "NAME": "Flame Blessing",
     "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies for each *Miracle in your hand. NL Exhaust."
@@ -45,7 +49,8 @@
   },
   "${ModID}:CrossCut": {
     "NAME": "Cross Cut",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies.{!${ModID}:Holy!|1= NL Add 1 *Miracle into your hand.}",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage to ALL enemies. NL Add 1 *Miracle into your hand."]
   },
   "${ModID}:CrossFormation": {
     "NAME": "Cross Formation",
@@ -65,7 +70,8 @@
   },
   "${ModID}:Defend": {
     "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": ["Gain !B! Block."]
   },
   "${ModID}:DetonateDead": {
     "NAME": "Detonate Dead",
@@ -272,7 +278,8 @@
   },
   "${ModID}:Strike": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "{@@}Deal !D! damage{!${ModID}:Holy!|1= twice}.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage twice."]
   },
   "${ModID}:Strikening": {
     "NAME": "Strikening",

@@ -1,7 +1,12 @@
 package CelestialHostess.cards;
 
+import CelestialHostess.actions.HolyAction;
+import CelestialHostess.cardmods.HolyMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.cards.abstracts.AbstractHolyInfoCard;
 import CelestialHostess.util.Wiz;
+import basemod.helpers.CardModifierManager;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -17,11 +22,12 @@ public class CrossCut extends AbstractEasyCard {
     public final static String ID = makeID(CrossCut.class.getSimpleName());
 
     public CrossCut() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = damage = 8;
-        baseMagicNumber = magicNumber = 1;
+        //baseMagicNumber = magicNumber = 1;
         isMultiDamage = true;
-        cardsToPreview = new Miracle();
+        CardModifierManager.addModifier(this, new HolyMod());
+        MultiCardPreview.add(this, new AbstractHolyInfoCard(this, cardStrings.EXTENDED_DESCRIPTION[0]) {});
     }
 
     @Override
@@ -29,12 +35,17 @@ public class CrossCut extends AbstractEasyCard {
         addToBot(new SFXAction("ATTACK_HEAVY"));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
-        Wiz.makeInHand(new Miracle(), magicNumber);
+        Wiz.atb(new HolyAction(() -> Wiz.makeInHand(new Miracle(), 1)));
     }
 
     @Override
     public void upp() {
         upgradeDamage(3);
+        MultiCardPreview.multiCardPreview.get(this).forEach(c -> {
+            if (c instanceof AbstractHolyInfoCard) {
+                c.upgrade();
+            }
+        });
     }
 
     @Override

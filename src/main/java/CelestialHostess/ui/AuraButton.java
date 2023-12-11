@@ -105,7 +105,7 @@ public class AuraButton {
 
                     for (AbstractCard c : AbstractDungeon.player.hand.group) {
                         if (c.hasTag(CustomTags.HOSTESS_HOLY)) {// 102
-                            c.superFlash(c.glowColor);// 103
+                            c.superFlash(Color.GOLD.cpy());// 103
                         }
                     }
                 }

@@ -2,6 +2,7 @@ package CelestialHostess.util;
 
 import CelestialHostess.actions.TimedVFXAction;
 import CelestialHostess.patches.CardCounterPatches;
+import CelestialHostess.powers.DivineForcePower;
 import CelestialHostess.powers.LosePowerPower;
 import CelestialHostess.powers.NextTurnPowerPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -305,5 +306,9 @@ public class Wiz {
         ArrayList<AbstractMonster> ret = new ArrayList<>();
         forAdjacentMonsters(entity, ret::add);
         return ret;
+    }
+
+    public static boolean auraActive() {
+        return Wiz.adp() != null && Wiz.adp().hasPower(DivineForcePower.POWER_ID);
     }
 }

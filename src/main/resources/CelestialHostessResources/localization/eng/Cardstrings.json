@@ -107,7 +107,8 @@
   },
   "${ModID}:Espoir": {
     "NAME": "Espoir",
-    "DESCRIPTION": "Gain !B! Block. NL Remove !M! of your debuffs."
+    "DESCRIPTION": "Gain !B! Block. NL Remove !M! of your debuffs.",
+    "EXTENDED_DESCRIPTION": ["Gain !B! Block. NL Remove all of your debuffs."]
   },
   "${ModID}:EternalVoice": {
     "NAME": "Eternal Voice",
@@ -254,7 +255,8 @@
   },
   "${ModID}:RighteousBlow": {
     "NAME": "Righteous Blow",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."]
   },
   "${ModID}:Sentence": {
     "NAME": "Sentence",
@@ -266,7 +268,8 @@
   },
   "${ModID}:Serenity": {
     "NAME": "Serenity",
-    "DESCRIPTION": "Add !M! *Miracle{!M!|>1=s}{@@} into your hand next turn."
+    "DESCRIPTION": "{@@}{!${ModID}:Holy!|1=Put a card from your discard pile into your hand. NL }Add !M! *Miracle{!M!|>1=s} into your hand next turn.",
+    "EXTENDED_DESCRIPTION": ["Put a card from your discard pile into your hand. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand next turn."]
   },
   "${ModID}:Sheathe": {
     "NAME": "Sheathe",

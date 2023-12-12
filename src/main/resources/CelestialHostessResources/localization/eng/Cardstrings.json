@@ -58,7 +58,8 @@
   },
   "${ModID}:CuttingEdge": {
     "NAME": "Cutting Edge",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is Exhausted, ${ModID}:Sharpen your hand by !M! this combat."
+    "DESCRIPTION": "Deal !D! damage. NL {@@}{!${ModID}:Holy!|0=If this card is Exhausted, }${ModID}:Sharpen your hand by !M! this combat.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage. ${ModID}:Sharpen your hand by !M! this combat."]
   },
   "${ModID}:DangerClose": {
     "NAME": "Danger Close",
@@ -151,7 +152,8 @@
   },
   "${ModID}:GlowingStrike": {
     "NAME": "Glowing Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card for each unique ${ModID}:Charge you have."
+    "DESCRIPTION": "{@@}Deal !D! damage{!${ModID}:Holy!|1= twice}. NL Draw {!${ModID}:Holy!|0=1 card for each unique ${ModID}:Charge you have|1=2 cards}.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage twice. NL Draw 2 cards."]
   },
   "${ModID}:HallowedGround": {
     "NAME": "Hallowed Ground",
@@ -231,7 +233,8 @@
   },
   "${ModID}:Punishment": {
     "NAME": "Punishment",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card{@@}{!M!|>1=s} if you have a *Miracle in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card{@@}{!M!|>1=s} if you have a *Miracle in your hand.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Draw !M! card{@@}{!M!|>1=s} if you have a *Miracle in your hand."]
   },
   "${ModID}:Pyre": {
     "NAME": "Pyre",

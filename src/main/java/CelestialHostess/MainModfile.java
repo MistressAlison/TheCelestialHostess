@@ -310,7 +310,7 @@ public class MainModfile implements
 
         //Other Setup stuff
         DynamicTextBlocks.registerCustomCheck(makeID("Holy"), card -> {
-            if (card.hasTag(CustomTags.HOSTESS_HOLY) && Wiz.auraActive()) {
+            if (card.hasTag(CustomTags.HOSTESS_HOLY) && Wiz.auraActive() && Wiz.isInCombat()) {
                 return 1;
             }
             return 0;

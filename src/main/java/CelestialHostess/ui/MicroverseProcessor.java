@@ -1,8 +1,8 @@
 package CelestialHostess.ui;
 
-import CelestialHostess.cards.Microcosm;
-import CelestialHostess.util.CardArtRoller;
+import CelestialHostess.MainModfile;
 import CelestialHostess.util.ImageHelper;
+import CelestialHostess.util.TexLoader;
 import basemod.interfaces.ScreenPostProcessor;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.*;
@@ -11,7 +11,6 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.badlogic.gdx.utils.BufferUtils;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 
 import java.nio.IntBuffer;
 
@@ -23,7 +22,7 @@ public class MicroverseProcessor implements ScreenPostProcessor {
     private static final FrameBuffer SCVBuffer = ImageHelper.createBuffer(500, 380);
     private static final OrthographicCamera og = new OrthographicCamera(250, 190);
     private static final OrthographicCamera SCVog = new OrthographicCamera(500, 380);
-    private static final Texture mask = CardArtRoller.getMask(CardLibrary.getCard(Microcosm.ID));
+    private static final Texture mask = TexLoader.getTexture(MainModfile.makeImagePath("masks/SkillMask.png"));
     private static final int[] saveEquations = new int[]{0, 0};
     public static TextureAtlas.AtlasRegion portrait;
     public static Texture scv;

@@ -1,10 +1,8 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.actions.BetterSelectCardsInHandAction;
-import CelestialHostess.cardmods.FlatDamageMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.util.Wiz;
-import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -27,16 +25,16 @@ public class WeaponFusion extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new BetterSelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0], true, true, c -> c.type == CardType.ATTACK, l -> {
-            AbstractCard card = new Strike();
-            card.baseDamage = 0;
+            AbstractCard newCard = new Strike();
+            newCard.baseDamage = 0;
             for (AbstractCard c : l) {
                 Wiz.adp().hand.moveToExhaustPile(c);
-                card.baseDamage += c.baseDamage;
-                for (AbstractCardModifier mod : CardModifierManager.getModifiers(c, FlatDamageMod.ID)) {
-                    CardModifierManager.addModifier(card, mod.makeCopy());
-                }
+                newCard.baseDamage += CardModifierManager.onModifyBaseDamage(c.baseDamage, c, null);
+                /*for (AbstractCardModifier mod : CardModifierManager.getModifiers(c, FlatDamageMod.ID)) {
+                    CardModifierManager.addModifier(newCard, mod.makeCopy());
+                }*/
             }
-            Wiz.makeInHand(card);
+            Wiz.makeInHand(newCard);
             l.clear();
         }));
     }

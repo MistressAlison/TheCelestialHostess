@@ -91,15 +91,18 @@
   },
   "${ModID}:EchoingHymn": {
     "NAME": "Echoing Hymn",
-    "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, gain !B! Block.",
+    "EXTENDED_DESCRIPTION": ["Gain !B! Block. NL At the start of your next !M! turns, gain !B! Block."]
   },
   "${ModID}:EclipsePower": {
     "NAME": "Eclipse Power",
-    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage equal to the target's intent."
+    "DESCRIPTION": "{@@}Deal !D! damage.{!${ModID}:Holy!|1= NL Deals additional damage equal to the target's intent.}",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Deals additional damage equal to the target's intent"]
   },
   "${ModID}:Empower": {
     "NAME": "Empower",
-    "DESCRIPTION": "Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
+    "DESCRIPTION": "{@@}Gain !M! Strength.{!${ModID}:Holy!|0= NL At the end of this turn, lose !M! Strength.}",
+    "EXTENDED_DESCRIPTION": ["Gain !M! Strength."]
   },
   "${ModID}:Enfeeble": {
     "NAME": "Enfeeble",
@@ -160,7 +163,8 @@
   },
   "${ModID}:ImbuedStrike": {
     "NAME": "Imbued Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Trigger ALL your ${ModID}:Charges."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Trigger ALL your ${ModID}:Charges{!${ModID}:Holy!|1= without removing them}.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Trigger ALL your ${ModID}:Charges without removing them."]
   },
   "${ModID}:Lightmare": {
     "NAME": "Lightmare",

@@ -264,7 +264,7 @@
   },
   "${ModID}:Sentence": {
     "NAME": "Sentence",
-    "DESCRIPTION": "Deal !D! damage. NL When this enemy dies, add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL When this enemy dies, add draw !M! card{!M!|>1=s} and gain {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|@=!M! [E]}."
   },
   "${ModID}:SeraphForm": {
     "NAME": "Seraph Form",

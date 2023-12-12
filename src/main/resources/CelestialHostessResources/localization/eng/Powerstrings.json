@@ -89,7 +89,7 @@
   },
   "${ModID}:SentencePower": {
     "NAME": "Sentenced",
-    "DESCRIPTIONS": ["When this enemy dies, add #b"," #yMiracle into your hand."," #yMiracles into your hand."]
+    "DESCRIPTIONS": ["When this enemy dies, draw #b"," card and gain #b"," cards and gain #b"," [E] ."]
   },
   "${ModID}:SwordGuruPower": {
     "NAME": "Sword Guru",

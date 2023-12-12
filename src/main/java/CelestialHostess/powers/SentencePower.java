@@ -1,8 +1,8 @@
 package CelestialHostess.powers;
 
 import CelestialHostess.MainModfile;
-import CelestialHostess.util.Wiz;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -27,15 +27,16 @@ public class SentencePower extends AbstractPower {
     @Override
     public void updateDescription() {
         if (amount == 1) {
-            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[3];
         } else {
-            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + amount + DESCRIPTIONS[3];
         }
     }
 
     @Override
     public void onDeath() {
         flash();
-        Wiz.makeInHand(new Miracle(), amount);
+        addToBot(new DrawCardAction(amount));
+        addToBot(new GainEnergyAction(amount));
     }
 }

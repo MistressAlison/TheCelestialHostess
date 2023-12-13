@@ -17,7 +17,7 @@ public class Overload extends AbstractEasyCard {
     public Overload() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         baseMagicNumber = magicNumber = 3;
-        //exhaust = true;
+        exhaust = true;
     }
 
     @Override

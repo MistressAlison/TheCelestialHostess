@@ -207,7 +207,7 @@
   },
   "${ModID}:Overload": {
     "NAME": "Overload",
-    "DESCRIPTION": "Gain !M! ${ModID}:Fire_Charge{!M!|>1=s}{@@}. NL Gain !M! ${ModID}:Ice_Charge{!M!|>1=s}{@@}. NL Gain !M! ${ModID}:Wind_Charge{!M!|>1=s}{@@}."
+    "DESCRIPTION": "Gain !M! ${ModID}:Fire_Charge{!M!|>1=s}{@@}. NL Gain !M! ${ModID}:Ice_Charge{!M!|>1=s}{@@}. NL Gain !M! ${ModID}:Wind_Charge{!M!|>1=s}{@@}. NL Exhaust."
   },
   "${ModID}:Parry": {
     "NAME": "Parry",

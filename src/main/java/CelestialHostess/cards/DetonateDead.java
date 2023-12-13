@@ -15,8 +15,8 @@ public class DetonateDead extends AbstractEasyCard {
 
     public DetonateDead() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = damage = 10;
-        baseMagicNumber = magicNumber = 10;
+        baseDamage = damage = 15;
+        baseMagicNumber = magicNumber = 20;
     }
 
     @Override
@@ -27,8 +27,8 @@ public class DetonateDead extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(4);
-        upgradeMagicNumber(4);
+        upgradeDamage(5);
+        upgradeMagicNumber(5);
     }
 
     @Override

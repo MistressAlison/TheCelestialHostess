@@ -16,7 +16,7 @@ public class FallenForm extends AbstractEasyCard {
     public final static String ID = makeID(FallenForm.class.getSimpleName());
 
     public FallenForm() {
-        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         tags.add(BaseModCardTags.FORM);
         CardModifierManager.addModifier(this, new CorruptMod(3));

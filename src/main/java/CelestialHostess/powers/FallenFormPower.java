@@ -3,6 +3,9 @@ package CelestialHostess.powers;
 import CelestialHostess.MainModfile;
 import CelestialHostess.patches.EnterCardGroupPatches;
 import CelestialHostess.util.Wiz;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -41,6 +44,17 @@ public class FallenFormPower extends AbstractPower implements EnterCardGroupPatc
             //addToBot(new BetterTransformCardInHandAction(c, Wiz.returnTrulyRandomPrediCardInCombat(card -> true)));
             //addToBot(new GainEnergyAction(amount));
             addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount)));
+        }
+    }
+
+    @SpirePatch2(clz = VoidCard.class, method = "triggerWhenDrawn")
+    public static class NoEnergyLoss {
+        @SpirePrefixPatch
+        public static SpireReturn<?> plz() {
+            if (Wiz.adp().hasPower(POWER_ID)) {
+                return SpireReturn.Return();
+            }
+            return SpireReturn.Continue();
         }
     }
 }

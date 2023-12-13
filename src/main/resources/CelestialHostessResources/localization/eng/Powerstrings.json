@@ -85,7 +85,7 @@
   },
   "${ModID}:FallenFormPower": {
     "NAME": "Fallen Form",
-    "DESCRIPTIONS": ["Whenever a #yVoid enters your hand, gain #b"," #yStrength."]
+    "DESCRIPTIONS": ["Whenever a #yVoid enters your hand, gain #b"," #yStrength instead of losing Energy."]
   },
   "${ModID}:SentencePower": {
     "NAME": "Sentenced",

@@ -120,7 +120,7 @@
   },
   "${ModID}:FallenForm": {
     "NAME": "Fallen Form",
-    "DESCRIPTION": "Whenever a *Void enters your hand, gain !M! Strength."
+    "DESCRIPTION": "Whenever a *Void enters your hand, gain !M! Strength instead of losing Energy."
   },
   "${ModID}:Fervor": {
     "NAME": "Fervor",

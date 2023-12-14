@@ -1,6 +1,7 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.powers.WindChargePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -18,7 +19,7 @@ public class Zephyr extends AbstractEasyCard {
     public Zephyr() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        //cardsToPreview = new GaleBlessing();
+        tags.add(CustomTags.HOSTESS_GIVES_CHARGE);
     }
 
     @Override

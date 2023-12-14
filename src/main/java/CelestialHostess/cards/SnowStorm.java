@@ -1,6 +1,7 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.powers.IceChargePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.cards.purple.Vigilance;
@@ -16,7 +17,7 @@ public class SnowStorm extends AbstractEasyCard {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = block = 7;
         baseMagicNumber = magicNumber = 3;
-        //cardsToPreview = new FrostBlessing();
+        tags.add(CustomTags.HOSTESS_GIVES_CHARGE);
     }
 
     @Override

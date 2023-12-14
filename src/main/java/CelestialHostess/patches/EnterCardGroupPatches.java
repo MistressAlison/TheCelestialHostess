@@ -16,6 +16,7 @@ public class EnterCardGroupPatches {
         @SpirePostfixPatch
         public static void checkCard(CardGroup __instance, AbstractCard c) {
             if (Wiz.adp() != null) {
+                AuraButtonPatches.cardCheck(c);
                 if (c instanceof OnEnterCardGroupCard) {
                     ((OnEnterCardGroupCard) c).onEnter(__instance);
                 }

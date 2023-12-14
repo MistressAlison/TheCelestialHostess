@@ -10,4 +10,6 @@ public class CustomTags {
     public static AbstractCard.CardTags HOSTESS_IF_MIRACLE;
     @SpireEnum
     public static AbstractCard.CardTags HOSTESS_HOLY;
+    @SpireEnum
+    public static AbstractCard.CardTags HOSTESS_GIVES_CHARGE;
 }

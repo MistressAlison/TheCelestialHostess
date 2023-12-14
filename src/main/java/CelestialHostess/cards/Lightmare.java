@@ -2,6 +2,7 @@ package CelestialHostess.cards;
 
 import CelestialHostess.cardmods.CorruptMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.powers.LightChargePower;
 import CelestialHostess.util.Wiz;
 import basemod.helpers.CardModifierManager;
@@ -19,6 +20,7 @@ public class Lightmare extends AbstractEasyCard {
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
         CardModifierManager.addModifier(this, new CorruptMod(1));
+        tags.add(CustomTags.HOSTESS_GIVES_CHARGE);
     }
 
     @Override

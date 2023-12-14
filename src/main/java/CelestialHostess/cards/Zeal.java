@@ -1,6 +1,7 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.powers.FireChargePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.cards.green.Survivor;
@@ -16,6 +17,7 @@ public class Zeal extends AbstractEasyCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = block = 3;
         baseMagicNumber = magicNumber = 1;
+        tags.add(CustomTags.HOSTESS_GIVES_CHARGE);
     }
 
     @Override

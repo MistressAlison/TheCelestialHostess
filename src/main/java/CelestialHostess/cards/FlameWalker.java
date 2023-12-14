@@ -1,6 +1,7 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.powers.FireChargePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -17,7 +18,7 @@ public class FlameWalker extends AbstractEasyCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseSecondMagic = secondMagic = 1;
         baseMagicNumber = magicNumber = 2;
-        //cardsToPreview = new FlameBlessing();
+        tags.add(CustomTags.HOSTESS_GIVES_CHARGE);
     }
 
     @Override

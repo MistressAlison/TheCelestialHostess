@@ -1,6 +1,7 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.powers.FireChargePower;
 import CelestialHostess.powers.IceChargePower;
 import CelestialHostess.powers.WindChargePower;
@@ -17,6 +18,7 @@ public class Overload extends AbstractEasyCard {
     public Overload() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         baseMagicNumber = magicNumber = 3;
+        tags.add(CustomTags.HOSTESS_GIVES_CHARGE);
         exhaust = true;
     }
 

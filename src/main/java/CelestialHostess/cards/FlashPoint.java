@@ -2,6 +2,7 @@ package CelestialHostess.cards;
 
 import CelestialHostess.actions.EasyXCostAction;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
+import CelestialHostess.patches.CustomTags;
 import CelestialHostess.powers.FireChargePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.cards.purple.Eruption;
@@ -16,7 +17,7 @@ public class FlashPoint extends AbstractEasyCard {
     public FlashPoint() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 2;
-        //cardsToPreview = new FlameBlessing();
+        tags.add(CustomTags.HOSTESS_GIVES_CHARGE);
         exhaust = true;
     }
 

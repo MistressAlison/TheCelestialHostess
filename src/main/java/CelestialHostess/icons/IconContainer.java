@@ -3,6 +3,7 @@ package CelestialHostess.icons;
 import CelestialHostess.MainModfile;
 import CelestialHostess.cardmods.CorruptMod;
 import CelestialHostess.cardmods.FlatDamageMod;
+import CelestialHostess.cardmods.HolyMod;
 import CelestialHostess.cardmods.TributeMod;
 import com.evacipated.cardcrawl.mod.stslib.icons.AbstractCustomIcon;
 
@@ -47,6 +48,21 @@ public class IconContainer {
         public static AbstractCustomIcon get() {
             if (singleton == null) {
                 singleton = new CorruptIcon();
+            }
+            return singleton;
+        }
+    }
+
+    public static class HolyIcon extends AbstractCustomIcon {
+        static AbstractCustomIcon singleton;
+
+        public HolyIcon() {
+            super(MainModfile.makeID("Holy"), HolyMod.modIcon);
+        }
+
+        public static AbstractCustomIcon get() {
+            if (singleton == null) {
+                singleton = new HolyIcon();
             }
             return singleton;
         }

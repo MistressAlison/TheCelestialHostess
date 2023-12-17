@@ -27,9 +27,11 @@ public class AuraButtonPatches {
     }
 
     public static void cardCheck(AbstractCard card) {
-        if (card.hasTag(CustomTags.HOSTESS_HOLY) || card.hasTag(CustomTags.HOSTESS_GIVES_CHARGE)) {
-            AuraButtonField.button.get(AbstractDungeon.overlayMenu).show();
-            shownThisCombat = true;
+        if (Wiz.isInCombat() && card.hasTag(CustomTags.HOSTESS_HOLY) || card.hasTag(CustomTags.HOSTESS_GIVES_CHARGE)) {
+            if (AbstractDungeon.overlayMenu != null && AuraButtonField.button.get(AbstractDungeon.overlayMenu) != null) {
+                AuraButtonField.button.get(AbstractDungeon.overlayMenu).show();
+                shownThisCombat = true;
+            }
         }
     }
 

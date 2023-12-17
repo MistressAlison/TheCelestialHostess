@@ -309,6 +309,6 @@ public class Wiz {
     }
 
     public static boolean auraActive() {
-        return Wiz.adp() != null && Wiz.adp().hasPower(DivineForcePower.POWER_ID);
+        return isInCombat() && Wiz.adp() != null && Wiz.adp().hasPower(DivineForcePower.POWER_ID);
     }
 }

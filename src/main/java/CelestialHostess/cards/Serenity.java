@@ -1,16 +1,11 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.actions.HolyAction;
-import CelestialHostess.cardmods.HolyMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
-import CelestialHostess.cards.abstracts.AbstractHolyInfoCard;
-import CelestialHostess.powers.CardToHandPower;
 import CelestialHostess.util.Wiz;
-import basemod.helpers.CardModifierManager;
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
-import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.purple.Tranquility;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -21,25 +16,26 @@ public class Serenity extends AbstractEasyCard {
 
     public Serenity() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 2;
-        CardModifierManager.addModifier(this, new HolyMod());
-        MultiCardPreview.add(this, new AbstractHolyInfoCard(this, cardStrings.EXTENDED_DESCRIPTION[0]) {}, new Miracle());
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new HolyAction(() -> addToTop(new BetterDiscardPileToHandAction(1))));
-        Wiz.applyToSelf(new CardToHandPower(p, magicNumber, new Miracle()));
+        addToBot(new MoveCardsAction(Wiz.adp().hand, Wiz.adp().discardPile, magicNumber, cards -> {
+            for (AbstractCard card : cards) {
+                card.current_x = CardGroup.DISCARD_PILE_X;
+                card.current_y = CardGroup.DISCARD_PILE_Y;
+                if (card.canUpgrade()) {
+                    card.upgrade();
+                }
+            }
+        }));
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(0);
-        MultiCardPreview.multiCardPreview.get(this).forEach(c -> {
-            if (c instanceof AbstractHolyInfoCard) {
-                c.upgrade();
-            }
-        });
+        //upgradeBaseCost(0);
+        upgradeMagicNumber(1);
     }
 
     @Override

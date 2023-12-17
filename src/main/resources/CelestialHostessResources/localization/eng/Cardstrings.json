@@ -275,8 +275,7 @@
   },
   "${ModID}:Serenity": {
     "NAME": "Serenity",
-    "DESCRIPTION": "{@@}{!${ModID}:Holy!|1=Put a card from your discard pile into your hand. NL }Add !M! *Miracle{!M!|>1=s} into your hand next turn.",
-    "EXTENDED_DESCRIPTION": ["Put a card from your discard pile into your hand. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand next turn."]
+    "DESCRIPTION": "{@@}Put !M! card{!M!|>1=s} from your discard pile into your hand and Upgrade {!M!|1=it|@=them}."
   },
   "${ModID}:Sheathe": {
     "NAME": "Sheathe",

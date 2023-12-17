@@ -18,7 +18,7 @@ public class ResoundingImpact extends AbstractEasyCard {
     public ResoundingImpact() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 12;
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 12;
     }
 
     @Override
@@ -32,7 +32,8 @@ public class ResoundingImpact extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(4);
+        upgradeDamage(3);
+        upgradeMagicNumber(3);
     }
 
     @Override

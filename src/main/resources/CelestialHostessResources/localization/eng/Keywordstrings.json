@@ -55,7 +55,7 @@
   },
   {
     "ID": "holy",
-    "PROPER_NAME": "Holy",
+    "PROPER_NAME": "Holy [${ModID}:HolyIcon]",
     "NAMES": [
       "holy"
     ],

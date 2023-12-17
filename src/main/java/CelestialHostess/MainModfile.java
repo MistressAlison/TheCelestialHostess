@@ -169,6 +169,7 @@ public class MainModfile implements
         CustomIconHelper.addCustomIcon(IconContainer.TributeIcon.get());
         CustomIconHelper.addCustomIcon(IconContainer.SharpenIcon.get());
         CustomIconHelper.addCustomIcon(IconContainer.CorruptIcon.get());
+        CustomIconHelper.addCustomIcon(IconContainer.HolyIcon.get());
 
         new AutoAdd(modID)
                 .packageFilter(modID+".cards")

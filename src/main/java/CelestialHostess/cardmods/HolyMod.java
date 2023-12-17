@@ -2,14 +2,20 @@ package CelestialHostess.cardmods;
 
 import CelestialHostess.patches.CustomTags;
 import CelestialHostess.util.KeywordManager;
+import CelestialHostess.util.TextureScaler;
 import CelestialHostess.util.Wiz;
 import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.TooltipInfo;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +28,7 @@ public class HolyMod extends AbstractCardModifier {
     public static String NAME = CardCrawlGame.languagePack.getCardStrings(ID).NAME;
     public static final ArrayList<String> descriptors = new ArrayList<>();
     public static final ArrayList<TooltipInfo> tips = new ArrayList<>();
+    public static Texture modIcon = TextureScaler.rescale(AbstractPower.atlas.findRegion("128/nirvana"), 64, 64);
     private int dd, db, dm;
 
     static {
@@ -77,6 +84,16 @@ public class HolyMod extends AbstractCardModifier {
 
     public void onInitialApplication(AbstractCard card) {
         card.tags.add(CustomTags.HOSTESS_HOLY);
+    }
+
+    @Override
+    public void onRender(AbstractCard card, SpriteBatch sb) {
+        ExtraIcons.icon(modIcon).drawColor(new Color(1, 1, 1, card.transparency)).render(card);
+    }
+
+    @Override
+    public void onSingleCardViewRender(AbstractCard card, SpriteBatch sb) {
+        ExtraIcons.icon(modIcon).drawColor(new Color(1, 1, 1, card.transparency)).render(card);
     }
 
     @Override

@@ -3,8 +3,8 @@ package CelestialHostess.powers;
 import CelestialHostess.MainModfile;
 import CelestialHostess.patches.PowerOrbitPatches;
 import CelestialHostess.powers.interfaces.AuraTriggerPower;
-import CelestialHostess.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -48,6 +48,6 @@ public class LightChargePower extends AbstractPower implements PowerOrbitPatches
     @Override
     public void onActivateAura() {
         flash();
-        Wiz.applyToSelf(new GuidingLightPower(Wiz.adp(), amount));
+        addToBot(new GainEnergyAction(amount));
     }
 }

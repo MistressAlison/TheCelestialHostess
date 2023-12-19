@@ -23,7 +23,12 @@
     ],
     "EXTRA_TEXT": [
       "Holy Aura",
-      "Pressing this button will spend [E] to activate your #yAura this turn, triggering all #yCharges. NL NL While your #yAura is active, #yHoly cards are enhanced."
+      "Pressing this button will spend [E] to activate your #yAura this turn, triggering all #yCharges. NL NL While your #yAura is active, #yHoly cards are enhanced.",
+      " NL NL #yCharge #yEffects:",
+      " NL Deal #b"," damage to ALL enemies.",
+      " NL Gain #b"," #yBlock.",
+      " NL Draw #b"," card."," cards.",
+      " NL Gain #b"," [E] ."
     ]
   },
   "${ModID}:ModifyAction": {

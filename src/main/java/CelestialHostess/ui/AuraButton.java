@@ -2,8 +2,7 @@ package CelestialHostess.ui;
 
 import CelestialHostess.MainModfile;
 import CelestialHostess.patches.CustomTags;
-import CelestialHostess.powers.ChargePreservationPower;
-import CelestialHostess.powers.DivineForcePower;
+import CelestialHostess.powers.*;
 import CelestialHostess.powers.interfaces.AuraTriggerPower;
 import CelestialHostess.util.Wiz;
 import com.badlogic.gdx.Gdx;

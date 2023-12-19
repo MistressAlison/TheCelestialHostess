@@ -83,7 +83,7 @@
     "NAMES": [
       "purity"
     ],
-    "DESCRIPTION": "When you obtain #b10 Purity, remove all your debuffs and gain a #yLight #yCharge. NL Light Charges make your next card cost #b0 and play twice."
+    "DESCRIPTION": "When you obtain #b10 Purity, your next #b3 cards cost #b0 and play twice."
   },
   {
     "ID": "sharpen",
@@ -159,7 +159,7 @@
       "light_charge",
       "light_charges"
     ],
-    "DESCRIPTION": "The next time you active your #yAura, the next card you play costs #b0 and is played twice."
+    "DESCRIPTION": "The next time you active your #yAura, gain [E] ."
   },
   {
     "ID": "charge",

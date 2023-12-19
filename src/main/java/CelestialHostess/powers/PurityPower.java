@@ -5,7 +5,6 @@ import CelestialHostess.powers.interfaces.OnPurityActivatePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -58,8 +57,8 @@ public class PurityPower extends AbstractPower {
                 }
             }
             //Wiz.att(new ApplyPowerAction(owner, owner, new DivineForcePower(owner, 1)));
-            Wiz.att(new ApplyPowerAction(owner, owner, new LightChargePower(owner, 1)));
-            Wiz.att(new RemoveDebuffsAction(owner));
+            Wiz.att(new ApplyPowerAction(owner, owner, new GuidingLightPower(owner, 3)));
+            //Wiz.att(new RemoveDebuffsAction(owner));
             this.amount -= 10;
             if (this.amount == 0) {
                 Wiz.att(new RemoveSpecificPowerAction(owner, owner, this));

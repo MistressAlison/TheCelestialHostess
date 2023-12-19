@@ -49,7 +49,7 @@
   },
   "${ModID}:PurityPower": {
     "NAME": "Purity",
-    "DESCRIPTIONS": ["When you obtain #b10 #yPurity, remove all your debuffs and gain a #yLight #yCharge."]
+    "DESCRIPTIONS": ["When you obtain #b10 #yPurity, your next #b3 cards cost #b0 and play twice."]
   },
   "${ModID}:DivineForcePower": {
     "NAME": "Holy Aura",
@@ -109,8 +109,8 @@
   },
   "${ModID}:LightChargePower": {
     "NAME": "Light Charge",
-    "DESCRIPTIONS": ["The next time activate your #yAura, the next card you play costs #b0 and is played twice.",
-      "The next time activate your #yAura, the next #b"," cards you play cost #b0 and are played twice."]
+    "DESCRIPTIONS": ["The next time activate your #yAura, gain [E] .",
+      "The next time activate your #yAura, gain #b"," [E] ."]
   },
   "${ModID}:DarkChargePower": {
     "NAME": "Dark Charge",

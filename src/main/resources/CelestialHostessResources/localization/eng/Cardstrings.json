@@ -170,7 +170,7 @@
   },
   "${ModID}:Lightmare": {
     "NAME": "Lightmare",
-    "DESCRIPTION": "Gain !M! ${ModID}:Light_Charge{!M!|>1=s}{@@}. NL Exhaust."
+    "DESCRIPTION": "{@@}Your next {!M!|>1=!M! }card{!M!|>1=s} cost{!M!|1=s} 0 and {!M!|1=is|>1=are} played twice. NL Exhaust."
   },
   "${ModID}:MagicWall": {
     "NAME": "Magic Wall",

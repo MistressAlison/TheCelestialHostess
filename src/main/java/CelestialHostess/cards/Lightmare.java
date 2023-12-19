@@ -3,7 +3,7 @@ package CelestialHostess.cards;
 import CelestialHostess.cardmods.CorruptMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.patches.CustomTags;
-import CelestialHostess.powers.LightChargePower;
+import CelestialHostess.powers.GuidingLightPower;
 import CelestialHostess.util.Wiz;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.blue.Storm;
@@ -25,7 +25,7 @@ public class Lightmare extends AbstractEasyCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.applyToSelf(new LightChargePower(p, magicNumber));
+        Wiz.applyToSelf(new GuidingLightPower(p, magicNumber));
     }
 
     @Override

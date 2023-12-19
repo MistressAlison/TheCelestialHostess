@@ -243,7 +243,34 @@ public class AuraButton {
                 }
 
                 if (this.hb.hovered && !AbstractDungeon.isScreenUp && !Settings.isTouchScreen) {// 258
-                    TipHelper.renderGenericTip(this.current_x - 90.0F * Settings.scale, this.current_y + 300.0F * Settings.scale, TIP_TEXT[0], TIP_TEXT[1]);// 259 262
+                    String body = TIP_TEXT[1];
+                    boolean hasFire = Wiz.adp().hasPower(FireChargePower.POWER_ID);
+                    boolean hasIce = Wiz.adp().hasPower(IceChargePower.POWER_ID);
+                    boolean hasWind = Wiz.adp().hasPower(WindChargePower.POWER_ID);
+                    boolean hasLight = Wiz.adp().hasPower(LightChargePower.POWER_ID);
+                    float dy = 275f;
+                    if (hasFire || hasIce || hasWind || hasLight) {
+                        body += TIP_TEXT[2];
+                        dy += 50f;
+                        if (hasFire) {
+                            body += TIP_TEXT[3] + FireChargePower.EFFECT * Wiz.adp().getPower(FireChargePower.POWER_ID).amount + TIP_TEXT[4];
+                            dy += 50f;
+                        }
+                        if (hasIce) {
+                            body += TIP_TEXT[5] + IceChargePower.EFFECT * Wiz.adp().getPower(IceChargePower.POWER_ID).amount + TIP_TEXT[6];
+                            dy += 25f;
+                        }
+                        if (hasWind) {
+                            int amount = WindChargePower.EFFECT * Wiz.adp().getPower(WindChargePower.POWER_ID).amount;
+                            body += TIP_TEXT[7] + amount + (amount == 1 ? TIP_TEXT[8] : TIP_TEXT[9]);
+                            dy += 25f;
+                        }
+                        if (hasLight) {
+                            body += TIP_TEXT[10] + Wiz.adp().getPower(LightChargePower.POWER_ID).amount + TIP_TEXT[11];
+                            dy += 25f;
+                        }
+                    }
+                    TipHelper.renderGenericTip(this.current_x - 90.0F * Settings.scale, this.current_y + dy * Settings.scale, TIP_TEXT[0], body);// 259 262
                 }
             } else if (this.label.equals(ALREADY_ACTIVE_TEXT)) {// 238
                 this.textColor = Settings.CREAM_COLOR;// 239

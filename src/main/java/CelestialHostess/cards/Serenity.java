@@ -15,8 +15,8 @@ public class Serenity extends AbstractEasyCard {
     public final static String ID = makeID(Serenity.class.getSimpleName());
 
     public Serenity() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override

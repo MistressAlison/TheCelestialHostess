@@ -321,7 +321,7 @@
   },
   "${ModID}:WeaknessExploit": {
     "NAME": "Weakness Exploit",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Weak, add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL If the enemy has Weak, gain {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|@=!M! [E]}."
   },
   "${ModID}:WeaponFusion": {
     "NAME": "Weapon Fusion",

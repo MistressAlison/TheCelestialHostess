@@ -233,8 +233,8 @@
   },
   "${ModID}:Punishment": {
     "NAME": "Punishment",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card{@@}{!M!|>1=s} if you have a *Miracle in your hand.",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Draw !M! card{@@}{!M!|>1=s} if you have a *Miracle in your hand."]
+    "DESCRIPTION": "{@@}Deal !D! damage.{!${ModID}:Holy!|0= NL Deals !M! additional damage for each ${ModID}:Charge you have.}",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage."]
   },
   "${ModID}:Pyre": {
     "NAME": "Pyre",

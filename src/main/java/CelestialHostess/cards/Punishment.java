@@ -1,20 +1,18 @@
 package CelestialHostess.cards;
 
-import CelestialHostess.actions.DoIfAction;
 import CelestialHostess.cardmods.HolyMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.cards.abstracts.AbstractHolyInfoCard;
 import CelestialHostess.patches.CustomTags;
+import CelestialHostess.powers.interfaces.AuraTriggerPower;
 import CelestialHostess.util.Wiz;
 import basemod.helpers.CardModifierManager;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.purple.SimmeringFury;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static CelestialHostess.MainModfile.makeID;
 
@@ -38,14 +36,36 @@ public class Punishment extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        addToBot(new DoIfAction(() -> Wiz.adp().hand.group.stream().anyMatch(c -> c instanceof Miracle), () -> addToTop(new DrawCardAction(magicNumber))));
     }
 
-    public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if (Wiz.adp().hand.group.stream().anyMatch(c -> c instanceof Miracle)) {
-            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+    @Override
+    public void applyPowers() {
+        int base = baseDamage;
+        if (!Wiz.auraActive()) {
+            for (AbstractPower p : Wiz.adp().powers) {
+                if (p instanceof AuraTriggerPower) {
+                    baseDamage += magicNumber * p.amount;
+                }
+            }
         }
+        super.applyPowers();
+        baseDamage = base;
+        isDamageModified = baseDamage != damage;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        int base = baseDamage;
+        if (!Wiz.auraActive()) {
+            for (AbstractPower p : Wiz.adp().powers) {
+                if (p instanceof AuraTriggerPower) {
+                    baseDamage += magicNumber * p.amount;
+                }
+            }
+        }
+        super.calculateCardDamage(mo);
+        baseDamage = base;
+        isDamageModified = baseDamage != damage;
     }
 
     @Override

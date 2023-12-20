@@ -162,7 +162,7 @@
   },
   "${ModID}:MagicWall": {
     "NAME": "Magic Wall",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Dexterity. NL At the end of this turn, lose !M! Dexterity."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Exhaust."
   },
   "${ModID}:ManaMaster": {
     "NAME": "Mana Master",

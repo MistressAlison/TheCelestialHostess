@@ -5,8 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.blue.ForceField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.LoseDexterityPower;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 
 import static CelestialHostess.MainModfile.makeID;
 
@@ -16,18 +15,18 @@ public class MagicWall extends AbstractEasyCard {
 
     public MagicWall() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = block = 7;
-        baseMagicNumber = magicNumber = 2;
+        baseBlock = block = 5;
+        baseMagicNumber = magicNumber = 1;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber)));
-        addToBot(new ApplyPowerAction(p, p, new LoseDexterityPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, magicNumber)));
     }
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(1);
         upgradeMagicNumber(1);
     }
 

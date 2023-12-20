@@ -9,18 +9,6 @@
     "NAME": "Enhanced %s",
     "DESCRIPTION": ""
   },
-  "${ModID}:FlameBlessing": {
-    "NAME": "Flame Blessing",
-    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies for each *Miracle in your hand. NL Exhaust."
-  },
-  "${ModID}:FrostBlessing": {
-    "NAME": "Frost Blessing",
-    "DESCRIPTION": "Retain. NL Gain !B! Block for each *Miracle in your hand. NL Exhaust."
-  },
-  "${ModID}:GaleBlessing": {
-    "NAME": "Gale Blessing",
-    "DESCRIPTION": "Retain. NL Draw !M! card{@@}{!M!|>1=s} for each *Miracle in your hand. NL Exhaust."
-  },
   "${ModID}:Absolution": {
     "NAME": "Absolution",
     "DESCRIPTION": "Whenever you gain Energy, deal !M! damage to ALL enemies."

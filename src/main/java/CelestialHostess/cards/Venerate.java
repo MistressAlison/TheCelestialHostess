@@ -15,7 +15,7 @@ public class Venerate extends AbstractEasyCard {
 
     public Venerate() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = block = 7;
+        baseBlock = block = 6;
         baseMagicNumber = magicNumber = 1;
     }
 

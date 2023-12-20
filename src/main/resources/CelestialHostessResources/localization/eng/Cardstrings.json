@@ -267,7 +267,7 @@
   },
   "${ModID}:Sentence": {
     "NAME": "Sentence",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL When this enemy dies, add draw !M! card{!M!|>1=s} and gain {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|@=!M! [E]}."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL When this enemy dies, draw !M! card{!M!|>1=s} NL and gain {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|@=!M! [E]}."
   },
   "${ModID}:SeraphForm": {
     "NAME": "Seraph Form",

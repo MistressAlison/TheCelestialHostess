@@ -263,7 +263,7 @@
   },
   "${ModID}:Serenity": {
     "NAME": "Serenity",
-    "DESCRIPTION": "{@@}Put !M! card{!M!|>1=s} from your discard pile into your hand and Upgrade {!M!|1=it|@=them}."
+    "DESCRIPTION": "{@@}Put !M! card{!M!|>1=s} from your discard pile into your hand and Upgrade {!M!|1=it|@=them}. NL Exhaust."
   },
   "${ModID}:Sheathe": {
     "NAME": "Sheathe",

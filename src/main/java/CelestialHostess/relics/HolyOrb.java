@@ -1,18 +1,13 @@
 package CelestialHostess.relics;
 
 import CelestialHostess.TheCelestialHostess;
-import CelestialHostess.cardmods.MiracleTracker;
-import basemod.helpers.CardModifierManager;
+import CelestialHostess.powers.LightChargePower;
+import CelestialHostess.util.Wiz;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.text.DecimalFormat;
@@ -38,18 +33,11 @@ public class HolyOrb extends AbstractEasyRelic {
     public void atBattleStartPreDraw() {
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToBot(new LoseEnergyAction(1));
-        AbstractCard miracle = new Miracle();
-        CardModifierManager.addModifier(miracle, new MiracleTracker());
-        addToBot(new MakeTempCardInHandAction(miracle, 2));
-        incrementStat(-1);
+        Wiz.applyToSelf(new LightChargePower(Wiz.adp(), 1, 1));
     }
 
-    @Override
-    public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (CardModifierManager.hasModifier(c, MiracleTracker.ID)) {
-            incrementStat(1);
-        }
+    public void powerTrigger(int amount) {
+        incrementStat(amount);
     }
 
     public int getStat() {

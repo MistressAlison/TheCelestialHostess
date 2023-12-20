@@ -136,7 +136,8 @@
   },
   "${ModID}:GearRepair": {
     "NAME": "Gear Repair",
-    "DESCRIPTION": "Upgrade all cards in your hand for the rest of combat. NL Exhaust."
+    "DESCRIPTION": "Upgrade all cards in your hand for the rest of combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Upgrade all cards in your hand for the rest of combat."
   },
   "${ModID}:GlowingStrike": {
     "NAME": "Glowing Strike",

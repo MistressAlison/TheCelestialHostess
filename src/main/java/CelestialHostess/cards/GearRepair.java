@@ -14,7 +14,7 @@ public class GearRepair extends AbstractEasyCard {
     public final static String ID = makeID(GearRepair.class.getSimpleName());
 
     public GearRepair() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         exhaust = true;
         CardModifierManager.addModifier(this, new TributeMod(1));
     }
@@ -27,7 +27,9 @@ public class GearRepair extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(0);
+        //upgradeBaseCost(0);
+        exhaust = false;
+        uDesc();
     }
 
     @Override

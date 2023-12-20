@@ -153,8 +153,8 @@
   },
   "${ModID}:ImbuedStrike": {
     "NAME": "Imbued Strike",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Trigger ALL your ${ModID}:Charges{!${ModID}:Holy!|1= without removing them}.",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Trigger ALL your ${ModID}:Charges without removing them."]
+    "DESCRIPTION": "{@@}Deal !D! damage. NL {!${ModID}:Holy!|0=Trigger ALL your ${ModID}:Charges without removing them|1=Prevent the next time you would lose your ${ModID}:Charges}.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Prevent the next time you would lose your ${ModID}:Charges."]
   },
   "${ModID}:Lightmare": {
     "NAME": "Lightmare",

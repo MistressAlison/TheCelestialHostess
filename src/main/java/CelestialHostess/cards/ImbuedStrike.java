@@ -1,5 +1,6 @@
 package CelestialHostess.cards;
 
+import CelestialHostess.actions.DoIfAction;
 import CelestialHostess.cardmods.HolyMod;
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
 import CelestialHostess.cards.abstracts.AbstractHolyInfoCard;
@@ -9,8 +10,6 @@ import CelestialHostess.util.Wiz;
 import basemod.helpers.CardModifierManager;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.red.SeverSoul;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -33,19 +32,15 @@ public class ImbuedStrike extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        //Wiz.applyToSelf(new ChargePreservationPower(p, magicNumber));
-        AbstractPower preserve = Wiz.adp().getPower(ChargePreservationPower.POWER_ID);
-        for (AbstractPower pow : Wiz.adp().powers) {
-            if (pow instanceof AuraTriggerPower) {
-                ((AuraTriggerPower) pow).onActivateAura();
-                if (preserve == null && !Wiz.auraActive()) {
-                    Wiz.atb(new RemoveSpecificPowerAction(Wiz.adp(), Wiz.adp(), pow));
-                }
-            }
-        }
-        if (preserve != null && !Wiz.auraActive()) {
-            Wiz.atb(new ReducePowerAction(Wiz.adp(), Wiz.adp(), preserve, 1));
-        }
+        addToBot(new DoIfAction(Wiz::auraActive,
+                () -> Wiz.applyToSelfTop(new ChargePreservationPower(p, magicNumber)),
+                () -> {
+                    for (AbstractPower pow : Wiz.adp().powers) {
+                        if (pow instanceof AuraTriggerPower) {
+                            ((AuraTriggerPower) pow).onActivateAura();
+                        }
+                    }
+                }));
     }
 
     @Override

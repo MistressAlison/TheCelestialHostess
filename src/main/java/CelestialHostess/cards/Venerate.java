@@ -1,10 +1,9 @@
 package CelestialHostess.cards;
 
 import CelestialHostess.cards.abstracts.AbstractEasyCard;
-import CelestialHostess.powers.CardToHandPower;
+import CelestialHostess.powers.LightChargePower;
 import CelestialHostess.util.Wiz;
 import com.megacrit.cardcrawl.cards.purple.Sanctity;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -18,12 +17,11 @@ public class Venerate extends AbstractEasyCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = 7;
         baseMagicNumber = magicNumber = 1;
-        cardsToPreview = new Miracle();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        Wiz.applyToSelf(new CardToHandPower(p, magicNumber, new Miracle()));
+        Wiz.applyToSelf(new LightChargePower(p, magicNumber));
     }
 
     public void upp() {

@@ -40,7 +40,7 @@
   },
   "${ModID}:BreakThrough": {
     "NAME": "Break Through",
-    "DESCRIPTION": "Deal !D! damage. NL If this deals unblocked damage, add !M! *Miracle{!M!|>1=s}{@@} into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL If this deals unblocked damage, gain !M! ${ModID}:Light_Charge{!M!|>1=s}{@@}."
   },
   "${ModID}:BurdenBreaker": {
     "NAME": "Burden Breaker",
@@ -312,7 +312,7 @@
   },
   "${ModID}:Venerate": {
     "NAME": "Venerate",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Miracle{!M!|>1=s}{@@} into your hand next turn."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Light_Charge{!M!|>1=s}{@@}."
   },
   "${ModID}:VoidSpirit": {
     "NAME": "Void Spirit",

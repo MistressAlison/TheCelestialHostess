@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.purple.Wish;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -24,7 +23,7 @@ public class RayOfLight extends AbstractEasyCard implements EnterCardGroupPatche
     public final static String ID = makeID(RayOfLight.class.getSimpleName());
 
     public RayOfLight() {
-        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 4, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = 24;
         CardModifierManager.addModifier(this, new TributeMod(1));
     }
@@ -52,19 +51,13 @@ public class RayOfLight extends AbstractEasyCard implements EnterCardGroupPatche
     @Override
     public void onEnter(CardGroup g) {
         if (g == Wiz.adp().hand) {
-            for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
-                if (c instanceof Miracle) {
-                    setCostForTurn(this.costForTurn - 1);
-                }
-            }
+            setCostForTurn(this.costForTurn - AbstractDungeon.actionManager.cardsPlayedThisTurn.size());
         }
     }
 
     public void triggerOnCardPlayed(AbstractCard c) {
-        if (c instanceof Miracle) {
-            if (Wiz.adp().hand.contains(this)) {
-                setCostForTurn(this.costForTurn - 1);
-            }
+        if (Wiz.adp().hand.contains(this)) {
+            setCostForTurn(this.costForTurn - 1);
         }
     }
 }

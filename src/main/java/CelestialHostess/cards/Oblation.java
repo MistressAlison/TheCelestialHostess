@@ -16,7 +16,7 @@ public class Oblation extends AbstractEasyCard {
     public final static String ID = makeID(Oblation.class.getSimpleName());
 
     public Oblation() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
         cardsToPreview = new Miracle();

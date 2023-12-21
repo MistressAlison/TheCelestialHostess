@@ -99,7 +99,7 @@
   },
   "${ModID}:Espoir": {
     "NAME": "Espoir",
-    "DESCRIPTION": "Gain !B! Block. NL Remove !M! of your debuffs.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Remove {!${ModID}:Holy!|0=!M!|1=all} of your debuffs.",
     "EXTENDED_DESCRIPTION": ["Gain !B! Block. NL Remove all of your debuffs."]
   },
   "${ModID}:EternalVoice": {

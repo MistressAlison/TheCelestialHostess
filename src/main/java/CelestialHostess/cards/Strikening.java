@@ -24,7 +24,7 @@ public class Strikening extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         Strike strike = new Strike();
         strike.cost = strike.costForTurn = 0;
-        //strike.isCostModified = true;
+        strike.isCostModified = true;
         Wiz.makeInHand(strike, magicNumber);
         Wiz.applyToSelf(new StrikeningPower(p, secondMagic));
     }

@@ -154,8 +154,7 @@
   },
   "${ModID}:ImbuedStrike": {
     "NAME": "Imbued Strike",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL {!${ModID}:Holy!|0=Trigger ALL your ${ModID}:Charges without removing them|1=Prevent the next time you would lose your ${ModID}:Charges}.",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Prevent the next time you would lose your ${ModID}:Charges."]
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Prevent the next {!M!|>1=!M! }time{!M!|>1=s} you would lose your ${ModID}:Charges."
   },
   "${ModID}:Lightmare": {
     "NAME": "Lightmare",

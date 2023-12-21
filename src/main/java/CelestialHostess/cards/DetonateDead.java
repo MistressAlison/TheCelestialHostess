@@ -15,7 +15,7 @@ public class DetonateDead extends AbstractEasyCard {
 
     public DetonateDead() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = damage = 15;
+        baseDamage = damage = 20;
         baseMagicNumber = magicNumber = 20;
     }
 
